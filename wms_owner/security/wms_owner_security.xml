@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Record rules for multi-owner isolation -->
+    <data noupdate="1">
+        <!-- Warehouse owner record rule -->
+        <record id="wms_owner_rule" model="ir.rule">
+            <field name="name">Warehouse Owner Access Rule</field>
+            <field name="model_id" ref="model_wms_owner"/>
+            <field name="domain_force">[('partner_id', 'in', user.partner_id.commercial_partner_id.ids + user.partner_id.commercial_partner_id.child_ids.ids)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!-- Billing rule record rule -->
+        <record id="wms_billing_rule_rule" model="ir.rule">
+            <field name="name">WMS Billing Rule Access Rule</field>
+            <field name="model_id" ref="model_wms_billing_rule"/>
+            <field name="domain_force">[('owner_id.partner_id', 'in', user.partner_id.commercial_partner_id.ids + user.partner_id.commercial_partner_id.child_ids.ids)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!-- Billing record record rule -->
+        <record id="wms_billing_record_rule" model="ir.rule">
+            <field name="name">WMS Billing Record Access Rule</field>
+            <field name="model_id" ref="model_wms_billing_record"/>
+            <field name="domain_force">[('owner_id.partner_id', 'in', user.partner_id.commercial_partner_id.ids + user.partner_id.commercial_partner_id.child_ids.ids)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+    </data>
+</odoo>
