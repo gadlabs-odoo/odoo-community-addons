@@ -1,5 +1,5 @@
 {
-    "version": 22,
+    "version": "18.5.10",
     "sheets": [
         {
             "id": "2d7b0ebd-7621-516c-a641-55d78e1cad3b",
@@ -14,9 +14,7 @@
             },
             "merges": [],
             "cells": {
-                "A1": {
-                    "content": "01/01/2026 to 10/01/2026, compared with 01/01/2025 to 10/01/2025"
-                }
+                "A1": "01/01/2026 to 09/30/2026, compared with 01/01/2025 to 09/30/2025"
             },
             "styles": {
                 "A1": 1
@@ -28,8 +26,12 @@
             "figures": [
                 {
                     "id": "735dc167-1ab1-5e95-b865-9931a177f689",
-                    "x": 0,
-                    "y": 30,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 0,
+                        "y": 30
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -45,15 +47,22 @@
                         "type": "scorecard",
                         "background": "",
                         "baseline": "Data!D16",
-                        "baselineDescr": "vs comparison",
+                        "baselineDescr": {
+                            "text": "vs comparison"
+                        },
                         "keyValue": "Data!B16",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "735dc167-1ab1-5e95-b865-9931a177f689"
                     }
                 },
                 {
                     "id": "295eb25b-914a-5b85-b331-c81064e55771",
-                    "x": 250,
-                    "y": 30,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 250,
+                        "y": 30
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -69,15 +78,22 @@
                         "type": "scorecard",
                         "background": "",
                         "baseline": "Data!D18",
-                        "baselineDescr": "vs comparison",
+                        "baselineDescr": {
+                            "text": "vs comparison"
+                        },
                         "keyValue": "Data!B18",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "295eb25b-914a-5b85-b331-c81064e55771"
                     }
                 },
                 {
                     "id": "9b78f9ee-5f61-5164-89b2-4158c6bea2df",
-                    "x": 500,
-                    "y": 30,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 500,
+                        "y": 30
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -93,15 +109,22 @@
                         "type": "scorecard",
                         "background": "",
                         "baseline": "Data!D20",
-                        "baselineDescr": "vs comparison",
+                        "baselineDescr": {
+                            "text": "vs comparison"
+                        },
                         "keyValue": "Data!B20",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "9b78f9ee-5f61-5164-89b2-4158c6bea2df"
                     }
                 },
                 {
                     "id": "8a436a27-dab1-5e5a-a3b5-95d75009d69e",
-                    "x": 750,
-                    "y": 30,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 750,
+                        "y": 30
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -117,15 +140,22 @@
                         "type": "scorecard",
                         "background": "",
                         "baseline": "Data!D21",
-                        "baselineDescr": "vs comparison",
+                        "baselineDescr": {
+                            "text": "vs comparison"
+                        },
                         "keyValue": "Data!B21",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "8a436a27-dab1-5e5a-a3b5-95d75009d69e"
                     }
                 },
                 {
                     "id": "fec865af-e01c-53f7-9969-5bee9a745055",
-                    "x": 0,
-                    "y": 150,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 0,
+                        "y": 150
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -141,15 +171,22 @@
                         "type": "scorecard",
                         "background": "",
                         "baseline": "Data!D23",
-                        "baselineDescr": "vs comparison",
+                        "baselineDescr": {
+                            "text": "vs comparison"
+                        },
                         "keyValue": "Data!B23",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "fec865af-e01c-53f7-9969-5bee9a745055"
                     }
                 },
                 {
                     "id": "b64906df-781d-5eee-a835-3f4dec1e3ed2",
-                    "x": 250,
-                    "y": 150,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 250,
+                        "y": 150
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -165,15 +202,22 @@
                         "type": "scorecard",
                         "background": "",
                         "baseline": "Data!D24",
-                        "baselineDescr": "vs comparison",
+                        "baselineDescr": {
+                            "text": "vs comparison"
+                        },
                         "keyValue": "Data!B24",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "b64906df-781d-5eee-a835-3f4dec1e3ed2"
                     }
                 },
                 {
                     "id": "315ec35d-3e85-5630-9931-b638836b57c2",
-                    "x": 500,
-                    "y": 150,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 500,
+                        "y": 150
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -189,15 +233,22 @@
                         "type": "scorecard",
                         "background": "",
                         "baseline": "Data!D25",
-                        "baselineDescr": "vs comparison",
+                        "baselineDescr": {
+                            "text": "vs comparison"
+                        },
                         "keyValue": "Data!B25",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "315ec35d-3e85-5630-9931-b638836b57c2"
                     }
                 },
                 {
                     "id": "0ba2fb41-02de-5f74-95aa-b12599ce8498",
-                    "x": 750,
-                    "y": 150,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 750,
+                        "y": 150
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -213,15 +264,22 @@
                         "type": "scorecard",
                         "background": "",
                         "baseline": "Data!D28",
-                        "baselineDescr": "vs comparison",
+                        "baselineDescr": {
+                            "text": "vs comparison"
+                        },
                         "keyValue": "Data!B28",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "0ba2fb41-02de-5f74-95aa-b12599ce8498"
                     }
                 },
                 {
                     "id": "2e4a2b08-ede2-5241-8b51-a6ad6afd3b6b",
-                    "x": 0,
-                    "y": 280,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 0,
+                        "y": 280
+                    },
                     "width": 990,
                     "height": 400,
                     "tag": "chart",
@@ -252,7 +310,9 @@
                             "color": "#01666B",
                             "bold": true
                         },
-                        "aggregated": false
+                        "aggregated": false,
+                        "humanize": true,
+                        "chartId": "2e4a2b08-ede2-5241-8b51-a6ad6afd3b6b"
                     }
                 }
             ],
@@ -286,468 +346,158 @@
             },
             "merges": [],
             "cells": {
-                "A1": {
-                    "content": "Period"
-                },
-                "B1": {
-                    "content": "Year to Date"
-                },
-                "G1": {
-                    "content": "Same Period Last Year"
-                },
-                "A2": {
-                    "content": "End"
-                },
-                "B2": {
-                    "content": "46296"
-                },
-                "G2": {
-                    "content": "Previous Period"
-                },
-                "A3": {
-                    "content": "Start"
-                },
-                "B3": {
-                    "content": "46023"
-                },
-                "A4": {
-                    "content": "Compare with"
-                },
-                "B4": {
-                    "content": "Same Period Last Year"
-                },
-                "A5": {
-                    "content": "Previous period"
-                },
-                "B5": {
-                    "content": "FALSE"
-                },
-                "A6": {
-                    "content": "Months in the period"
-                },
-                "B6": {
-                    "content": "0"
-                },
-                "A7": {
-                    "content": "Comparison end"
-                },
-                "B7": {
-                    "content": "45931"
-                },
-                "A8": {
-                    "content": "Comparison start"
-                },
-                "B8": {
-                    "content": "45658"
-                },
-                "A9": {
-                    "content": "Fiscal year start"
-                },
-                "B9": {
-                    "content": "46023"
-                },
-                "A10": {
-                    "content": "Comparison fiscal year start"
-                },
-                "B10": {
-                    "content": "45658"
-                },
-                "A11": {
-                    "content": "Description"
-                },
-                "B11": {
-                    "content": "01/01/2026 to 10/01/2026, compared with 01/01/2025 to 10/01/2025"
-                },
-                "A12": {
-                    "content": "Comparison"
-                },
-                "B12": {
-                    "content": "Last Year"
-                },
-                "A15": {
-                    "content": "Key figures"
-                },
-                "B15": {
-                    "content": "Period"
-                },
-                "C15": {
-                    "content": "Comparison"
-                },
-                "D15": {
-                    "content": "Compared with"
-                },
-                "A16": {
-                    "content": "Revenue"
-                },
-                "B16": {
-                    "content": "2500"
-                },
-                "C16": {
-                    "content": "0"
-                },
-                "A17": {
-                    "content": "Cost of Revenue"
-                },
-                "B17": {
-                    "content": "0"
-                },
-                "C17": {
-                    "content": "0"
-                },
-                "A18": {
-                    "content": "Gross Profit"
-                },
-                "B18": {
-                    "content": "2500"
-                },
-                "C18": {
-                    "content": "0"
-                },
-                "A19": {
-                    "content": "Gross Margin"
-                },
-                "B19": {
-                    "content": "1"
-                },
-                "C19": {
-                    "content": "0"
-                },
-                "A20": {
-                    "content": "Expenses"
-                },
-                "B20": {
-                    "content": "0"
-                },
-                "C20": {
-                    "content": "0"
-                },
-                "A21": {
-                    "content": "Net Profit"
-                },
-                "B21": {
-                    "content": "2500"
-                },
-                "C21": {
-                    "content": "0"
-                },
-                "A22": {
-                    "content": "Net Margin"
-                },
-                "B22": {
-                    "content": "1"
-                },
-                "C22": {
-                    "content": "0"
-                },
-                "A23": {
-                    "content": "Bank and Cash"
-                },
-                "B23": {
-                    "content": "12444.87"
-                },
-                "C23": {
-                    "content": "0"
-                },
-                "A24": {
-                    "content": "Receivables"
-                },
-                "B24": {
-                    "content": "0"
-                },
-                "C24": {
-                    "content": "0"
-                },
-                "A25": {
-                    "content": "Payables"
-                },
-                "B25": {
-                    "content": "0"
-                },
-                "C25": {
-                    "content": "0"
-                },
-                "A26": {
-                    "content": "Current Assets"
-                },
-                "B26": {
-                    "content": "2500"
-                },
-                "C26": {
-                    "content": "0"
-                },
-                "A27": {
-                    "content": "Current Liabilities"
-                },
-                "B27": {
-                    "content": "0"
-                },
-                "C27": {
-                    "content": "0"
-                },
-                "A28": {
-                    "content": "Current Ratio"
-                },
-                "B28": {
-                    "content": "0"
-                },
-                "C28": {
-                    "content": "0"
-                },
-                "A31": {
-                    "content": "Month"
-                },
-                "B31": {
-                    "content": "From"
-                },
-                "C31": {
-                    "content": "To"
-                },
-                "D31": {
-                    "content": "In the period"
-                },
-                "E31": {
-                    "content": "Revenue"
-                },
-                "F31": {
-                    "content": "Expenses"
-                },
-                "G31": {
-                    "content": "Net Profit"
-                },
-                "A32": {
-                    "content": "46023"
-                },
-                "B32": {
-                    "content": "46023"
-                },
-                "C32": {
-                    "content": "46053"
-                },
-                "D32": {
-                    "content": "TRUE"
-                },
-                "E32": {
-                    "content": "0"
-                },
-                "F32": {
-                    "content": "0"
-                },
-                "G32": {
-                    "content": "0"
-                },
-                "A33": {
-                    "content": "46054"
-                },
-                "B33": {
-                    "content": "46054"
-                },
-                "C33": {
-                    "content": "46081"
-                },
-                "D33": {
-                    "content": "TRUE"
-                },
-                "E33": {
-                    "content": "0"
-                },
-                "F33": {
-                    "content": "0"
-                },
-                "G33": {
-                    "content": "0"
-                },
-                "A34": {
-                    "content": "46082"
-                },
-                "B34": {
-                    "content": "46082"
-                },
-                "C34": {
-                    "content": "46112"
-                },
-                "D34": {
-                    "content": "TRUE"
-                },
-                "E34": {
-                    "content": "0"
-                },
-                "F34": {
-                    "content": "0"
-                },
-                "G34": {
-                    "content": "0"
-                },
-                "A35": {
-                    "content": "46113"
-                },
-                "B35": {
-                    "content": "46113"
-                },
-                "C35": {
-                    "content": "46142"
-                },
-                "D35": {
-                    "content": "TRUE"
-                },
-                "E35": {
-                    "content": "0"
-                },
-                "F35": {
-                    "content": "0"
-                },
-                "G35": {
-                    "content": "0"
-                },
-                "A36": {
-                    "content": "46143"
-                },
-                "B36": {
-                    "content": "46143"
-                },
-                "C36": {
-                    "content": "46173"
-                },
-                "D36": {
-                    "content": "TRUE"
-                },
-                "E36": {
-                    "content": "0"
-                },
-                "F36": {
-                    "content": "0"
-                },
-                "G36": {
-                    "content": "0"
-                },
-                "A37": {
-                    "content": "46174"
-                },
-                "B37": {
-                    "content": "46174"
-                },
-                "C37": {
-                    "content": "46203"
-                },
-                "D37": {
-                    "content": "TRUE"
-                },
-                "E37": {
-                    "content": "0"
-                },
-                "F37": {
-                    "content": "0"
-                },
-                "G37": {
-                    "content": "0"
-                },
-                "A38": {
-                    "content": "46204"
-                },
-                "B38": {
-                    "content": "46204"
-                },
-                "C38": {
-                    "content": "46234"
-                },
-                "D38": {
-                    "content": "TRUE"
-                },
-                "E38": {
-                    "content": "0"
-                },
-                "F38": {
-                    "content": "0"
-                },
-                "G38": {
-                    "content": "0"
-                },
-                "A39": {
-                    "content": "46235"
-                },
-                "B39": {
-                    "content": "46235"
-                },
-                "C39": {
-                    "content": "46265"
-                },
-                "D39": {
-                    "content": "TRUE"
-                },
-                "E39": {
-                    "content": "0"
-                },
-                "F39": {
-                    "content": "0"
-                },
-                "G39": {
-                    "content": "0"
-                },
-                "A40": {
-                    "content": "46266"
-                },
-                "B40": {
-                    "content": "46266"
-                },
-                "C40": {
-                    "content": "46295"
-                },
-                "D40": {
-                    "content": "TRUE"
-                },
-                "E40": {
-                    "content": "-29250"
-                },
-                "F40": {
-                    "content": "0"
-                },
-                "G40": {
-                    "content": "-29250"
-                },
-                "A41": {
-                    "content": "46296"
-                },
-                "B41": {
-                    "content": "46296"
-                },
-                "C41": {
-                    "content": "46296"
-                },
-                "D41": {
-                    "content": "TRUE"
-                },
-                "E41": {
-                    "content": "31750"
-                },
-                "F41": {
-                    "content": "0"
-                },
-                "G41": {
-                    "content": "31750"
-                },
-                "A42": {
-                    "content": "46327"
-                },
-                "B42": {
-                    "content": "46327"
-                },
-                "C42": {
-                    "content": "46296"
-                },
-                "D42": {
-                    "content": "FALSE"
-                },
-                "A43": {
-                    "content": "46357"
-                },
-                "B43": {
-                    "content": "46357"
-                },
-                "C43": {
-                    "content": "46296"
-                },
-                "D43": {
-                    "content": "FALSE"
-                }
+                "A1": "Period",
+                "B1": "46023",
+                "C1": "46295",
+                "G1": "Same Period Last Year",
+                "A2": "End",
+                "B2": "46295",
+                "G2": "Previous Period",
+                "A3": "Start",
+                "B3": "46023",
+                "A4": "Compare with",
+                "B4": "Same Period Last Year",
+                "A5": "Previous period",
+                "B5": "FALSE",
+                "A6": "Months in the period",
+                "B6": "9",
+                "A7": "Comparison end",
+                "B7": "45930",
+                "A8": "Comparison start",
+                "B8": "45658",
+                "A9": "Fiscal year start",
+                "B9": "46023",
+                "A10": "Comparison fiscal year start",
+                "B10": "45658",
+                "A11": "Description",
+                "B11": "01/01/2026 to 09/30/2026, compared with 01/01/2025 to 09/30/2025",
+                "A12": "Comparison",
+                "B12": "Last Year",
+                "A15": "Key figures",
+                "B15": "Period",
+                "C15": "Comparison",
+                "D15": "Compared with",
+                "A16": "Revenue",
+                "B16": "50074",
+                "C16": "0",
+                "A17": "Cost of Revenue",
+                "B17": "0",
+                "C17": "0",
+                "A18": "Gross Profit",
+                "B18": "50074",
+                "C18": "0",
+                "A19": "Gross Margin",
+                "B19": "1",
+                "C19": "0",
+                "A20": "Expenses",
+                "B20": "7288.91",
+                "C20": "0",
+                "A21": "Net Profit",
+                "B21": "42785.09",
+                "C21": "0",
+                "A22": "Net Margin",
+                "B22": "0.8544372328953148",
+                "C22": "0",
+                "A23": "Bank and Cash",
+                "B23": "4190.93",
+                "C23": "0",
+                "A24": "Receivables",
+                "B24": "52074",
+                "C24": "0",
+                "A25": "Payables",
+                "B25": "622.27",
+                "C25": "0",
+                "A26": "Current Assets",
+                "B26": "54574",
+                "C26": "0",
+                "A27": "Current Liabilities",
+                "B27": "5122.27",
+                "C27": "0",
+                "A28": "Current Ratio",
+                "B28": "10.654260708631133",
+                "C28": "0",
+                "A31": "Month",
+                "B31": "From",
+                "C31": "To",
+                "D31": "In the period",
+                "E31": "Revenue",
+                "F31": "Expenses",
+                "G31": "Net Profit",
+                "A32": "46023",
+                "B32": "46023",
+                "C32": "46053",
+                "D32": "TRUE",
+                "E32": "0",
+                "F32": "833.33",
+                "G32": "-833.33",
+                "A33": "46054",
+                "B33": "46054",
+                "C33": "46081",
+                "D33": "TRUE",
+                "E33": "0",
+                "F33": "833.33",
+                "G33": "-833.33",
+                "A34": "46082",
+                "B34": "46082",
+                "C34": "46112",
+                "D34": "TRUE",
+                "E34": "0",
+                "F34": "833.33",
+                "G34": "-833.33",
+                "A35": "46113",
+                "B35": "46113",
+                "C35": "46142",
+                "D35": "TRUE",
+                "E35": "0",
+                "F35": "833.33",
+                "G35": "-833.33",
+                "A36": "46143",
+                "B36": "46143",
+                "C36": "46173",
+                "D36": "TRUE",
+                "E36": "0",
+                "F36": "833.33",
+                "G36": "-833.33",
+                "A37": "46174",
+                "B37": "46174",
+                "C37": "46203",
+                "D37": "TRUE",
+                "E37": "0",
+                "F37": "833.33",
+                "G37": "-833.33",
+                "A38": "46204",
+                "B38": "46204",
+                "C38": "46234",
+                "D38": "TRUE",
+                "E38": "0",
+                "F38": "833.33",
+                "G38": "-833.33",
+                "A39": "46235",
+                "B39": "46235",
+                "C39": "46265",
+                "D39": "TRUE",
+                "E39": "-28475",
+                "F39": "833.33",
+                "G39": "-29308.33",
+                "A40": "46266",
+                "B40": "46266",
+                "C40": "46295",
+                "D40": "TRUE",
+                "E40": "78549",
+                "F40": "622.27",
+                "G40": "77926.73",
+                "A41": "46296",
+                "B41": "46296",
+                "C41": "46295",
+                "D41": "FALSE",
+                "A42": "46327",
+                "B42": "46327",
+                "C42": "46295",
+                "D42": "FALSE",
+                "A43": "46357",
+                "B43": "46357",
+                "C43": "46295",
+                "D43": "FALSE"
             },
             "styles": {
                 "A1:A12": 2,
@@ -857,9 +607,6 @@
                 "A41": 1,
                 "B41": 2,
                 "C41": 2,
-                "E41": 5,
-                "F41": 5,
-                "G41": 5,
                 "A42": 1,
                 "B42": 2,
                 "C42": 2,
@@ -919,7 +666,7 @@
             "thousandsSeparator": ",",
             "decimalSeparator": ".",
             "dateFormat": "mm/dd/yyyy",
-            "timeFormat": "hh:mm:ss",
+            "timeFormat": "hh:mm:ss a",
             "formulaArgSeparator": ",",
             "weekStart": 7
         }
@@ -927,7 +674,6 @@
     "pivots": {},
     "pivotNextId": 1,
     "customTableStyles": {},
-    "odooVersion": 12,
     "globalFilters": [],
     "lists": {},
     "listNextId": 1,

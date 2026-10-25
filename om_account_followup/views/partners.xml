@@ -85,8 +85,7 @@
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_tree"/>
             <field name="arch" type="xml">
-                <!-- the name column of the contacts is complete_name on 18 -->
-                <field name="complete_name" position="after">
+                <field name="display_name" position="after">
                     <field name="payment_responsible_id" column_invisible="1"/>
                 </field>
             </field>

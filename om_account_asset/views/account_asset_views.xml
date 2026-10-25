@@ -153,7 +153,7 @@
                 <field name="date"/>
                 <field name="state"/>
                 <templates>
-                    <t t-name="kanban-box">
+                    <t t-name="card">
                         <div t-attf-class="oe_kanban_global_click">
                             <div class="row mb4">
                                 <div class="col-6">
@@ -220,7 +220,7 @@
                         help="Assets in closed state"/>
                 <field name="category_id" string="Asset Category"/>
                 <field name="partner_id" filter_domain="[('partner_id','child_of',self)]"/>
-                <group expand="0" string="Group By...">
+                <group>
                     <filter string="Date" name="month" domain="[]" context="{'group_by':'date'}"/>
                     <filter string="Asset Category" name="category" domain="[]" context="{'group_by':'category_id'}"/>
                 </group>
@@ -237,7 +237,7 @@
     </record>
 
     <menuitem id="menu_action_account_asset_asset_form"
-              parent="account.account_management_menu"
+              parent="account.account_account_menu"
               action="action_account_asset_asset_form"
               sequence="101"
               groups="account.group_account_manager"/>

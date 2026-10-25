@@ -203,9 +203,6 @@ class ResPartner(models.Model):
             partner.followup_level_due_id = values['level_due']
 
     def _search_followup_status(self, operator, value):
-        return self._followup_search(operator, value, self._followup_status_search)
-
-    def _followup_status_search(self, operator, value):
         if operator not in ('in', '='):
             return NotImplemented
         values = {value} if operator == '=' else set(value)
@@ -283,19 +280,6 @@ class ResPartner(models.Model):
             partner.payment_amount_overdue = amount_overdue
             partner.payment_earliest_due_date = worst_due_date
 
-    def _followup_search(self, operator, operand, search):
-        """ Odoo 18 gives the search methods the operator as written: bring '=', '!='
-        and 'not in' down to 'in' and negate the result, as the ORM of 19 does. """
-        negate = operator in ('!=', 'not in')
-        if operator in ('=', '!='):
-            operand = [operand]
-        if operator in ('=', '!=', 'not in'):
-            operator = 'in'
-        domain = search(operator, operand)
-        if domain is NotImplemented:
-            raise UserError(_('Operator %s is not supported for this search.', operator))
-        return ['!', *domain] if negate else domain
-
     def _followup_having_condition(self, expression, operator, value):
         """ SQL condition comparing the aggregate `expression` to `value`, or
         NotImplemented for operators the ORM can derive (e.g. 'not in'). """
@@ -352,13 +336,9 @@ class ResPartner(models.Model):
         return [('id', 'in', [x[0] for x in self.env.cr.fetchall()])]
 
     def _payment_overdue_search(self, operator, operand):
-        return self._followup_search(
-            operator, operand, lambda op, value: self._followup_amount_search(op, value, overdue_only=True))
+        return self._followup_amount_search(operator, operand, overdue_only=True)
 
     def _payment_earliest_date_search(self, operator, operand):
-        return self._followup_search(operator, operand, self._followup_earliest_date_search)
-
-    def _followup_earliest_date_search(self, operator, operand):
         having = self._followup_having_condition(
             SQL("MIN(COALESCE(l.date_maturity, l.date))"), operator, operand)
         if having is NotImplemented:
@@ -384,8 +364,7 @@ class ResPartner(models.Model):
         return domain
 
     def _payment_due_search(self, operator, operand):
-        return self._followup_search(
-            operator, operand, lambda op, value: self._followup_amount_search(op, value, overdue_only=False))
+        return self._followup_amount_search(operator, operand, overdue_only=False)
 
     # -------------------------------------------------------------------------
     # Open items

@@ -1,5 +1,5 @@
 {
-    "version": 22,
+    "version": "18.5.10",
     "sheets": [
         {
             "id": "69e38221-f858-57a5-9011-da276f24cf6e",
@@ -23,258 +23,90 @@
             },
             "merges": [],
             "cells": {
-                "A1": {
-                    "content": "=CONCATENATE(_t(\"Balance at \"),TEXT(Data!B2,\"mm/dd/yyyy\"),_t(\", compared with \"),TEXT(Data!B7,\"mm/dd/yyyy\"))"
-                },
-                "A8": {
-                    "content": "=_t(\"Balance Sheet\")"
-                },
-                "B8": {
-                    "content": "=TEXT(Data!$B$2,\"mm/dd/yyyy\")"
-                },
-                "C8": {
-                    "content": "=TEXT(Data!$B$7,\"mm/dd/yyyy\")"
-                },
-                "D8": {
-                    "content": "=_t(\"Change\")"
-                },
-                "A9": {
-                    "content": "=_t(\"Assets\")"
-                },
-                "A10": {
-                    "content": "=_t(\"Bank and Cash\")"
-                },
-                "B10": {
-                    "content": "=OM.ACCOUNT.BALANCE(\"asset_cash\",\"\",Data!$B$2)"
-                },
-                "C10": {
-                    "content": "=OM.ACCOUNT.BALANCE(\"asset_cash\",\"\",Data!$B$7)"
-                },
-                "D10": {
-                    "content": "=B10-C10"
-                },
-                "A11": {
-                    "content": "=_t(\"Receivables\")"
-                },
-                "B11": {
-                    "content": "=OM.ACCOUNT.BALANCE(\"asset_receivable\",\"\",Data!$B$2)"
-                },
-                "C11": {
-                    "content": "=OM.ACCOUNT.BALANCE(\"asset_receivable\",\"\",Data!$B$7)"
-                },
-                "D11": {
-                    "content": "=B11-C11"
-                },
-                "A12": {
-                    "content": "=_t(\"Current Assets\")"
-                },
-                "B12": {
-                    "content": "=OM.ACCOUNT.BALANCE(\"asset_current\",\"\",Data!$B$2)"
-                },
-                "C12": {
-                    "content": "=OM.ACCOUNT.BALANCE(\"asset_current\",\"\",Data!$B$7)"
-                },
-                "D12": {
-                    "content": "=B12-C12"
-                },
-                "A13": {
-                    "content": "=_t(\"Prepayments\")"
-                },
-                "B13": {
-                    "content": "=OM.ACCOUNT.BALANCE(\"asset_prepayments\",\"\",Data!$B$2)"
-                },
-                "C13": {
-                    "content": "=OM.ACCOUNT.BALANCE(\"asset_prepayments\",\"\",Data!$B$7)"
-                },
-                "D13": {
-                    "content": "=B13-C13"
-                },
-                "A14": {
-                    "content": "=_t(\"Total Current Assets\")"
-                },
-                "B14": {
-                    "content": "=B10+B11+B12+B13"
-                },
-                "C14": {
-                    "content": "=C10+C11+C12+C13"
-                },
-                "D14": {
-                    "content": "=B14-C14"
-                },
-                "A15": {
-                    "content": "=_t(\"Fixed Assets\")"
-                },
-                "B15": {
-                    "content": "=OM.ACCOUNT.BALANCE(\"asset_fixed\",\"\",Data!$B$2)"
-                },
-                "C15": {
-                    "content": "=OM.ACCOUNT.BALANCE(\"asset_fixed\",\"\",Data!$B$7)"
-                },
-                "D15": {
-                    "content": "=B15-C15"
-                },
-                "A16": {
-                    "content": "=_t(\"Non-current Assets\")"
-                },
-                "B16": {
-                    "content": "=OM.ACCOUNT.BALANCE(\"asset_non_current\",\"\",Data!$B$2)"
-                },
-                "C16": {
-                    "content": "=OM.ACCOUNT.BALANCE(\"asset_non_current\",\"\",Data!$B$7)"
-                },
-                "D16": {
-                    "content": "=B16-C16"
-                },
-                "A17": {
-                    "content": "=_t(\"Total Assets\")"
-                },
-                "B17": {
-                    "content": "=B14+B15+B16"
-                },
-                "C17": {
-                    "content": "=C14+C15+C16"
-                },
-                "D17": {
-                    "content": "=B17-C17"
-                },
-                "A18": {
-                    "content": "=_t(\"Liabilities\")"
-                },
-                "A19": {
-                    "content": "=_t(\"Payables\")"
-                },
-                "B19": {
-                    "content": "=-OM.ACCOUNT.BALANCE(\"liability_payable\",\"\",Data!$B$2)"
-                },
-                "C19": {
-                    "content": "=-OM.ACCOUNT.BALANCE(\"liability_payable\",\"\",Data!$B$7)"
-                },
-                "D19": {
-                    "content": "=B19-C19"
-                },
-                "A20": {
-                    "content": "=_t(\"Credit Cards\")"
-                },
-                "B20": {
-                    "content": "=-OM.ACCOUNT.BALANCE(\"liability_credit_card\",\"\",Data!$B$2)"
-                },
-                "C20": {
-                    "content": "=-OM.ACCOUNT.BALANCE(\"liability_credit_card\",\"\",Data!$B$7)"
-                },
-                "D20": {
-                    "content": "=B20-C20"
-                },
-                "A21": {
-                    "content": "=_t(\"Current Liabilities\")"
-                },
-                "B21": {
-                    "content": "=-OM.ACCOUNT.BALANCE(\"liability_current\",\"\",Data!$B$2)"
-                },
-                "C21": {
-                    "content": "=-OM.ACCOUNT.BALANCE(\"liability_current\",\"\",Data!$B$7)"
-                },
-                "D21": {
-                    "content": "=B21-C21"
-                },
-                "A22": {
-                    "content": "=_t(\"Total Current Liabilities\")"
-                },
-                "B22": {
-                    "content": "=B19+B20+B21"
-                },
-                "C22": {
-                    "content": "=C19+C20+C21"
-                },
-                "D22": {
-                    "content": "=B22-C22"
-                },
-                "A23": {
-                    "content": "=_t(\"Non-current Liabilities\")"
-                },
-                "B23": {
-                    "content": "=-OM.ACCOUNT.BALANCE(\"liability_non_current\",\"\",Data!$B$2)"
-                },
-                "C23": {
-                    "content": "=-OM.ACCOUNT.BALANCE(\"liability_non_current\",\"\",Data!$B$7)"
-                },
-                "D23": {
-                    "content": "=B23-C23"
-                },
-                "A24": {
-                    "content": "=_t(\"Total Liabilities\")"
-                },
-                "B24": {
-                    "content": "=B22+B23"
-                },
-                "C24": {
-                    "content": "=C22+C23"
-                },
-                "D24": {
-                    "content": "=B24-C24"
-                },
-                "A25": {
-                    "content": "=_t(\"Equity\")"
-                },
-                "A26": {
-                    "content": "=_t(\"Capital and Reserves\")"
-                },
-                "B26": {
-                    "content": "=-OM.ACCOUNT.BALANCE(\"equity,equity_unaffected\",\"\",Data!$B$2)"
-                },
-                "C26": {
-                    "content": "=-OM.ACCOUNT.BALANCE(\"equity,equity_unaffected\",\"\",Data!$B$7)"
-                },
-                "D26": {
-                    "content": "=B26-C26"
-                },
-                "A27": {
-                    "content": "=_t(\"Current Year Earnings\")"
-                },
-                "B27": {
-                    "content": "=-OM.ACCOUNT.BALANCE(\"income,income_other,expense_direct_cost,expense,expense_depreciation,expense_other\",Data!$B$9,Data!$B$2)"
-                },
-                "C27": {
-                    "content": "=-OM.ACCOUNT.BALANCE(\"income,income_other,expense_direct_cost,expense,expense_depreciation,expense_other\",Data!$B$10,Data!$B$7)"
-                },
-                "D27": {
-                    "content": "=B27-C27"
-                },
-                "A28": {
-                    "content": "=_t(\"Previous Years Unallocated Earnings\")"
-                },
-                "B28": {
-                    "content": "=ROUND(B17-B24-B26-B27,6)+0"
-                },
-                "C28": {
-                    "content": "=ROUND(C17-C24-C26-C27,6)+0"
-                },
-                "D28": {
-                    "content": "=B28-C28"
-                },
-                "A29": {
-                    "content": "=_t(\"Total Equity\")"
-                },
-                "B29": {
-                    "content": "=B26+B27+B28"
-                },
-                "C29": {
-                    "content": "=C26+C27+C28"
-                },
-                "D29": {
-                    "content": "=B29-C29"
-                },
-                "A30": {
-                    "content": "=_t(\"Total Liabilities and Equity\")"
-                },
-                "B30": {
-                    "content": "=B24+B29"
-                },
-                "C30": {
-                    "content": "=C24+C29"
-                },
-                "D30": {
-                    "content": "=B30-C30"
-                }
+                "A1": "=CONCATENATE(_t(\"Balance at \"),TEXT(Data!B2,\"mm/dd/yyyy\"),_t(\", compared with \"),TEXT(Data!B7,\"mm/dd/yyyy\"))",
+                "A8": "=_t(\"Balance Sheet\")",
+                "B8": "=TEXT(Data!$B$2,\"mm/dd/yyyy\")",
+                "C8": "=TEXT(Data!$B$7,\"mm/dd/yyyy\")",
+                "D8": "=_t(\"Change\")",
+                "A9": "=_t(\"Assets\")",
+                "A10": "=_t(\"Bank and Cash\")",
+                "B10": "=OM.ACCOUNT.BALANCE(\"asset_cash\",\"\",Data!$B$2)",
+                "C10": "=OM.ACCOUNT.BALANCE(\"asset_cash\",\"\",Data!$B$7)",
+                "D10": "=B10-C10",
+                "A11": "=_t(\"Receivables\")",
+                "B11": "=OM.ACCOUNT.BALANCE(\"asset_receivable\",\"\",Data!$B$2)",
+                "C11": "=OM.ACCOUNT.BALANCE(\"asset_receivable\",\"\",Data!$B$7)",
+                "D11": "=B11-C11",
+                "A12": "=_t(\"Current Assets\")",
+                "B12": "=OM.ACCOUNT.BALANCE(\"asset_current\",\"\",Data!$B$2)",
+                "C12": "=OM.ACCOUNT.BALANCE(\"asset_current\",\"\",Data!$B$7)",
+                "D12": "=B12-C12",
+                "A13": "=_t(\"Prepayments\")",
+                "B13": "=OM.ACCOUNT.BALANCE(\"asset_prepayments\",\"\",Data!$B$2)",
+                "C13": "=OM.ACCOUNT.BALANCE(\"asset_prepayments\",\"\",Data!$B$7)",
+                "D13": "=B13-C13",
+                "A14": "=_t(\"Total Current Assets\")",
+                "B14": "=B10+B11+B12+B13",
+                "C14": "=C10+C11+C12+C13",
+                "D14": "=B14-C14",
+                "A15": "=_t(\"Fixed Assets\")",
+                "B15": "=OM.ACCOUNT.BALANCE(\"asset_fixed\",\"\",Data!$B$2)",
+                "C15": "=OM.ACCOUNT.BALANCE(\"asset_fixed\",\"\",Data!$B$7)",
+                "D15": "=B15-C15",
+                "A16": "=_t(\"Non-current Assets\")",
+                "B16": "=OM.ACCOUNT.BALANCE(\"asset_non_current\",\"\",Data!$B$2)",
+                "C16": "=OM.ACCOUNT.BALANCE(\"asset_non_current\",\"\",Data!$B$7)",
+                "D16": "=B16-C16",
+                "A17": "=_t(\"Total Assets\")",
+                "B17": "=B14+B15+B16",
+                "C17": "=C14+C15+C16",
+                "D17": "=B17-C17",
+                "A18": "=_t(\"Liabilities\")",
+                "A19": "=_t(\"Payables\")",
+                "B19": "=-OM.ACCOUNT.BALANCE(\"liability_payable\",\"\",Data!$B$2)",
+                "C19": "=-OM.ACCOUNT.BALANCE(\"liability_payable\",\"\",Data!$B$7)",
+                "D19": "=B19-C19",
+                "A20": "=_t(\"Credit Cards\")",
+                "B20": "=-OM.ACCOUNT.BALANCE(\"liability_credit_card\",\"\",Data!$B$2)",
+                "C20": "=-OM.ACCOUNT.BALANCE(\"liability_credit_card\",\"\",Data!$B$7)",
+                "D20": "=B20-C20",
+                "A21": "=_t(\"Current Liabilities\")",
+                "B21": "=-OM.ACCOUNT.BALANCE(\"liability_current\",\"\",Data!$B$2)",
+                "C21": "=-OM.ACCOUNT.BALANCE(\"liability_current\",\"\",Data!$B$7)",
+                "D21": "=B21-C21",
+                "A22": "=_t(\"Total Current Liabilities\")",
+                "B22": "=B19+B20+B21",
+                "C22": "=C19+C20+C21",
+                "D22": "=B22-C22",
+                "A23": "=_t(\"Non-current Liabilities\")",
+                "B23": "=-OM.ACCOUNT.BALANCE(\"liability_non_current\",\"\",Data!$B$2)",
+                "C23": "=-OM.ACCOUNT.BALANCE(\"liability_non_current\",\"\",Data!$B$7)",
+                "D23": "=B23-C23",
+                "A24": "=_t(\"Total Liabilities\")",
+                "B24": "=B22+B23",
+                "C24": "=C22+C23",
+                "D24": "=B24-C24",
+                "A25": "=_t(\"Equity\")",
+                "A26": "=_t(\"Capital and Reserves\")",
+                "B26": "=-OM.ACCOUNT.BALANCE(\"equity,equity_unaffected\",\"\",Data!$B$2)",
+                "C26": "=-OM.ACCOUNT.BALANCE(\"equity,equity_unaffected\",\"\",Data!$B$7)",
+                "D26": "=B26-C26",
+                "A27": "=_t(\"Current Year Earnings\")",
+                "B27": "=-OM.ACCOUNT.BALANCE(\"income,income_other,expense_direct_cost,expense,expense_depreciation,expense_other\",Data!$B$9,Data!$B$2)",
+                "C27": "=-OM.ACCOUNT.BALANCE(\"income,income_other,expense_direct_cost,expense,expense_depreciation,expense_other\",Data!$B$10,Data!$B$7)",
+                "D27": "=B27-C27",
+                "A28": "=_t(\"Previous Years Unallocated Earnings\")",
+                "B28": "=ROUND(B17-B24-B26-B27,6)+0",
+                "C28": "=ROUND(C17-C24-C26-C27,6)+0",
+                "D28": "=B28-C28",
+                "A29": "=_t(\"Total Equity\")",
+                "B29": "=B26+B27+B28",
+                "C29": "=C26+C27+C28",
+                "D29": "=B29-C29",
+                "A30": "=_t(\"Total Liabilities and Equity\")",
+                "B30": "=B24+B29",
+                "C30": "=C24+C29",
+                "D30": "=B30-C30"
             },
             "styles": {
                 "A1": 2,
@@ -455,8 +287,12 @@
             "figures": [
                 {
                     "id": "482da37c-1ba0-5c18-9835-d755ebbfb00b",
-                    "x": 0,
-                    "y": 30,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 0,
+                        "y": 30
+                    },
                     "width": 190,
                     "height": 110,
                     "tag": "chart",
@@ -473,14 +309,21 @@
                         "baselineColorUp": "#00A04A",
                         "baselineMode": "percentage",
                         "humanize": true,
+                        "chartId": "482da37c-1ba0-5c18-9835-d755ebbfb00b",
                         "baseline": "Data!G16",
-                        "baselineDescr": "vs comparison"
+                        "baselineDescr": {
+                            "text": "vs comparison"
+                        }
                     }
                 },
                 {
                     "id": "efb0397c-e3b7-5cb0-a9e0-57a5250f5b3f",
-                    "x": 200,
-                    "y": 30,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 200,
+                        "y": 30
+                    },
                     "width": 190,
                     "height": 110,
                     "tag": "chart",
@@ -497,14 +340,21 @@
                         "baselineColorUp": "#00A04A",
                         "baselineMode": "percentage",
                         "humanize": true,
+                        "chartId": "efb0397c-e3b7-5cb0-a9e0-57a5250f5b3f",
                         "baseline": "Data!G17",
-                        "baselineDescr": "vs comparison"
+                        "baselineDescr": {
+                            "text": "vs comparison"
+                        }
                     }
                 },
                 {
                     "id": "37298280-179e-5f89-81fe-12026aadd04e",
-                    "x": 400,
-                    "y": 30,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 400,
+                        "y": 30
+                    },
                     "width": 190,
                     "height": 110,
                     "tag": "chart",
@@ -521,14 +371,21 @@
                         "baselineColorUp": "#00A04A",
                         "baselineMode": "percentage",
                         "humanize": true,
+                        "chartId": "37298280-179e-5f89-81fe-12026aadd04e",
                         "baseline": "Data!G18",
-                        "baselineDescr": "vs comparison"
+                        "baselineDescr": {
+                            "text": "vs comparison"
+                        }
                     }
                 },
                 {
                     "id": "bd319a3f-42a9-56fa-a89d-02307bbd0169",
-                    "x": 600,
-                    "y": 30,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 600,
+                        "y": 30
+                    },
                     "width": 190,
                     "height": 110,
                     "tag": "chart",
@@ -544,13 +401,18 @@
                         "baselineColorDown": "#DC6965",
                         "baselineColorUp": "#00A04A",
                         "baselineMode": "percentage",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "bd319a3f-42a9-56fa-a89d-02307bbd0169"
                     }
                 },
                 {
                     "id": "334660b1-0e25-5f0b-b39b-f1a0d163c048",
-                    "x": 800,
-                    "y": 30,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 800,
+                        "y": 30
+                    },
                     "width": 190,
                     "height": 110,
                     "tag": "chart",
@@ -566,13 +428,18 @@
                         "baselineColorDown": "#DC6965",
                         "baselineColorUp": "#00A04A",
                         "baselineMode": "percentage",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "334660b1-0e25-5f0b-b39b-f1a0d163c048"
                     }
                 },
                 {
                     "id": "de956c29-8fcb-5e0e-8b8f-917079e50b08",
-                    "x": 1000,
-                    "y": 30,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 1000,
+                        "y": 30
+                    },
                     "width": 190,
                     "height": 110,
                     "tag": "chart",
@@ -588,13 +455,18 @@
                         "baselineColorDown": "#DC6965",
                         "baselineColorUp": "#00A04A",
                         "baselineMode": "percentage",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "de956c29-8fcb-5e0e-8b8f-917079e50b08"
                     }
                 },
                 {
                     "id": "2db18849-e7c3-5937-8896-bf1ce8ebf8f1",
-                    "x": 720,
-                    "y": 184,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 720,
+                        "y": 184
+                    },
                     "width": 440,
                     "height": 320,
                     "tag": "chart",
@@ -619,6 +491,7 @@
                             }
                         ],
                         "dataSetsHaveTitle": false,
+                        "chartId": "2db18849-e7c3-5937-8896-bf1ce8ebf8f1",
                         "stacked": false,
                         "aggregated": false
                     }
@@ -656,153 +529,55 @@
             },
             "merges": [],
             "cells": {
-                "G1": {
-                    "content": "=_t(\"Same Period Last Year\")"
-                },
-                "G2": {
-                    "content": "=_t(\"Previous Period\")"
-                },
-                "A1": {
-                    "content": "=_t(\"Period\")"
-                },
-                "B1": {
-                    "content": "=ODOO.FILTER.VALUE(\"Period\")"
-                },
-                "A2": {
-                    "content": "=_t(\"End\")"
-                },
-                "B2": {
-                    "content": "=IF(ISNUMBER(C1),C1,TODAY())"
-                },
-                "A3": {
-                    "content": "=_t(\"Start\")"
-                },
-                "B3": {
-                    "content": "=IF(ISNUMBER(B1),B1,ODOO.FISCALYEAR.START(B2))"
-                },
-                "A4": {
-                    "content": "=_t(\"Compare with\")"
-                },
-                "B4": {
-                    "content": "=ODOO.FILTER.VALUE(\"Compare With\")"
-                },
-                "A5": {
-                    "content": "=_t(\"Previous period\")"
-                },
-                "B5": {
-                    "content": "=B4=G2"
-                },
-                "A6": {
-                    "content": "=_t(\"Months in the period\")"
-                },
-                "B6": {
-                    "content": "=IF(AND(DAY(B3)=1,B2=EOMONTH(B2,0)),(YEAR(B2)-YEAR(B3))*12+MONTH(B2)-MONTH(B3)+1,0)"
-                },
-                "A7": {
-                    "content": "=_t(\"Comparison end\")"
-                },
-                "B7": {
-                    "content": "=IF(B5,B3-1,EDATE(B2,-12))"
-                },
-                "A8": {
-                    "content": "=_t(\"Comparison start\")"
-                },
-                "B8": {
-                    "content": "=IF(B5,IF(B6,EDATE(B3,-B6),B3-(B2-B3)-1),EDATE(B3,-12))"
-                },
-                "A9": {
-                    "content": "=_t(\"Fiscal year start\")"
-                },
-                "B9": {
-                    "content": "=ODOO.FISCALYEAR.START(B2)"
-                },
-                "A10": {
-                    "content": "=_t(\"Comparison fiscal year start\")"
-                },
-                "B10": {
-                    "content": "=ODOO.FISCALYEAR.START(B7)"
-                },
-                "A11": {
-                    "content": "=_t(\"Description\")"
-                },
-                "B11": {
-                    "content": "=CONCATENATE(TEXT(B3,\"mm/dd/yyyy\"),_t(\" to \"),TEXT(B2,\"mm/dd/yyyy\"),_t(\", compared with \"),TEXT(B8,\"mm/dd/yyyy\"),_t(\" to \"),TEXT(B7,\"mm/dd/yyyy\"))"
-                },
-                "A12": {
-                    "content": "=_t(\"Comparison\")"
-                },
-                "B12": {
-                    "content": "=IF(B5,_t(\"Previous Period\"),_t(\"Last Year\"))"
-                },
-                "A15": {
-                    "content": "=_t(\"Ratios\")"
-                },
-                "A16": {
-                    "content": "=_t(\"Current Ratio\")"
-                },
-                "B16": {
-                    "content": "=IFERROR(Dashboard!B14/Dashboard!B22,0)"
-                },
-                "A17": {
-                    "content": "=_t(\"Quick Ratio\")"
-                },
-                "B17": {
-                    "content": "=IFERROR((Dashboard!B10+Dashboard!B11)/Dashboard!B22,0)"
-                },
-                "A18": {
-                    "content": "=_t(\"Debt to Equity\")"
-                },
-                "B18": {
-                    "content": "=IFERROR(Dashboard!B24/Dashboard!B29,0)"
-                },
-                "D15": {
-                    "content": "=_t(\"Structure\")"
-                },
-                "E15": {
-                    "content": "=_t(\"Period\")"
-                },
-                "F15": {
-                    "content": "=_t(\"Comparison\")"
-                },
-                "G15": {
-                    "content": "=_t(\"Compared with\")"
-                },
-                "D16": {
-                    "content": "=Dashboard!A17"
-                },
-                "E16": {
-                    "content": "=Dashboard!B17"
-                },
-                "F16": {
-                    "content": "=Dashboard!C17"
-                },
-                "G16": {
-                    "content": "=IF(F16=0,\"\",F16)"
-                },
-                "D17": {
-                    "content": "=Dashboard!A24"
-                },
-                "E17": {
-                    "content": "=Dashboard!B24"
-                },
-                "F17": {
-                    "content": "=Dashboard!C24"
-                },
-                "G17": {
-                    "content": "=IF(F17=0,\"\",F17)"
-                },
-                "D18": {
-                    "content": "=Dashboard!A29"
-                },
-                "E18": {
-                    "content": "=Dashboard!B29"
-                },
-                "F18": {
-                    "content": "=Dashboard!C29"
-                },
-                "G18": {
-                    "content": "=IF(F18=0,\"\",F18)"
-                }
+                "G1": "=_t(\"Same Period Last Year\")",
+                "G2": "=_t(\"Previous Period\")",
+                "A1": "=_t(\"Period\")",
+                "B1": "=ODOO.FILTER.VALUE(\"Period\")",
+                "A2": "=_t(\"End\")",
+                "B2": "=IF(ISNUMBER(C1),C1,TODAY())",
+                "A3": "=_t(\"Start\")",
+                "B3": "=IF(ISNUMBER(B1),B1,ODOO.FISCALYEAR.START(B2))",
+                "A4": "=_t(\"Compare with\")",
+                "B4": "=ODOO.FILTER.VALUE(\"Compare With\")",
+                "A5": "=_t(\"Previous period\")",
+                "B5": "=B4=G2",
+                "A6": "=_t(\"Months in the period\")",
+                "B6": "=IF(AND(DAY(B3)=1,B2=EOMONTH(B2,0)),(YEAR(B2)-YEAR(B3))*12+MONTH(B2)-MONTH(B3)+1,0)",
+                "A7": "=_t(\"Comparison end\")",
+                "B7": "=IF(B5,B3-1,EDATE(B2,-12))",
+                "A8": "=_t(\"Comparison start\")",
+                "B8": "=IF(B5,IF(B6,EDATE(B3,-B6),B3-(B2-B3)-1),EDATE(B3,-12))",
+                "A9": "=_t(\"Fiscal year start\")",
+                "B9": "=ODOO.FISCALYEAR.START(B2)",
+                "A10": "=_t(\"Comparison fiscal year start\")",
+                "B10": "=ODOO.FISCALYEAR.START(B7)",
+                "A11": "=_t(\"Description\")",
+                "B11": "=CONCATENATE(TEXT(B3,\"mm/dd/yyyy\"),_t(\" to \"),TEXT(B2,\"mm/dd/yyyy\"),_t(\", compared with \"),TEXT(B8,\"mm/dd/yyyy\"),_t(\" to \"),TEXT(B7,\"mm/dd/yyyy\"))",
+                "A12": "=_t(\"Comparison\")",
+                "B12": "=IF(B5,_t(\"Previous Period\"),_t(\"Last Year\"))",
+                "A15": "=_t(\"Ratios\")",
+                "A16": "=_t(\"Current Ratio\")",
+                "B16": "=IFERROR(Dashboard!B14/Dashboard!B22,0)",
+                "A17": "=_t(\"Quick Ratio\")",
+                "B17": "=IFERROR((Dashboard!B10+Dashboard!B11)/Dashboard!B22,0)",
+                "A18": "=_t(\"Debt to Equity\")",
+                "B18": "=IFERROR(Dashboard!B24/Dashboard!B29,0)",
+                "D15": "=_t(\"Structure\")",
+                "E15": "=_t(\"Period\")",
+                "F15": "=_t(\"Comparison\")",
+                "G15": "=_t(\"Compared with\")",
+                "D16": "=Dashboard!A17",
+                "E16": "=Dashboard!B17",
+                "F16": "=Dashboard!C17",
+                "G16": "=IF(F16=0,\"\",F16)",
+                "D17": "=Dashboard!A24",
+                "E17": "=Dashboard!B24",
+                "F17": "=Dashboard!C24",
+                "G17": "=IF(F17=0,\"\",F17)",
+                "D18": "=Dashboard!A29",
+                "E18": "=Dashboard!B29",
+                "F18": "=Dashboard!C29",
+                "G18": "=IF(F18=0,\"\",F18)"
             },
             "styles": {
                 "G1": 1,
@@ -925,19 +700,24 @@
             "id": "6810fc21-b42d-59a0-81a8-a98d48d087c6",
             "type": "date",
             "label": "Period",
-            "defaultValue": "year_to_date",
-            "rangeType": "relative"
+            "defaultValue": "year_to_date"
         },
         {
             "id": "b517e2b5-21b1-5f42-9fbc-9c23501afb38",
             "type": "text",
             "label": "Compare With",
-            "defaultValue": "Same Period Last Year",
-            "rangeOfAllowedValues": "Data!G1:G2"
+            "rangesOfAllowedValues": [
+                "Data!G1:G2"
+            ],
+            "defaultValue": {
+                "operator": "in",
+                "strings": [
+                    "Same Period Last Year"
+                ]
+            }
         }
     ],
     "lists": {},
     "listNextId": 1,
-    "chartOdooMenusReferences": {},
-    "odooVersion": 12
+    "chartOdooMenusReferences": {}
 }

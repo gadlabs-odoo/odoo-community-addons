@@ -1,9 +1,9 @@
 =========================
-Odoo 18 Budgets Dashboard
+Odoo 19 Budgets Dashboard
 =========================
 
-This module adds the Budgets dashboard to the Finance section of the Dashboards app of Odoo 18
-Community Edition, next to the accounting dashboards of Odoo 18 Accounting Dashboards. It is installed
+This module adds the Budgets dashboard to the Finance section of the Dashboards app of Odoo 19
+Community Edition, next to the accounting dashboards of Odoo 19 Accounting Dashboards. It is installed
 automatically when om_account_budget and om_spreadsheet_account are installed.
 
 Features
@@ -13,7 +13,7 @@ Features
   amounts.
 * Gauges of the share of the planned expenses spent and of the planned revenues earned.
 * The planned, theoretical and actual amounts by budgetary position: the expenses and the revenues are
-  told apart by the sign of their planned amount, as Odoo 18 budgets plan them.
+  told apart by the sign of their planned amount, as Odoo 19 budgets plan them.
 * Period and Budget filters.
 
 Installation

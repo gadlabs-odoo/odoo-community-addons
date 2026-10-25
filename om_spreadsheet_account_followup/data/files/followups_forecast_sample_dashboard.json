@@ -1,5 +1,5 @@
 {
-    "version": 22,
+    "version": "18.5.10",
     "sheets": [
         {
             "id": "c2dfc55f-352e-5f25-9a27-a4ed721348ca",
@@ -32,66 +32,39 @@
             },
             "merges": [],
             "cells": {
-                "A21": {
-                    "content": "Cash Forecast Items"
-                },
-                "A22": {
-                    "content": "Expected On"
-                },
-                "B22": {
-                    "content": "Description"
-                },
-                "C22": {
-                    "content": "Type"
-                },
-                "D22": {
-                    "content": "Amount"
-                },
-                "E22": {
-                    "content": "Recurrence"
-                },
-                "F22": {
-                    "content": "Until"
-                },
-                "G22": {
-                    "content": "Partner"
-                },
-                "A23": {
-                    "content": "46300"
-                },
-                "B23": {
-                    "content": "Office rent"
-                },
-                "C23": {
-                    "content": "Payment"
-                },
-                "D23": {
-                    "content": "2400"
-                },
-                "E23": {
-                    "content": "Every Month"
-                },
-                "A24": {
-                    "content": "46323"
-                },
-                "B24": {
-                    "content": "Salaries"
-                },
-                "C24": {
-                    "content": "Payment"
-                },
-                "D24": {
-                    "content": "18000"
-                },
-                "E24": {
-                    "content": "Every Month"
-                },
-                "A39": {
-                    "content": "Balance by Follow-up Level"
-                },
-                "A40": {
-                    "content": "Total"
-                }
+                "A21": "Cash Forecast Items",
+                "A22": "Expected On",
+                "B22": "Description",
+                "C22": "Type",
+                "D22": "Amount",
+                "E22": "Recurrence",
+                "F22": "Until",
+                "G22": "Partner",
+                "A23": "46295",
+                "B23": "Office rent",
+                "C23": "Payment",
+                "D23": "2500",
+                "E23": "Every Month",
+                "G23": "Acme Corporation",
+                "A24": "46295",
+                "B24": "Salaries",
+                "C24": "Payment",
+                "D24": "18000",
+                "E24": "Every Month",
+                "G24": "Acme Corporation",
+                "A25": "46295",
+                "B25": "Service contract",
+                "C25": "Receipt",
+                "D25": "6000",
+                "E25": "Every Month",
+                "G25": "Acme Corporation",
+                "A39": "Balance by Follow-up Level",
+                "A40": "Balance by Follow-up Level",
+                "B40": "Amount Due",
+                "A41": "None",
+                "B41": "52074",
+                "A42": "Total",
+                "B42": "52074"
             },
             "styles": {
                 "A39:B39": 1,
@@ -103,7 +76,13 @@
                 "D23": 4,
                 "A24": 1,
                 "B24": 3,
-                "D24": 4
+                "D24": 4,
+                "A25": 1,
+                "B25": 3,
+                "D25": 4,
+                "A41": 5,
+                "B41": 6,
+                "B42": 6
             },
             "borders": {},
             "conditionalFormats": [],
@@ -111,8 +90,12 @@
             "figures": [
                 {
                     "id": "e6d6b825-4441-5961-ab5e-0a6e4c38093a",
-                    "x": 0,
-                    "y": 0,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -128,13 +111,18 @@
                         "type": "scorecard",
                         "background": "",
                         "keyValue": "Data!B1",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "e6d6b825-4441-5961-ab5e-0a6e4c38093a"
                     }
                 },
                 {
                     "id": "37d1c78f-acdb-5490-9a2f-81cc1e1e14cd",
-                    "x": 250,
-                    "y": 0,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 250,
+                        "y": 0
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -150,13 +138,18 @@
                         "type": "scorecard",
                         "background": "",
                         "keyValue": "Data!B2",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "37d1c78f-acdb-5490-9a2f-81cc1e1e14cd"
                     }
                 },
                 {
                     "id": "5ea04761-08bd-59ea-917f-c01c6db365aa",
-                    "x": 500,
-                    "y": 0,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 500,
+                        "y": 0
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -172,13 +165,18 @@
                         "type": "scorecard",
                         "background": "",
                         "keyValue": "Data!B3",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "5ea04761-08bd-59ea-917f-c01c6db365aa"
                     }
                 },
                 {
                     "id": "4a368284-76d6-5ac0-985f-57c711a335ba",
-                    "x": 750,
-                    "y": 0,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 750,
+                        "y": 0
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -194,13 +192,18 @@
                         "type": "scorecard",
                         "background": "",
                         "keyValue": "Data!B4",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "4a368284-76d6-5ac0-985f-57c711a335ba"
                     }
                 },
                 {
                     "id": "c5fd3595-6565-5d41-b08d-51ab9c866c96",
-                    "x": 0,
-                    "y": 120,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 0,
+                        "y": 120
+                    },
                     "width": 590,
                     "height": 320,
                     "tag": "chart",
@@ -225,33 +228,51 @@
                             "bold": true
                         },
                         "stacked": false,
-                        "aggregated": false
+                        "aggregated": false,
+                        "humanize": true,
+                        "chartId": "c5fd3595-6565-5d41-b08d-51ab9c866c96"
                     }
                 },
                 {
                     "id": "57c00682-0d30-56de-a25b-09656e5f570b",
-                    "x": 600,
-                    "y": 120,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 600,
+                        "y": 120
+                    },
                     "width": 360,
                     "height": 320,
-                    "tag": "chart",
+                    "tag": "carousel",
                     "data": {
-                        "type": "pie",
+                        "chartDefinitions": {
+                            "f8e01b59-5d32-5184-aae6-d823ba500eee": {
+                                "type": "pie",
+                                "title": {},
+                                "legendPosition": "top",
+                                "humanize": true,
+                                "labelRange": "Data!U1:U1",
+                                "dataSets": [
+                                    {
+                                        "dataRange": "Data!V1:V1"
+                                    }
+                                ],
+                                "dataSetsHaveTitle": false
+                            }
+                        },
+                        "items": [
+                            {
+                                "type": "chart",
+                                "chartId": "f8e01b59-5d32-5184-aae6-d823ba500eee"
+                            }
+                        ],
                         "title": {
                             "text": "By Follow-up Level",
                             "fontSize": 16,
                             "bold": true,
                             "color": "#01666B"
                         },
-                        "legendPosition": "top",
-                        "humanize": true,
-                        "labelRange": "Data!U1:U1",
-                        "dataSets": [
-                            {
-                                "dataRange": "Data!V1:V1"
-                            }
-                        ],
-                        "dataSetsHaveTitle": false
+                        "fieldMatching": {}
                     }
                 }
             ],
@@ -279,72 +300,28 @@
             },
             "merges": [],
             "cells": {
-                "A1": {
-                    "content": "Overdue receivables"
-                },
-                "B1": {
-                    "content": "31750"
-                },
-                "D1": {
-                    "content": "Due Month"
-                },
-                "E1": {
-                    "content": "Receipts"
-                },
-                "F1": {
-                    "content": "Payments"
-                },
-                "A2": {
-                    "content": "Overdue payables"
-                },
-                "D2": {
-                    "content": "46296"
-                },
-                "E2": {
-                    "content": "-63500"
-                },
-                "F2": {
-                    "content": "-30"
-                },
-                "A3": {
-                    "content": "Receipts expected in 6 months"
-                },
-                "B3": {
-                    "content": "-31750"
-                },
-                "D3": {
-                    "content": "46327"
-                },
-                "E3": {
-                    "content": "31750"
-                },
-                "F3": {
-                    "content": "30"
-                },
-                "A4": {
-                    "content": "Payments expected in 6 months"
-                },
-                "B4": {
-                    "content": "0"
-                },
-                "D4": {
-                    "content": "46357"
-                },
-                "A5": {
-                    "content": "First month"
-                },
-                "B5": {
-                    "content": "46296"
-                },
-                "D5": {
-                    "content": "46388"
-                },
-                "D6": {
-                    "content": "46419"
-                },
-                "D7": {
-                    "content": "46447"
-                }
+                "A1": "Overdue receivables",
+                "B1": "31750",
+                "D1": "Due Month",
+                "E1": "Receipts",
+                "F1": "Payments",
+                "A2": "Overdue payables",
+                "D2": "46266",
+                "E2": "-11426",
+                "F2": "592.27",
+                "A3": "Receipts expected in 6 months",
+                "B3": "20324",
+                "D3": "46296",
+                "E3": "31750",
+                "F3": "30",
+                "A4": "Payments expected in 6 months",
+                "B4": "622.27",
+                "D4": "46327",
+                "A5": "First month",
+                "B5": "46266",
+                "D5": "46357",
+                "D6": "46388",
+                "D7": "46419"
             },
             "styles": {
                 "D1": 1,
@@ -403,7 +380,9 @@
         "1": "mm/dd/yyyy",
         "2": "mmm yyyy",
         "3": "@",
-        "4": "[$$]#,##0.00"
+        "4": "[$$]#,##0.00",
+        "5": "@* ",
+        "6": "#,##0.00"
     },
     "borders": {},
     "revisionId": "START_REVISION",
@@ -415,7 +394,7 @@
             "thousandsSeparator": ",",
             "decimalSeparator": ".",
             "dateFormat": "mm/dd/yyyy",
-            "timeFormat": "hh:mm:ss",
+            "timeFormat": "hh:mm:ss a",
             "formulaArgSeparator": ",",
             "weekStart": 7
         }
@@ -423,7 +402,6 @@
     "pivots": {},
     "pivotNextId": 1,
     "customTableStyles": {},
-    "odooVersion": 12,
     "globalFilters": [],
     "lists": {},
     "listNextId": 1,

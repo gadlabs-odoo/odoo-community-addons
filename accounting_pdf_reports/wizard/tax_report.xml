@@ -42,7 +42,7 @@
               name="Tax Report"
               sequence="10"
               action="action_account_tax_report"
-              parent="menu_taxes_and_fiscal"
+              parent="account.account_reports_taxes_and_fiscal_menu"
               groups="account.group_account_readonly,account.group_account_manager"/>
 
 </odoo>

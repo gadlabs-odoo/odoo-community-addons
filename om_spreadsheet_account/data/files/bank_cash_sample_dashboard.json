@@ -1,5 +1,5 @@
 {
-    "version": 22,
+    "version": "18.5.10",
     "sheets": [
         {
             "id": "b72461bf-e802-5cb9-b74f-856eceb7dcdf",
@@ -29,63 +29,33 @@
             },
             "merges": [],
             "cells": {
-                "A22": {
-                    "content": "Balance by Account"
-                },
-                "D22": {
-                    "content": "To Reconcile by Journal"
-                },
-                "A23": {
-                    "content": "101401 Bank"
-                },
-                "B23": {
-                    "content": "12444.87"
-                },
-                "D23": {
-                    "content": "(#3) Transactions to Reconcile"
-                },
-                "E23": {
-                    "content": "Total"
-                },
-                "A24": {
-                    "content": "Total"
-                },
-                "B24": {
-                    "content": "12444.87"
-                },
-                "E24": {
-                    "content": "Count"
-                },
-                "F24": {
-                    "content": "Amount"
-                },
-                "D25": {
-                    "content": "Bank"
-                },
-                "E25": {
-                    "content": "8"
-                },
-                "F25": {
-                    "content": "9944.87"
-                },
-                "D26": {
-                    "content": "Total"
-                },
-                "E26": {
-                    "content": "8"
-                },
-                "F26": {
-                    "content": "9944.87"
-                }
+                "A22": "Balance by Account",
+                "D22": "To Reconcile by Journal",
+                "A23": "Balance by Account",
+                "B23": "Balance",
+                "D23": "Transactions to Reconcile",
+                "E23": "Total",
+                "A24": "101401 Bank",
+                "B24": "4190.93",
+                "E24": "Count",
+                "F24": "Amount",
+                "A25": "Total",
+                "B25": "4190.93",
+                "D25": "Bank",
+                "E25": "10",
+                "F25": "1690.93",
+                "D26": "Total",
+                "E26": "10",
+                "F26": "1690.93"
             },
             "styles": {
                 "A22:B22": 1,
                 "D22:F22": 1
             },
             "formats": {
-                "A23": 4,
-                "B23": 5,
+                "A24": 4,
                 "B24": 5,
+                "B25": 5,
                 "D25": 4,
                 "E25": 6,
                 "F25": 5,
@@ -98,8 +68,12 @@
             "figures": [
                 {
                     "id": "c95f1230-f156-5095-b7db-fdde51a9d9ff",
-                    "x": 0,
-                    "y": 0,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -115,13 +89,18 @@
                         "type": "scorecard",
                         "background": "",
                         "keyValue": "Data!B1",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "c95f1230-f156-5095-b7db-fdde51a9d9ff"
                     }
                 },
                 {
                     "id": "1adfd289-7584-5984-922a-b0562537deba",
-                    "x": 250,
-                    "y": 0,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 250,
+                        "y": 0
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -137,13 +116,18 @@
                         "type": "scorecard",
                         "background": "",
                         "keyValue": "Data!B2",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "1adfd289-7584-5984-922a-b0562537deba"
                     }
                 },
                 {
                     "id": "d033d609-7f67-5c38-bfcb-d6f9dc708501",
-                    "x": 500,
-                    "y": 0,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 500,
+                        "y": 0
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -159,13 +143,18 @@
                         "type": "scorecard",
                         "background": "",
                         "keyValue": "Data!B3",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "d033d609-7f67-5c38-bfcb-d6f9dc708501"
                     }
                 },
                 {
                     "id": "68d2a257-1725-5f75-8694-0b53c959e2fa",
-                    "x": 750,
-                    "y": 0,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 750,
+                        "y": 0
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -181,15 +170,22 @@
                         "type": "scorecard",
                         "background": "",
                         "baseline": "Data!B5",
-                        "baselineDescr": "amount",
+                        "baselineDescr": {
+                            "text": "amount"
+                        },
                         "keyValue": "Data!B4",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "68d2a257-1725-5f75-8694-0b53c959e2fa"
                     }
                 },
                 {
                     "id": "13bd1376-394a-567c-ab30-3ed26c0d3ac1",
-                    "x": 0,
-                    "y": 120,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 0,
+                        "y": 120
+                    },
                     "width": 990,
                     "height": 340,
                     "tag": "chart",
@@ -220,7 +216,9 @@
                             "color": "#01666B",
                             "bold": true
                         },
-                        "aggregated": false
+                        "aggregated": false,
+                        "humanize": true,
+                        "chartId": "13bd1376-394a-567c-ab30-3ed26c0d3ac1"
                     }
                 }
             ],
@@ -248,150 +246,55 @@
             },
             "merges": [],
             "cells": {
-                "A1": {
-                    "content": "Bank and cash balance"
-                },
-                "B1": {
-                    "content": "12444.87"
-                },
-                "D1": {
-                    "content": "Month"
-                },
-                "E1": {
-                    "content": "Cash In"
-                },
-                "F1": {
-                    "content": "Cash Out"
-                },
-                "G1": {
-                    "content": "Net"
-                },
-                "A2": {
-                    "content": "Cash in"
-                },
-                "B2": {
-                    "content": "12477.45"
-                },
-                "D2": {
-                    "content": "45962"
-                },
-                "G2": {
-                    "content": "0"
-                },
-                "A3": {
-                    "content": "Cash out"
-                },
-                "B3": {
-                    "content": "32.58"
-                },
-                "D3": {
-                    "content": "45992"
-                },
-                "G3": {
-                    "content": "0"
-                },
-                "A4": {
-                    "content": "Transactions to reconcile"
-                },
-                "B4": {
-                    "content": "8"
-                },
-                "D4": {
-                    "content": "46023"
-                },
-                "E4": {
-                    "content": "6378"
-                },
-                "F4": {
-                    "content": "0"
-                },
-                "G4": {
-                    "content": "6378"
-                },
-                "A5": {
-                    "content": "Amount to reconcile"
-                },
-                "B5": {
-                    "content": "9944.87"
-                },
-                "D5": {
-                    "content": "46054"
-                },
-                "G5": {
-                    "content": "0"
-                },
-                "A6": {
-                    "content": "Period start"
-                },
-                "B6": {
-                    "content": "2026"
-                },
-                "D6": {
-                    "content": "46082"
-                },
-                "G6": {
-                    "content": "0"
-                },
-                "A7": {
-                    "content": "First month"
-                },
-                "B7": {
-                    "content": "45962"
-                },
-                "D7": {
-                    "content": "46113"
-                },
-                "G7": {
-                    "content": "0"
-                },
-                "D8": {
-                    "content": "46143"
-                },
-                "G8": {
-                    "content": "0"
-                },
-                "D9": {
-                    "content": "46174"
-                },
-                "G9": {
-                    "content": "0"
-                },
-                "D10": {
-                    "content": "46204"
-                },
-                "G10": {
-                    "content": "0"
-                },
-                "D11": {
-                    "content": "46235"
-                },
-                "G11": {
-                    "content": "0"
-                },
-                "D12": {
-                    "content": "46266"
-                },
-                "E12": {
-                    "content": "2500"
-                },
-                "F12": {
-                    "content": "0"
-                },
-                "G12": {
-                    "content": "2500"
-                },
-                "D13": {
-                    "content": "46296"
-                },
-                "E13": {
-                    "content": "3599.45"
-                },
-                "F13": {
-                    "content": "32.58"
-                },
-                "G13": {
-                    "content": "3566.87"
-                }
+                "A1": "Bank and cash balance",
+                "B1": "4190.93",
+                "D1": "Month",
+                "E1": "Cash In",
+                "F1": "Cash Out",
+                "G1": "Net",
+                "A2": "Cash in",
+                "B2": "7363.2",
+                "D2": "46023",
+                "G2": "0",
+                "A3": "Cash out",
+                "B3": "3172.27",
+                "D3": "46054",
+                "G3": "0",
+                "A4": "Transactions to reconcile",
+                "B4": "10",
+                "D4": "46082",
+                "G4": "0",
+                "A5": "Amount to reconcile",
+                "B5": "1690.93",
+                "D5": "46113",
+                "G5": "0",
+                "A6": "Period start",
+                "B6": "46023",
+                "C6": "46387",
+                "D6": "46143",
+                "G6": "0",
+                "A7": "First month",
+                "B7": "46023",
+                "D7": "46174",
+                "G7": "0",
+                "D8": "46204",
+                "E8": "0",
+                "F8": "850",
+                "G8": "-850",
+                "D9": "46235",
+                "E9": "3275",
+                "F9": "850",
+                "G9": "2425",
+                "D10": "46266",
+                "E10": "4088.2",
+                "F10": "1472.27",
+                "G10": "2615.93",
+                "D11": "46296",
+                "G11": "0",
+                "D12": "46327",
+                "G12": "0",
+                "D13": "46357",
+                "G13": "0"
             },
             "styles": {
                 "D1": 1,
@@ -410,33 +313,34 @@
                 "D3": 3,
                 "G3": 5,
                 "D4": 3,
-                "E4": 5,
-                "F4": 5,
                 "G4": 5,
                 "B5": 5,
                 "D5": 3,
                 "G5": 5,
                 "B6": 2,
+                "C6": 2,
                 "D6": 3,
                 "G6": 5,
                 "B7": 2,
                 "D7": 3,
                 "G7": 5,
                 "D8": 3,
+                "E8": 5,
+                "F8": 5,
                 "G8": 5,
                 "D9": 3,
+                "E9": 5,
+                "F9": 5,
                 "G9": 5,
                 "D10": 3,
+                "E10": 5,
+                "F10": 5,
                 "G10": 5,
                 "D11": 3,
                 "G11": 5,
                 "D12": 3,
-                "E12": 5,
-                "F12": 5,
                 "G12": 5,
                 "D13": 3,
-                "E13": 5,
-                "F13": 5,
                 "G13": 5
             },
             "borders": {},
@@ -488,7 +392,7 @@
             "thousandsSeparator": ",",
             "decimalSeparator": ".",
             "dateFormat": "mm/dd/yyyy",
-            "timeFormat": "hh:mm:ss",
+            "timeFormat": "hh:mm:ss a",
             "formulaArgSeparator": ",",
             "weekStart": 7
         }
@@ -496,7 +400,6 @@
     "pivots": {},
     "pivotNextId": 1,
     "customTableStyles": {},
-    "odooVersion": 12,
     "globalFilters": [],
     "lists": {},
     "listNextId": 1,

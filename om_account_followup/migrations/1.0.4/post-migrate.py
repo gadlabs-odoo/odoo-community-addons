@@ -3,8 +3,7 @@ import logging
 _logger = logging.getLogger(__name__)
 
 OLD_PLACEHOLDER = '{{ user.company_id.name }}'
-# the company the follow-up is sent for: Odoo 18 has no `env` in the inline templates
-NEW_PLACEHOLDER = '{{ user.env.company.name }}'
+NEW_PLACEHOLDER = '{{ env.company.name }}'
 
 COMPANY_RULES = (
     'om_account_followup_comp_rule',

@@ -1,5 +1,5 @@
 {
-    'name': 'Odoo 18 Bank Statement Import',
+    'name': 'Odoo 19 Bank Statement Import',
     'version': '1.0.0',
     'category': 'Accounting',
     'summary': 'Import the bank statements of your bank: CAMT, MT940, OFX, QIF, CSV and Excel',

@@ -24,8 +24,8 @@ class AssetAssetReport(models.Model):
     company_id = fields.Many2one('res.company', string='Company', readonly=True)
 
     def init(self):
-        tools.drop_view_if_exists(self._cr, 'asset_asset_report')
-        self._cr.execute("""
+        tools.drop_view_if_exists(self.env.cr, 'asset_asset_report')
+        self.env.cr.execute("""
             create or replace view asset_asset_report as (
                 select
                     min(dl.id) as id,
@@ -58,7 +58,7 @@ class AssetAssetReport(models.Model):
                     left join account_asset_asset a on (dl.asset_id=a.id)
                     left join account_move m on (dl.move_id=m.id)
                     left join (select min(d.id) as id,ac.id as ac_id from account_asset_depreciation_line as d inner join account_asset_asset as ac ON (ac.id=d.asset_id) group by ac_id) as dlmin on dlmin.ac_id=a.id
-                where a.active is true and (m.state is null or m.state != 'cancel')
+                where a.active is true and (m.state is null or m.state != 'cancel') 
                 group by
                     dl.amount,dl.asset_id,dl.depreciation_date,dl.name,
                     a.date, m.state, a.state, a.category_id, a.partner_id, a.company_id,

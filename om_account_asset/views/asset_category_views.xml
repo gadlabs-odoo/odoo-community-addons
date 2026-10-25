@@ -105,7 +105,7 @@
                 <field name="journal_id"/>
                 <field name="method"/>
                 <templates>
-                    <t t-name="kanban-box">
+                    <t t-name="card">
                         <div t-attf-class="oe_kanban_card oe_kanban_global_click">
                             <div class="row mb4">
                                 <div class="col-6">
@@ -155,7 +155,7 @@
                 <filter string="Purchase" name="purchase" domain="[('type','=', 'purchase')]" help="Assets"/>
                 <field name="name" string="Category"/>
                 <field name="journal_id"/>
-                <group expand="0" string="Group By...">
+                <group>
                     <filter string="Type" name="type" domain="[]" context="{'group_by':'type'}"/>
                 </group>
             </search>
@@ -171,7 +171,7 @@
     </record>
 
     <menuitem id="menu_action_account_asset_asset_list_normal_purchase"
-              parent="account.account_management_menu"
+              parent="account.account_account_menu"
               action="action_account_asset_asset_list_normal_purchase"
               sequence="6"/>
 

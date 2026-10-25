@@ -173,7 +173,7 @@ class ResCompany(models.Model):
 
     def _notify_rate_failure(self, messages):
         self.ensure_one()
-        managers = self.env.ref('account.group_account_manager').sudo().users.filtered(
+        managers = self.env.ref('account.group_account_manager').sudo().user_ids.filtered(
             lambda user: self in user.company_ids and not user.share)
         if managers:
             self.env['mail.thread'].sudo().message_notify(

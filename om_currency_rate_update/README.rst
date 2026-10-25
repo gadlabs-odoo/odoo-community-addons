@@ -1,8 +1,8 @@
 ==================================
-Odoo 18 Automatic Currency Rates
+Odoo 19 Automatic Currency Rates
 ==================================
 
-This module updates the exchange rates of Odoo 18 Community Edition automatically from an online source,
+This module updates the exchange rates of Odoo 19 Community Edition automatically from an online source,
 daily, weekly or monthly, with a backup source for the currencies the main one does not quote.
 
 Features

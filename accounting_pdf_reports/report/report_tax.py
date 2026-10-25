@@ -67,8 +67,7 @@ class ReportTax(models.AbstractModel):
         results = self.env.cr.fetchall()
         for result in results:
             if result[0] in taxes:
-                # the withholding module of 18 books the base of a withholding on the side of the tax withheld
-                taxes[result[0]]['net'] = self._amount_sign(taxes[result[0]]) * (result[1] or 0.0)
+                taxes[result[0]]['net'] = self._tax_sign(taxes[result[0]]) * (result[1] or 0.0)
 
     @api.model
     def get_lines(self, options):

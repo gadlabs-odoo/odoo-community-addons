@@ -1,5 +1,5 @@
 {
-    "version": 22,
+    "version": "18.5.10",
     "sheets": [
         {
             "id": "b72461bf-e802-5cb9-b74f-856eceb7dcdf",
@@ -29,18 +29,10 @@
             },
             "merges": [],
             "cells": {
-                "A22": {
-                    "content": "=_t(\"Balance by Account\")"
-                },
-                "D22": {
-                    "content": "=_t(\"To Reconcile by Journal\")"
-                },
-                "A23": {
-                    "content": "=PIVOT(1,20,TRUE,FALSE)"
-                },
-                "D23": {
-                    "content": "=PIVOT(3,20,TRUE,TRUE)"
-                }
+                "A22": "=_t(\"Balance by Account\")",
+                "D22": "=_t(\"To Reconcile by Journal\")",
+                "A23": "=PIVOT(1,20,TRUE,FALSE)",
+                "D23": "=PIVOT(3,20,TRUE,TRUE)"
             },
             "styles": {
                 "A22": 2,
@@ -56,8 +48,12 @@
             "figures": [
                 {
                     "id": "c95f1230-f156-5095-b7db-fdde51a9d9ff",
-                    "x": 0,
-                    "y": 0,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -73,13 +69,18 @@
                         "baselineColorDown": "#DC6965",
                         "baselineColorUp": "#00A04A",
                         "baselineMode": "percentage",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "c95f1230-f156-5095-b7db-fdde51a9d9ff"
                     }
                 },
                 {
                     "id": "1adfd289-7584-5984-922a-b0562537deba",
-                    "x": 250,
-                    "y": 0,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 250,
+                        "y": 0
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -95,13 +96,18 @@
                         "baselineColorDown": "#DC6965",
                         "baselineColorUp": "#00A04A",
                         "baselineMode": "percentage",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "1adfd289-7584-5984-922a-b0562537deba"
                     }
                 },
                 {
                     "id": "d033d609-7f67-5c38-bfcb-d6f9dc708501",
-                    "x": 500,
-                    "y": 0,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 500,
+                        "y": 0
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -117,13 +123,18 @@
                         "baselineColorDown": "#DC6965",
                         "baselineColorUp": "#00A04A",
                         "baselineMode": "percentage",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "d033d609-7f67-5c38-bfcb-d6f9dc708501"
                     }
                 },
                 {
                     "id": "68d2a257-1725-5f75-8694-0b53c959e2fa",
-                    "x": 750,
-                    "y": 0,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 750,
+                        "y": 0
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -140,14 +151,21 @@
                         "baselineColorUp": "#00A04A",
                         "baselineMode": "text",
                         "humanize": true,
+                        "chartId": "68d2a257-1725-5f75-8694-0b53c959e2fa",
                         "baseline": "Data!B5",
-                        "baselineDescr": "amount"
+                        "baselineDescr": {
+                            "text": "amount"
+                        }
                     }
                 },
                 {
                     "id": "13bd1376-394a-567c-ab30-3ed26c0d3ac1",
-                    "x": 0,
-                    "y": 120,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 0,
+                        "y": 120
+                    },
                     "width": 990,
                     "height": 340,
                     "tag": "chart",
@@ -179,6 +197,7 @@
                             }
                         ],
                         "dataSetsHaveTitle": false,
+                        "chartId": "13bd1376-394a-567c-ab30-3ed26c0d3ac1",
                         "stacked": false,
                         "aggregated": false
                     }
@@ -210,204 +229,72 @@
             },
             "merges": [],
             "cells": {
-                "A1": {
-                    "content": "=_t(\"Bank and cash balance\")"
-                },
-                "B1": {
-                    "content": "=PIVOT.VALUE(1,\"balance\")"
-                },
-                "A2": {
-                    "content": "=_t(\"Cash in\")"
-                },
-                "B2": {
-                    "content": "=PIVOT.VALUE(2,\"debit\")"
-                },
-                "A3": {
-                    "content": "=_t(\"Cash out\")"
-                },
-                "B3": {
-                    "content": "=PIVOT.VALUE(2,\"credit\")"
-                },
-                "A4": {
-                    "content": "=_t(\"Transactions to reconcile\")"
-                },
-                "B4": {
-                    "content": "=PIVOT.VALUE(3,\"__count\")"
-                },
-                "A5": {
-                    "content": "=_t(\"Amount to reconcile\")"
-                },
-                "B5": {
-                    "content": "=PIVOT.VALUE(3,\"amount\")"
-                },
-                "A6": {
-                    "content": "=_t(\"Period start\")"
-                },
-                "B6": {
-                    "content": "=ODOO.FILTER.VALUE(\"Period\")"
-                },
-                "A7": {
-                    "content": "=_t(\"First month\")"
-                },
-                "B7": {
-                    "content": "=IF(ISNUMBER(B6),DATE(YEAR(B6),MONTH(B6),1),EDATE(DATE(YEAR(TODAY()),MONTH(TODAY()),1),-11))"
-                },
-                "D1": {
-                    "content": "=_t(\"Month\")"
-                },
-                "E1": {
-                    "content": "=_t(\"Cash In\")"
-                },
-                "F1": {
-                    "content": "=_t(\"Cash Out\")"
-                },
-                "G1": {
-                    "content": "=_t(\"Net\")"
-                },
-                "D2": {
-                    "content": "=EDATE($B$7,0)"
-                },
-                "E2": {
-                    "content": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D2,\"mm/yyyy\"))"
-                },
-                "F2": {
-                    "content": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D2,\"mm/yyyy\"))"
-                },
-                "G2": {
-                    "content": "=E2-F2"
-                },
-                "D3": {
-                    "content": "=EDATE($B$7,1)"
-                },
-                "E3": {
-                    "content": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D3,\"mm/yyyy\"))"
-                },
-                "F3": {
-                    "content": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D3,\"mm/yyyy\"))"
-                },
-                "G3": {
-                    "content": "=E3-F3"
-                },
-                "D4": {
-                    "content": "=EDATE($B$7,2)"
-                },
-                "E4": {
-                    "content": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D4,\"mm/yyyy\"))"
-                },
-                "F4": {
-                    "content": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D4,\"mm/yyyy\"))"
-                },
-                "G4": {
-                    "content": "=E4-F4"
-                },
-                "D5": {
-                    "content": "=EDATE($B$7,3)"
-                },
-                "E5": {
-                    "content": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D5,\"mm/yyyy\"))"
-                },
-                "F5": {
-                    "content": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D5,\"mm/yyyy\"))"
-                },
-                "G5": {
-                    "content": "=E5-F5"
-                },
-                "D6": {
-                    "content": "=EDATE($B$7,4)"
-                },
-                "E6": {
-                    "content": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D6,\"mm/yyyy\"))"
-                },
-                "F6": {
-                    "content": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D6,\"mm/yyyy\"))"
-                },
-                "G6": {
-                    "content": "=E6-F6"
-                },
-                "D7": {
-                    "content": "=EDATE($B$7,5)"
-                },
-                "E7": {
-                    "content": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D7,\"mm/yyyy\"))"
-                },
-                "F7": {
-                    "content": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D7,\"mm/yyyy\"))"
-                },
-                "G7": {
-                    "content": "=E7-F7"
-                },
-                "D8": {
-                    "content": "=EDATE($B$7,6)"
-                },
-                "E8": {
-                    "content": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D8,\"mm/yyyy\"))"
-                },
-                "F8": {
-                    "content": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D8,\"mm/yyyy\"))"
-                },
-                "G8": {
-                    "content": "=E8-F8"
-                },
-                "D9": {
-                    "content": "=EDATE($B$7,7)"
-                },
-                "E9": {
-                    "content": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D9,\"mm/yyyy\"))"
-                },
-                "F9": {
-                    "content": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D9,\"mm/yyyy\"))"
-                },
-                "G9": {
-                    "content": "=E9-F9"
-                },
-                "D10": {
-                    "content": "=EDATE($B$7,8)"
-                },
-                "E10": {
-                    "content": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D10,\"mm/yyyy\"))"
-                },
-                "F10": {
-                    "content": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D10,\"mm/yyyy\"))"
-                },
-                "G10": {
-                    "content": "=E10-F10"
-                },
-                "D11": {
-                    "content": "=EDATE($B$7,9)"
-                },
-                "E11": {
-                    "content": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D11,\"mm/yyyy\"))"
-                },
-                "F11": {
-                    "content": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D11,\"mm/yyyy\"))"
-                },
-                "G11": {
-                    "content": "=E11-F11"
-                },
-                "D12": {
-                    "content": "=EDATE($B$7,10)"
-                },
-                "E12": {
-                    "content": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D12,\"mm/yyyy\"))"
-                },
-                "F12": {
-                    "content": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D12,\"mm/yyyy\"))"
-                },
-                "G12": {
-                    "content": "=E12-F12"
-                },
-                "D13": {
-                    "content": "=EDATE($B$7,11)"
-                },
-                "E13": {
-                    "content": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D13,\"mm/yyyy\"))"
-                },
-                "F13": {
-                    "content": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D13,\"mm/yyyy\"))"
-                },
-                "G13": {
-                    "content": "=E13-F13"
-                }
+                "A1": "=_t(\"Bank and cash balance\")",
+                "B1": "=PIVOT.VALUE(1,\"balance\")",
+                "A2": "=_t(\"Cash in\")",
+                "B2": "=PIVOT.VALUE(2,\"debit\")",
+                "A3": "=_t(\"Cash out\")",
+                "B3": "=PIVOT.VALUE(2,\"credit\")",
+                "A4": "=_t(\"Transactions to reconcile\")",
+                "B4": "=PIVOT.VALUE(3,\"__count\")",
+                "A5": "=_t(\"Amount to reconcile\")",
+                "B5": "=PIVOT.VALUE(3,\"amount\")",
+                "A6": "=_t(\"Period start\")",
+                "B6": "=ODOO.FILTER.VALUE(\"Period\")",
+                "A7": "=_t(\"First month\")",
+                "B7": "=IF(ISNUMBER(B6),DATE(YEAR(B6),MONTH(B6),1),EDATE(DATE(YEAR(TODAY()),MONTH(TODAY()),1),-11))",
+                "D1": "=_t(\"Month\")",
+                "E1": "=_t(\"Cash In\")",
+                "F1": "=_t(\"Cash Out\")",
+                "G1": "=_t(\"Net\")",
+                "D2": "=EDATE($B$7,0)",
+                "E2": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D2,\"mm/yyyy\"))",
+                "F2": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D2,\"mm/yyyy\"))",
+                "G2": "=E2-F2",
+                "D3": "=EDATE($B$7,1)",
+                "E3": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D3,\"mm/yyyy\"))",
+                "F3": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D3,\"mm/yyyy\"))",
+                "G3": "=E3-F3",
+                "D4": "=EDATE($B$7,2)",
+                "E4": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D4,\"mm/yyyy\"))",
+                "F4": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D4,\"mm/yyyy\"))",
+                "G4": "=E4-F4",
+                "D5": "=EDATE($B$7,3)",
+                "E5": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D5,\"mm/yyyy\"))",
+                "F5": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D5,\"mm/yyyy\"))",
+                "G5": "=E5-F5",
+                "D6": "=EDATE($B$7,4)",
+                "E6": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D6,\"mm/yyyy\"))",
+                "F6": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D6,\"mm/yyyy\"))",
+                "G6": "=E6-F6",
+                "D7": "=EDATE($B$7,5)",
+                "E7": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D7,\"mm/yyyy\"))",
+                "F7": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D7,\"mm/yyyy\"))",
+                "G7": "=E7-F7",
+                "D8": "=EDATE($B$7,6)",
+                "E8": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D8,\"mm/yyyy\"))",
+                "F8": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D8,\"mm/yyyy\"))",
+                "G8": "=E8-F8",
+                "D9": "=EDATE($B$7,7)",
+                "E9": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D9,\"mm/yyyy\"))",
+                "F9": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D9,\"mm/yyyy\"))",
+                "G9": "=E9-F9",
+                "D10": "=EDATE($B$7,8)",
+                "E10": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D10,\"mm/yyyy\"))",
+                "F10": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D10,\"mm/yyyy\"))",
+                "G10": "=E10-F10",
+                "D11": "=EDATE($B$7,9)",
+                "E11": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D11,\"mm/yyyy\"))",
+                "F11": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D11,\"mm/yyyy\"))",
+                "G11": "=E11-F11",
+                "D12": "=EDATE($B$7,10)",
+                "E12": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D12,\"mm/yyyy\"))",
+                "F12": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D12,\"mm/yyyy\"))",
+                "G12": "=E12-F12",
+                "D13": "=EDATE($B$7,11)",
+                "E13": "=PIVOT.VALUE(2,\"debit\",\"date:month\",TEXT(D13,\"mm/yyyy\"))",
+                "F13": "=PIVOT.VALUE(2,\"credit\",\"date:month\",TEXT(D13,\"mm/yyyy\"))",
+                "G13": "=E13-F13"
             },
             "styles": {
                 "A1": 1,
@@ -530,12 +417,9 @@
                 }
             },
             "sortedColumn": {
-                "groupId": [
-                    [],
-                    []
-                ],
                 "measure": "balance",
-                "order": "desc"
+                "order": "desc",
+                "domain": []
             }
         },
         "2": {
@@ -636,8 +520,7 @@
             "id": "51e3ddab-73ef-58ff-aac3-38b7c0457ecb",
             "type": "date",
             "label": "Period",
-            "defaultValue": "this_year",
-            "rangeType": "relative"
+            "defaultValue": "this_year"
         },
         {
             "id": "ff51c263-86b9-536b-b688-dee8b7c58316",
@@ -655,8 +538,7 @@
                         "credit"
                     ]
                 ]
-            ],
-            "defaultValue": []
+            ]
         }
     ],
     "lists": {},
@@ -664,6 +546,5 @@
     "chartOdooMenusReferences": {
         "c95f1230-f156-5095-b7db-fdde51a9d9ff": "account.menu_board_journal_1",
         "68d2a257-1725-5f75-8694-0b53c959e2fa": "account.menu_board_journal_1"
-    },
-    "odooVersion": 12
+    }
 }

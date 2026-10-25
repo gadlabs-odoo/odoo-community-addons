@@ -1,5 +1,5 @@
 {
-    'name': 'Odoo 18 Reconciliation',
+    'name': 'Odoo 19 Reconciliation',
     'version': '1.0.3',
     'category': 'Accounting',
     'summary': 'Bank Reconciliation, Match Journal Items, Reconciliation Models, Auto Reconciliation',
@@ -14,6 +14,7 @@
         'security/ir.model.access.csv',
         'data/ir_cron.xml',
         'views/res_config_settings_views.xml',
+        'views/account_reconcile_model_views.xml',
         'views/account_bank_statement_views.xml',
         'views/bank_reconciliation_views.xml',
         'wizard/reconcile_items_wizard_views.xml',

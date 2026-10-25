@@ -365,7 +365,7 @@ class AccountCheckFormat(models.Model):
         if self.print_micr and not void and bank_account is not None:
             if not bank_account:
                 raise UserError(_('Set the bank account of the journal to print the MICR line of the cheques.'))
-            micr = self._format_micr(check_number, bank_account._om_check_routing_number(), bank_account.acc_number)
+            micr = self._format_micr(check_number, bank_account.clearing_number, bank_account.acc_number)
         return {
             'date': self._format_date(date),
             'payee': partner_name or '',

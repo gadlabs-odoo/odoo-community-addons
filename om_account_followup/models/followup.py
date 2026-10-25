@@ -20,8 +20,10 @@ class FollowupFollowup(models.Model):
         help='The follow-up emails are sent in the name of this user, with the access rights of this user.')
     last_auto_send = fields.Date(string='Last Automatic Sending', readonly=True, copy=False)
 
-    _sql_constraints = [('company_uniq', 'unique(company_id)',
-                         'Only one follow-up per company is allowed')]
+    _company_uniq = models.Constraint(
+        'unique(company_id)',
+        'Only one follow-up per company is allowed',
+    )
 
     @api.constrains('auto_send', 'auto_user_id')
     def _check_auto_user(self):
@@ -139,8 +141,10 @@ Best Regards,
     email_template_id = fields.Many2one('mail.template', 'Email Template',
                                         ondelete='set null')
 
-    _sql_constraints = [('days_uniq', 'unique(followup_id, delay)',
-                         'Days of the follow-up levels must be different')]
+    _days_uniq = models.Constraint(
+        'unique(followup_id, delay)',
+        'Days of the follow-up levels must be different',
+    )
 
     @api.constrains('description')
     def _check_description(self):

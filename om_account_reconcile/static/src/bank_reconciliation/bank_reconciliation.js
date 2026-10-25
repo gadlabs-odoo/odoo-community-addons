@@ -313,8 +313,7 @@ export class OmBankReconciliation extends Component {
     }
 
     get accountDomain() {
-        // Odoo 18 marks the accounts no longer used as deprecated (19: inactive)
-        return [["account_type", "!=", "off_balance"], ["deprecated", "=", false]];
+        return [["account_type", "!=", "off_balance"], ["active", "=", true]];
     }
 
     get taxDomain() {

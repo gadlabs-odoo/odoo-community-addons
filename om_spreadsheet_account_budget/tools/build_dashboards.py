@@ -31,7 +31,7 @@ def build_budgets():
     matching = {period: ('date_from', 'date'), budget: ('crossovered_budget_id', 'many2one')}
     live = [['crossovered_budget_state', 'in', ['confirm', 'validate', 'done']]]
     measures = ['planned_amount', ('theoritical_amount', 'sum'), ('practical_amount', 'sum')]
-    # the budgets plan the expenses as negative amounts and the revenues as positive ones
+    # the budgets of 19.0 plan the expenses as negative amounts and the revenues as positive ones
     budget_types = {
         'expense': workbook.pivot('Expense Budgets', 'crossovered.budget.lines',
                                   live + [['planned_amount', '<', 0]], measures, field_matching=matching),

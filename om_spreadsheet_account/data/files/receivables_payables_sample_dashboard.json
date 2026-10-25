@@ -1,5 +1,5 @@
 {
-    "version": 22,
+    "version": "18.5.10",
     "sheets": [
         {
             "id": "92e1e43f-5770-5357-b7e2-2e7fb306f06f",
@@ -26,29 +26,23 @@
             },
             "merges": [],
             "cells": {
-                "A21": {
-                    "content": "Top Overdue Customers"
-                },
-                "D21": {
-                    "content": "Top Overdue Vendors"
-                },
-                "A22": {
-                    "content": "Acme Corporation"
-                },
-                "B22": {
-                    "content": "31750"
-                },
-                "D22": {
-                    "content": "Total"
-                }
+                "A21": "Top Overdue Customers",
+                "D21": "Top Overdue Vendors",
+                "A22": "Overdue Customers",
+                "B22": "Amount Due",
+                "D22": "Overdue Vendors",
+                "E22": "Amount Due",
+                "A23": "Acme Corporation",
+                "B23": "31750",
+                "D23": "Total"
             },
             "styles": {
                 "A21:B21": 1,
                 "D21:E21": 1
             },
             "formats": {
-                "A22": 4,
-                "B22": 5
+                "A23": 4,
+                "B23": 5
             },
             "borders": {},
             "conditionalFormats": [],
@@ -56,8 +50,12 @@
             "figures": [
                 {
                     "id": "c4749217-6f0d-55e1-ad21-13616d3c4a19",
-                    "x": 0,
-                    "y": 0,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -73,15 +71,22 @@
                         "type": "scorecard",
                         "background": "",
                         "baseline": "Data!B8",
-                        "baselineDescr": "overdue",
+                        "baselineDescr": {
+                            "text": "overdue"
+                        },
                         "keyValue": "Data!B7",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "c4749217-6f0d-55e1-ad21-13616d3c4a19"
                     }
                 },
                 {
                     "id": "b7818efe-ad37-5bbe-88f3-8f1bf2051d53",
-                    "x": 250,
-                    "y": 0,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 250,
+                        "y": 0
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -97,15 +102,22 @@
                         "type": "scorecard",
                         "background": "",
                         "baseline": "Data!C8",
-                        "baselineDescr": "overdue",
+                        "baselineDescr": {
+                            "text": "overdue"
+                        },
                         "keyValue": "Data!C7",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "b7818efe-ad37-5bbe-88f3-8f1bf2051d53"
                     }
                 },
                 {
                     "id": "687d580b-8ed5-502c-9b9c-fe49873f6788",
-                    "x": 500,
-                    "y": 0,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 500,
+                        "y": 0
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -121,13 +133,18 @@
                         "type": "scorecard",
                         "background": "",
                         "keyValue": "Data!B13",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "687d580b-8ed5-502c-9b9c-fe49873f6788"
                     }
                 },
                 {
                     "id": "914403d5-7ccc-5fcd-9fc6-bda91bdd837d",
-                    "x": 750,
-                    "y": 0,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 750,
+                        "y": 0
+                    },
                     "width": 240,
                     "height": 110,
                     "tag": "chart",
@@ -143,13 +160,18 @@
                         "type": "scorecard",
                         "background": "",
                         "keyValue": "Data!B14",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "914403d5-7ccc-5fcd-9fc6-bda91bdd837d"
                     }
                 },
                 {
                     "id": "729208f5-7f63-5089-97a4-478223bfd893",
-                    "x": 0,
-                    "y": 120,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 0,
+                        "y": 120
+                    },
                     "width": 490,
                     "height": 320,
                     "tag": "chart",
@@ -174,13 +196,19 @@
                             "bold": true
                         },
                         "stacked": false,
-                        "aggregated": false
+                        "aggregated": false,
+                        "humanize": true,
+                        "chartId": "729208f5-7f63-5089-97a4-478223bfd893"
                     }
                 },
                 {
                     "id": "aab2c249-5236-5e35-8d03-8eaffa7d3c46",
-                    "x": 500,
-                    "y": 120,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 500,
+                        "y": 120
+                    },
                     "width": 490,
                     "height": 320,
                     "tag": "chart",
@@ -205,7 +233,9 @@
                             "bold": true
                         },
                         "stacked": false,
-                        "aggregated": false
+                        "aggregated": false,
+                        "humanize": true,
+                        "chartId": "aab2c249-5236-5e35-8d03-8eaffa7d3c46"
                     }
                 }
             ],
@@ -233,186 +263,67 @@
             },
             "merges": [],
             "cells": {
-                "A1": {
-                    "content": "Age"
-                },
-                "B1": {
-                    "content": "Customers"
-                },
-                "C1": {
-                    "content": "Vendors"
-                },
-                "D1": {
-                    "content": "Month"
-                },
-                "E1": {
-                    "content": "Invoiced"
-                },
-                "F1": {
-                    "content": "Billed"
-                },
-                "A2": {
-                    "content": "Not Due"
-                },
-                "B2": {
-                    "content": "-31750"
-                },
-                "C2": {
-                    "content": "0"
-                },
-                "D2": {
-                    "content": "45962"
-                },
-                "F2": {
-                    "content": "0"
-                },
-                "A3": {
-                    "content": "1-30 Days"
-                },
-                "B3": {
-                    "content": "31750"
-                },
-                "D3": {
-                    "content": "45992"
-                },
-                "F3": {
-                    "content": "0"
-                },
-                "A4": {
-                    "content": "31-60 Days"
-                },
-                "D4": {
-                    "content": "46023"
-                },
-                "F4": {
-                    "content": "0"
-                },
-                "A5": {
-                    "content": "61-90 Days"
-                },
-                "D5": {
-                    "content": "46054"
-                },
-                "F5": {
-                    "content": "0"
-                },
-                "A6": {
-                    "content": "Over 90 Days"
-                },
-                "D6": {
-                    "content": "46082"
-                },
-                "F6": {
-                    "content": "0"
-                },
-                "A7": {
-                    "content": "Total"
-                },
-                "B7": {
-                    "content": "0"
-                },
-                "C7": {
-                    "content": "0"
-                },
-                "D7": {
-                    "content": "46113"
-                },
-                "F7": {
-                    "content": "0"
-                },
-                "A8": {
-                    "content": "Overdue"
-                },
-                "B8": {
-                    "content": "31750"
-                },
-                "C8": {
-                    "content": "0"
-                },
-                "D8": {
-                    "content": "46143"
-                },
-                "F8": {
-                    "content": "0"
-                },
-                "D9": {
-                    "content": "46174"
-                },
-                "F9": {
-                    "content": "0"
-                },
-                "A10": {
-                    "content": "Days elapsed in the fiscal year"
-                },
-                "B10": {
-                    "content": "274"
-                },
-                "D10": {
-                    "content": "46204"
-                },
-                "F10": {
-                    "content": "0"
-                },
-                "A11": {
-                    "content": "Revenue of the fiscal year"
-                },
-                "B11": {
-                    "content": "2500"
-                },
-                "D11": {
-                    "content": "46235"
-                },
-                "F11": {
-                    "content": "0"
-                },
-                "A12": {
-                    "content": "Purchases of the fiscal year"
-                },
-                "B12": {
-                    "content": "0"
-                },
-                "D12": {
-                    "content": "46266"
-                },
-                "E12": {
-                    "content": "-31750"
-                },
-                "F12": {
-                    "content": "0"
-                },
-                "A13": {
-                    "content": "Days Sales Outstanding"
-                },
-                "B13": {
-                    "content": "0"
-                },
-                "D13": {
-                    "content": "46296"
-                },
-                "E13": {
-                    "content": "31750"
-                },
-                "F13": {
-                    "content": "0"
-                },
-                "A14": {
-                    "content": "Days Payables Outstanding"
-                },
-                "B14": {
-                    "content": "0"
-                },
-                "D15": {
-                    "content": "Period start"
-                },
-                "E15": {
-                    "content": "2026"
-                },
-                "D16": {
-                    "content": "First month"
-                },
-                "E16": {
-                    "content": "45962"
-                }
+                "A1": "Age",
+                "B1": "Customers",
+                "C1": "Vendors",
+                "D1": "Month",
+                "E1": "Invoiced",
+                "F1": "Billed",
+                "A2": "Not Due",
+                "B2": "20324",
+                "C2": "622.27",
+                "D2": "46023",
+                "F2": "0",
+                "A3": "1-30 Days",
+                "B3": "31750",
+                "D3": "46054",
+                "F3": "0",
+                "A4": "31-60 Days",
+                "D4": "46082",
+                "F4": "0",
+                "A5": "61-90 Days",
+                "D5": "46113",
+                "F5": "0",
+                "A6": "Over 90 Days",
+                "D6": "46143",
+                "F6": "0",
+                "A7": "Total",
+                "B7": "52074",
+                "C7": "622.27",
+                "D7": "46174",
+                "F7": "0",
+                "A8": "Overdue",
+                "B8": "31750",
+                "C8": "0",
+                "D8": "46204",
+                "F8": "0",
+                "D9": "46235",
+                "E9": "-28475",
+                "F9": "0",
+                "A10": "Days elapsed in the fiscal year",
+                "B10": "273",
+                "D10": "46266",
+                "E10": "76049",
+                "F10": "622.27",
+                "A11": "Revenue of the fiscal year",
+                "B11": "50074",
+                "D11": "46296",
+                "F11": "0",
+                "A12": "Purchases of the fiscal year",
+                "B12": "622.27",
+                "D12": "46327",
+                "F12": "0",
+                "A13": "Days Sales Outstanding",
+                "B13": "284",
+                "D13": "46357",
+                "F13": "0",
+                "A14": "Days Payables Outstanding",
+                "B14": "273",
+                "D15": "Period start",
+                "E15": "46023",
+                "F15": "46387",
+                "D16": "First month",
+                "E16": "46023"
             },
             "styles": {
                 "A1": 1,
@@ -451,22 +362,23 @@
                 "D8": 2,
                 "F8": 5,
                 "D9": 2,
+                "E9": 5,
                 "F9": 5,
                 "D10": 2,
+                "E10": 5,
                 "F10": 5,
                 "B11": 5,
                 "D11": 2,
                 "F11": 5,
                 "B12": 5,
                 "D12": 2,
-                "E12": 5,
                 "F12": 5,
                 "B13": 1,
                 "D13": 2,
-                "E13": 5,
                 "F13": 5,
                 "B14": 1,
                 "E15": 3,
+                "F15": 3,
                 "E16": 3
             },
             "borders": {},
@@ -521,7 +433,7 @@
             "thousandsSeparator": ",",
             "decimalSeparator": ".",
             "dateFormat": "mm/dd/yyyy",
-            "timeFormat": "hh:mm:ss",
+            "timeFormat": "hh:mm:ss a",
             "formulaArgSeparator": ",",
             "weekStart": 7
         }
@@ -529,7 +441,6 @@
     "pivots": {},
     "pivotNextId": 1,
     "customTableStyles": {},
-    "odooVersion": 12,
     "globalFilters": [],
     "lists": {},
     "listNextId": 1,

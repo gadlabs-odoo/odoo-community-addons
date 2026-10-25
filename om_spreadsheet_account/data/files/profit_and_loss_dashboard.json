@@ -1,5 +1,5 @@
 {
-    "version": 22,
+    "version": "18.5.10",
     "sheets": [
         {
             "id": "279eb8be-c387-5f8b-bd42-5e76d471e656",
@@ -63,627 +63,213 @@
             },
             "merges": [],
             "cells": {
-                "A1": {
-                    "content": "=Data!B11"
-                },
-                "A17": {
-                    "content": "=_t(\"Profit and Loss\")"
-                },
-                "E17": {
-                    "content": "=IF(Data!D16,Data!A16,\"\")"
-                },
-                "F17": {
-                    "content": "=IF(Data!D17,Data!A17,\"\")"
-                },
-                "G17": {
-                    "content": "=IF(Data!D18,Data!A18,\"\")"
-                },
-                "H17": {
-                    "content": "=IF(Data!D19,Data!A19,\"\")"
-                },
-                "I17": {
-                    "content": "=IF(Data!D20,Data!A20,\"\")"
-                },
-                "J17": {
-                    "content": "=IF(Data!D21,Data!A21,\"\")"
-                },
-                "K17": {
-                    "content": "=IF(Data!D22,Data!A22,\"\")"
-                },
-                "L17": {
-                    "content": "=IF(Data!D23,Data!A23,\"\")"
-                },
-                "M17": {
-                    "content": "=IF(Data!D24,Data!A24,\"\")"
-                },
-                "N17": {
-                    "content": "=IF(Data!D25,Data!A25,\"\")"
-                },
-                "O17": {
-                    "content": "=IF(Data!D26,Data!A26,\"\")"
-                },
-                "P17": {
-                    "content": "=IF(Data!D27,Data!A27,\"\")"
-                },
-                "B17": {
-                    "content": "=_t(\"Period\")"
-                },
-                "C17": {
-                    "content": "=Data!$B$12"
-                },
-                "D17": {
-                    "content": "=_t(\"Change\")"
-                },
-                "A18": {
-                    "content": "=_t(\"Revenue\")"
-                },
-                "B18": {
-                    "content": "=-OM.ACCOUNT.BALANCE(\"income\",Data!$B$3,Data!$B$2)"
-                },
-                "C18": {
-                    "content": "=-OM.ACCOUNT.BALANCE(\"income\",Data!$B$8,Data!$B$7)"
-                },
-                "E18": {
-                    "content": "=IF(Data!$D$16,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$16,Data!$C$16),\"\")"
-                },
-                "F18": {
-                    "content": "=IF(Data!$D$17,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$17,Data!$C$17),\"\")"
-                },
-                "G18": {
-                    "content": "=IF(Data!$D$18,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$18,Data!$C$18),\"\")"
-                },
-                "H18": {
-                    "content": "=IF(Data!$D$19,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$19,Data!$C$19),\"\")"
-                },
-                "I18": {
-                    "content": "=IF(Data!$D$20,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$20,Data!$C$20),\"\")"
-                },
-                "J18": {
-                    "content": "=IF(Data!$D$21,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$21,Data!$C$21),\"\")"
-                },
-                "K18": {
-                    "content": "=IF(Data!$D$22,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$22,Data!$C$22),\"\")"
-                },
-                "L18": {
-                    "content": "=IF(Data!$D$23,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$23,Data!$C$23),\"\")"
-                },
-                "M18": {
-                    "content": "=IF(Data!$D$24,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$24,Data!$C$24),\"\")"
-                },
-                "N18": {
-                    "content": "=IF(Data!$D$25,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$25,Data!$C$25),\"\")"
-                },
-                "O18": {
-                    "content": "=IF(Data!$D$26,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$26,Data!$C$26),\"\")"
-                },
-                "P18": {
-                    "content": "=IF(Data!$D$27,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$27,Data!$C$27),\"\")"
-                },
-                "D18": {
-                    "content": "=IFERROR((B18-C18)/ABS(C18),\"\")"
-                },
-                "A19": {
-                    "content": "=_t(\"Other Income\")"
-                },
-                "B19": {
-                    "content": "=-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$3,Data!$B$2)"
-                },
-                "C19": {
-                    "content": "=-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$8,Data!$B$7)"
-                },
-                "E19": {
-                    "content": "=IF(Data!$D$16,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$16,Data!$C$16),\"\")"
-                },
-                "F19": {
-                    "content": "=IF(Data!$D$17,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$17,Data!$C$17),\"\")"
-                },
-                "G19": {
-                    "content": "=IF(Data!$D$18,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$18,Data!$C$18),\"\")"
-                },
-                "H19": {
-                    "content": "=IF(Data!$D$19,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$19,Data!$C$19),\"\")"
-                },
-                "I19": {
-                    "content": "=IF(Data!$D$20,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$20,Data!$C$20),\"\")"
-                },
-                "J19": {
-                    "content": "=IF(Data!$D$21,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$21,Data!$C$21),\"\")"
-                },
-                "K19": {
-                    "content": "=IF(Data!$D$22,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$22,Data!$C$22),\"\")"
-                },
-                "L19": {
-                    "content": "=IF(Data!$D$23,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$23,Data!$C$23),\"\")"
-                },
-                "M19": {
-                    "content": "=IF(Data!$D$24,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$24,Data!$C$24),\"\")"
-                },
-                "N19": {
-                    "content": "=IF(Data!$D$25,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$25,Data!$C$25),\"\")"
-                },
-                "O19": {
-                    "content": "=IF(Data!$D$26,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$26,Data!$C$26),\"\")"
-                },
-                "P19": {
-                    "content": "=IF(Data!$D$27,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$27,Data!$C$27),\"\")"
-                },
-                "D19": {
-                    "content": "=IFERROR((B19-C19)/ABS(C19),\"\")"
-                },
-                "A20": {
-                    "content": "=_t(\"Total Income\")"
-                },
-                "B20": {
-                    "content": "=IF(B18=\"\",\"\",B18+B19)"
-                },
-                "C20": {
-                    "content": "=IF(C18=\"\",\"\",C18+C19)"
-                },
-                "E20": {
-                    "content": "=IF(E18=\"\",\"\",E18+E19)"
-                },
-                "F20": {
-                    "content": "=IF(F18=\"\",\"\",F18+F19)"
-                },
-                "G20": {
-                    "content": "=IF(G18=\"\",\"\",G18+G19)"
-                },
-                "H20": {
-                    "content": "=IF(H18=\"\",\"\",H18+H19)"
-                },
-                "I20": {
-                    "content": "=IF(I18=\"\",\"\",I18+I19)"
-                },
-                "J20": {
-                    "content": "=IF(J18=\"\",\"\",J18+J19)"
-                },
-                "K20": {
-                    "content": "=IF(K18=\"\",\"\",K18+K19)"
-                },
-                "L20": {
-                    "content": "=IF(L18=\"\",\"\",L18+L19)"
-                },
-                "M20": {
-                    "content": "=IF(M18=\"\",\"\",M18+M19)"
-                },
-                "N20": {
-                    "content": "=IF(N18=\"\",\"\",N18+N19)"
-                },
-                "O20": {
-                    "content": "=IF(O18=\"\",\"\",O18+O19)"
-                },
-                "P20": {
-                    "content": "=IF(P18=\"\",\"\",P18+P19)"
-                },
-                "D20": {
-                    "content": "=IFERROR((B20-C20)/ABS(C20),\"\")"
-                },
-                "A21": {
-                    "content": "=_t(\"Cost of Revenue\")"
-                },
-                "B21": {
-                    "content": "=OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$3,Data!$B$2)"
-                },
-                "C21": {
-                    "content": "=OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$8,Data!$B$7)"
-                },
-                "E21": {
-                    "content": "=IF(Data!$D$16,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$16,Data!$C$16),\"\")"
-                },
-                "F21": {
-                    "content": "=IF(Data!$D$17,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$17,Data!$C$17),\"\")"
-                },
-                "G21": {
-                    "content": "=IF(Data!$D$18,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$18,Data!$C$18),\"\")"
-                },
-                "H21": {
-                    "content": "=IF(Data!$D$19,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$19,Data!$C$19),\"\")"
-                },
-                "I21": {
-                    "content": "=IF(Data!$D$20,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$20,Data!$C$20),\"\")"
-                },
-                "J21": {
-                    "content": "=IF(Data!$D$21,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$21,Data!$C$21),\"\")"
-                },
-                "K21": {
-                    "content": "=IF(Data!$D$22,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$22,Data!$C$22),\"\")"
-                },
-                "L21": {
-                    "content": "=IF(Data!$D$23,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$23,Data!$C$23),\"\")"
-                },
-                "M21": {
-                    "content": "=IF(Data!$D$24,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$24,Data!$C$24),\"\")"
-                },
-                "N21": {
-                    "content": "=IF(Data!$D$25,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$25,Data!$C$25),\"\")"
-                },
-                "O21": {
-                    "content": "=IF(Data!$D$26,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$26,Data!$C$26),\"\")"
-                },
-                "P21": {
-                    "content": "=IF(Data!$D$27,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$27,Data!$C$27),\"\")"
-                },
-                "D21": {
-                    "content": "=IFERROR((B21-C21)/ABS(C21),\"\")"
-                },
-                "A22": {
-                    "content": "=_t(\"Gross Profit\")"
-                },
-                "B22": {
-                    "content": "=IF(B20=\"\",\"\",B20-B21)"
-                },
-                "C22": {
-                    "content": "=IF(C20=\"\",\"\",C20-C21)"
-                },
-                "E22": {
-                    "content": "=IF(E20=\"\",\"\",E20-E21)"
-                },
-                "F22": {
-                    "content": "=IF(F20=\"\",\"\",F20-F21)"
-                },
-                "G22": {
-                    "content": "=IF(G20=\"\",\"\",G20-G21)"
-                },
-                "H22": {
-                    "content": "=IF(H20=\"\",\"\",H20-H21)"
-                },
-                "I22": {
-                    "content": "=IF(I20=\"\",\"\",I20-I21)"
-                },
-                "J22": {
-                    "content": "=IF(J20=\"\",\"\",J20-J21)"
-                },
-                "K22": {
-                    "content": "=IF(K20=\"\",\"\",K20-K21)"
-                },
-                "L22": {
-                    "content": "=IF(L20=\"\",\"\",L20-L21)"
-                },
-                "M22": {
-                    "content": "=IF(M20=\"\",\"\",M20-M21)"
-                },
-                "N22": {
-                    "content": "=IF(N20=\"\",\"\",N20-N21)"
-                },
-                "O22": {
-                    "content": "=IF(O20=\"\",\"\",O20-O21)"
-                },
-                "P22": {
-                    "content": "=IF(P20=\"\",\"\",P20-P21)"
-                },
-                "D22": {
-                    "content": "=IFERROR((B22-C22)/ABS(C22),\"\")"
-                },
-                "A23": {
-                    "content": "=_t(\"Operating Expenses\")"
-                },
-                "B23": {
-                    "content": "=OM.ACCOUNT.BALANCE(\"expense\",Data!$B$3,Data!$B$2)"
-                },
-                "C23": {
-                    "content": "=OM.ACCOUNT.BALANCE(\"expense\",Data!$B$8,Data!$B$7)"
-                },
-                "E23": {
-                    "content": "=IF(Data!$D$16,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$16,Data!$C$16),\"\")"
-                },
-                "F23": {
-                    "content": "=IF(Data!$D$17,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$17,Data!$C$17),\"\")"
-                },
-                "G23": {
-                    "content": "=IF(Data!$D$18,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$18,Data!$C$18),\"\")"
-                },
-                "H23": {
-                    "content": "=IF(Data!$D$19,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$19,Data!$C$19),\"\")"
-                },
-                "I23": {
-                    "content": "=IF(Data!$D$20,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$20,Data!$C$20),\"\")"
-                },
-                "J23": {
-                    "content": "=IF(Data!$D$21,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$21,Data!$C$21),\"\")"
-                },
-                "K23": {
-                    "content": "=IF(Data!$D$22,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$22,Data!$C$22),\"\")"
-                },
-                "L23": {
-                    "content": "=IF(Data!$D$23,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$23,Data!$C$23),\"\")"
-                },
-                "M23": {
-                    "content": "=IF(Data!$D$24,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$24,Data!$C$24),\"\")"
-                },
-                "N23": {
-                    "content": "=IF(Data!$D$25,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$25,Data!$C$25),\"\")"
-                },
-                "O23": {
-                    "content": "=IF(Data!$D$26,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$26,Data!$C$26),\"\")"
-                },
-                "P23": {
-                    "content": "=IF(Data!$D$27,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$27,Data!$C$27),\"\")"
-                },
-                "D23": {
-                    "content": "=IFERROR((B23-C23)/ABS(C23),\"\")"
-                },
-                "A24": {
-                    "content": "=_t(\"Depreciation\")"
-                },
-                "B24": {
-                    "content": "=OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$3,Data!$B$2)"
-                },
-                "C24": {
-                    "content": "=OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$8,Data!$B$7)"
-                },
-                "E24": {
-                    "content": "=IF(Data!$D$16,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$16,Data!$C$16),\"\")"
-                },
-                "F24": {
-                    "content": "=IF(Data!$D$17,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$17,Data!$C$17),\"\")"
-                },
-                "G24": {
-                    "content": "=IF(Data!$D$18,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$18,Data!$C$18),\"\")"
-                },
-                "H24": {
-                    "content": "=IF(Data!$D$19,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$19,Data!$C$19),\"\")"
-                },
-                "I24": {
-                    "content": "=IF(Data!$D$20,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$20,Data!$C$20),\"\")"
-                },
-                "J24": {
-                    "content": "=IF(Data!$D$21,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$21,Data!$C$21),\"\")"
-                },
-                "K24": {
-                    "content": "=IF(Data!$D$22,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$22,Data!$C$22),\"\")"
-                },
-                "L24": {
-                    "content": "=IF(Data!$D$23,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$23,Data!$C$23),\"\")"
-                },
-                "M24": {
-                    "content": "=IF(Data!$D$24,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$24,Data!$C$24),\"\")"
-                },
-                "N24": {
-                    "content": "=IF(Data!$D$25,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$25,Data!$C$25),\"\")"
-                },
-                "O24": {
-                    "content": "=IF(Data!$D$26,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$26,Data!$C$26),\"\")"
-                },
-                "P24": {
-                    "content": "=IF(Data!$D$27,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$27,Data!$C$27),\"\")"
-                },
-                "D24": {
-                    "content": "=IFERROR((B24-C24)/ABS(C24),\"\")"
-                },
-                "A25": {
-                    "content": "=_t(\"Other Expenses\")"
-                },
-                "B25": {
-                    "content": "=OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$3,Data!$B$2)"
-                },
-                "C25": {
-                    "content": "=OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$8,Data!$B$7)"
-                },
-                "E25": {
-                    "content": "=IF(Data!$D$16,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$16,Data!$C$16),\"\")"
-                },
-                "F25": {
-                    "content": "=IF(Data!$D$17,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$17,Data!$C$17),\"\")"
-                },
-                "G25": {
-                    "content": "=IF(Data!$D$18,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$18,Data!$C$18),\"\")"
-                },
-                "H25": {
-                    "content": "=IF(Data!$D$19,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$19,Data!$C$19),\"\")"
-                },
-                "I25": {
-                    "content": "=IF(Data!$D$20,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$20,Data!$C$20),\"\")"
-                },
-                "J25": {
-                    "content": "=IF(Data!$D$21,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$21,Data!$C$21),\"\")"
-                },
-                "K25": {
-                    "content": "=IF(Data!$D$22,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$22,Data!$C$22),\"\")"
-                },
-                "L25": {
-                    "content": "=IF(Data!$D$23,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$23,Data!$C$23),\"\")"
-                },
-                "M25": {
-                    "content": "=IF(Data!$D$24,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$24,Data!$C$24),\"\")"
-                },
-                "N25": {
-                    "content": "=IF(Data!$D$25,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$25,Data!$C$25),\"\")"
-                },
-                "O25": {
-                    "content": "=IF(Data!$D$26,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$26,Data!$C$26),\"\")"
-                },
-                "P25": {
-                    "content": "=IF(Data!$D$27,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$27,Data!$C$27),\"\")"
-                },
-                "D25": {
-                    "content": "=IFERROR((B25-C25)/ABS(C25),\"\")"
-                },
-                "A26": {
-                    "content": "=_t(\"Total Expenses\")"
-                },
-                "B26": {
-                    "content": "=IF(B21=\"\",\"\",B21+B23+B24+B25)"
-                },
-                "C26": {
-                    "content": "=IF(C21=\"\",\"\",C21+C23+C24+C25)"
-                },
-                "E26": {
-                    "content": "=IF(E21=\"\",\"\",E21+E23+E24+E25)"
-                },
-                "F26": {
-                    "content": "=IF(F21=\"\",\"\",F21+F23+F24+F25)"
-                },
-                "G26": {
-                    "content": "=IF(G21=\"\",\"\",G21+G23+G24+G25)"
-                },
-                "H26": {
-                    "content": "=IF(H21=\"\",\"\",H21+H23+H24+H25)"
-                },
-                "I26": {
-                    "content": "=IF(I21=\"\",\"\",I21+I23+I24+I25)"
-                },
-                "J26": {
-                    "content": "=IF(J21=\"\",\"\",J21+J23+J24+J25)"
-                },
-                "K26": {
-                    "content": "=IF(K21=\"\",\"\",K21+K23+K24+K25)"
-                },
-                "L26": {
-                    "content": "=IF(L21=\"\",\"\",L21+L23+L24+L25)"
-                },
-                "M26": {
-                    "content": "=IF(M21=\"\",\"\",M21+M23+M24+M25)"
-                },
-                "N26": {
-                    "content": "=IF(N21=\"\",\"\",N21+N23+N24+N25)"
-                },
-                "O26": {
-                    "content": "=IF(O21=\"\",\"\",O21+O23+O24+O25)"
-                },
-                "P26": {
-                    "content": "=IF(P21=\"\",\"\",P21+P23+P24+P25)"
-                },
-                "D26": {
-                    "content": "=IFERROR((B26-C26)/ABS(C26),\"\")"
-                },
-                "A27": {
-                    "content": "=_t(\"Net Profit\")"
-                },
-                "B27": {
-                    "content": "=IF(B20=\"\",\"\",B20-B26)"
-                },
-                "C27": {
-                    "content": "=IF(C20=\"\",\"\",C20-C26)"
-                },
-                "E27": {
-                    "content": "=IF(E20=\"\",\"\",E20-E26)"
-                },
-                "F27": {
-                    "content": "=IF(F20=\"\",\"\",F20-F26)"
-                },
-                "G27": {
-                    "content": "=IF(G20=\"\",\"\",G20-G26)"
-                },
-                "H27": {
-                    "content": "=IF(H20=\"\",\"\",H20-H26)"
-                },
-                "I27": {
-                    "content": "=IF(I20=\"\",\"\",I20-I26)"
-                },
-                "J27": {
-                    "content": "=IF(J20=\"\",\"\",J20-J26)"
-                },
-                "K27": {
-                    "content": "=IF(K20=\"\",\"\",K20-K26)"
-                },
-                "L27": {
-                    "content": "=IF(L20=\"\",\"\",L20-L26)"
-                },
-                "M27": {
-                    "content": "=IF(M20=\"\",\"\",M20-M26)"
-                },
-                "N27": {
-                    "content": "=IF(N20=\"\",\"\",N20-N26)"
-                },
-                "O27": {
-                    "content": "=IF(O20=\"\",\"\",O20-O26)"
-                },
-                "P27": {
-                    "content": "=IF(P20=\"\",\"\",P20-P26)"
-                },
-                "D27": {
-                    "content": "=IFERROR((B27-C27)/ABS(C27),\"\")"
-                },
-                "A28": {
-                    "content": "=_t(\"Gross Margin\")"
-                },
-                "B28": {
-                    "content": "=IF(B20=\"\",\"\",IFERROR(B22/B20,0))"
-                },
-                "C28": {
-                    "content": "=IF(C20=\"\",\"\",IFERROR(C22/C20,0))"
-                },
-                "E28": {
-                    "content": "=IF(E20=\"\",\"\",IFERROR(E22/E20,0))"
-                },
-                "F28": {
-                    "content": "=IF(F20=\"\",\"\",IFERROR(F22/F20,0))"
-                },
-                "G28": {
-                    "content": "=IF(G20=\"\",\"\",IFERROR(G22/G20,0))"
-                },
-                "H28": {
-                    "content": "=IF(H20=\"\",\"\",IFERROR(H22/H20,0))"
-                },
-                "I28": {
-                    "content": "=IF(I20=\"\",\"\",IFERROR(I22/I20,0))"
-                },
-                "J28": {
-                    "content": "=IF(J20=\"\",\"\",IFERROR(J22/J20,0))"
-                },
-                "K28": {
-                    "content": "=IF(K20=\"\",\"\",IFERROR(K22/K20,0))"
-                },
-                "L28": {
-                    "content": "=IF(L20=\"\",\"\",IFERROR(L22/L20,0))"
-                },
-                "M28": {
-                    "content": "=IF(M20=\"\",\"\",IFERROR(M22/M20,0))"
-                },
-                "N28": {
-                    "content": "=IF(N20=\"\",\"\",IFERROR(N22/N20,0))"
-                },
-                "O28": {
-                    "content": "=IF(O20=\"\",\"\",IFERROR(O22/O20,0))"
-                },
-                "P28": {
-                    "content": "=IF(P20=\"\",\"\",IFERROR(P22/P20,0))"
-                },
-                "A29": {
-                    "content": "=_t(\"Net Margin\")"
-                },
-                "B29": {
-                    "content": "=IF(B20=\"\",\"\",IFERROR(B27/B20,0))"
-                },
-                "C29": {
-                    "content": "=IF(C20=\"\",\"\",IFERROR(C27/C20,0))"
-                },
-                "E29": {
-                    "content": "=IF(E20=\"\",\"\",IFERROR(E27/E20,0))"
-                },
-                "F29": {
-                    "content": "=IF(F20=\"\",\"\",IFERROR(F27/F20,0))"
-                },
-                "G29": {
-                    "content": "=IF(G20=\"\",\"\",IFERROR(G27/G20,0))"
-                },
-                "H29": {
-                    "content": "=IF(H20=\"\",\"\",IFERROR(H27/H20,0))"
-                },
-                "I29": {
-                    "content": "=IF(I20=\"\",\"\",IFERROR(I27/I20,0))"
-                },
-                "J29": {
-                    "content": "=IF(J20=\"\",\"\",IFERROR(J27/J20,0))"
-                },
-                "K29": {
-                    "content": "=IF(K20=\"\",\"\",IFERROR(K27/K20,0))"
-                },
-                "L29": {
-                    "content": "=IF(L20=\"\",\"\",IFERROR(L27/L20,0))"
-                },
-                "M29": {
-                    "content": "=IF(M20=\"\",\"\",IFERROR(M27/M20,0))"
-                },
-                "N29": {
-                    "content": "=IF(N20=\"\",\"\",IFERROR(N27/N20,0))"
-                },
-                "O29": {
-                    "content": "=IF(O20=\"\",\"\",IFERROR(O27/O20,0))"
-                },
-                "P29": {
-                    "content": "=IF(P20=\"\",\"\",IFERROR(P27/P20,0))"
-                }
+                "A1": "=Data!B11",
+                "A17": "=_t(\"Profit and Loss\")",
+                "E17": "=IF(Data!D16,Data!A16,\"\")",
+                "F17": "=IF(Data!D17,Data!A17,\"\")",
+                "G17": "=IF(Data!D18,Data!A18,\"\")",
+                "H17": "=IF(Data!D19,Data!A19,\"\")",
+                "I17": "=IF(Data!D20,Data!A20,\"\")",
+                "J17": "=IF(Data!D21,Data!A21,\"\")",
+                "K17": "=IF(Data!D22,Data!A22,\"\")",
+                "L17": "=IF(Data!D23,Data!A23,\"\")",
+                "M17": "=IF(Data!D24,Data!A24,\"\")",
+                "N17": "=IF(Data!D25,Data!A25,\"\")",
+                "O17": "=IF(Data!D26,Data!A26,\"\")",
+                "P17": "=IF(Data!D27,Data!A27,\"\")",
+                "B17": "=_t(\"Period\")",
+                "C17": "=Data!$B$12",
+                "D17": "=_t(\"Change\")",
+                "A18": "=_t(\"Revenue\")",
+                "B18": "=-OM.ACCOUNT.BALANCE(\"income\",Data!$B$3,Data!$B$2)",
+                "C18": "=-OM.ACCOUNT.BALANCE(\"income\",Data!$B$8,Data!$B$7)",
+                "E18": "=IF(Data!$D$16,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$16,Data!$C$16),\"\")",
+                "F18": "=IF(Data!$D$17,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$17,Data!$C$17),\"\")",
+                "G18": "=IF(Data!$D$18,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$18,Data!$C$18),\"\")",
+                "H18": "=IF(Data!$D$19,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$19,Data!$C$19),\"\")",
+                "I18": "=IF(Data!$D$20,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$20,Data!$C$20),\"\")",
+                "J18": "=IF(Data!$D$21,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$21,Data!$C$21),\"\")",
+                "K18": "=IF(Data!$D$22,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$22,Data!$C$22),\"\")",
+                "L18": "=IF(Data!$D$23,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$23,Data!$C$23),\"\")",
+                "M18": "=IF(Data!$D$24,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$24,Data!$C$24),\"\")",
+                "N18": "=IF(Data!$D$25,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$25,Data!$C$25),\"\")",
+                "O18": "=IF(Data!$D$26,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$26,Data!$C$26),\"\")",
+                "P18": "=IF(Data!$D$27,-OM.ACCOUNT.BALANCE(\"income\",Data!$B$27,Data!$C$27),\"\")",
+                "D18": "=IFERROR((B18-C18)/ABS(C18),\"\")",
+                "A19": "=_t(\"Other Income\")",
+                "B19": "=-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$3,Data!$B$2)",
+                "C19": "=-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$8,Data!$B$7)",
+                "E19": "=IF(Data!$D$16,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$16,Data!$C$16),\"\")",
+                "F19": "=IF(Data!$D$17,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$17,Data!$C$17),\"\")",
+                "G19": "=IF(Data!$D$18,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$18,Data!$C$18),\"\")",
+                "H19": "=IF(Data!$D$19,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$19,Data!$C$19),\"\")",
+                "I19": "=IF(Data!$D$20,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$20,Data!$C$20),\"\")",
+                "J19": "=IF(Data!$D$21,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$21,Data!$C$21),\"\")",
+                "K19": "=IF(Data!$D$22,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$22,Data!$C$22),\"\")",
+                "L19": "=IF(Data!$D$23,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$23,Data!$C$23),\"\")",
+                "M19": "=IF(Data!$D$24,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$24,Data!$C$24),\"\")",
+                "N19": "=IF(Data!$D$25,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$25,Data!$C$25),\"\")",
+                "O19": "=IF(Data!$D$26,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$26,Data!$C$26),\"\")",
+                "P19": "=IF(Data!$D$27,-OM.ACCOUNT.BALANCE(\"income_other\",Data!$B$27,Data!$C$27),\"\")",
+                "D19": "=IFERROR((B19-C19)/ABS(C19),\"\")",
+                "A20": "=_t(\"Total Income\")",
+                "B20": "=IF(B18=\"\",\"\",B18+B19)",
+                "C20": "=IF(C18=\"\",\"\",C18+C19)",
+                "E20": "=IF(E18=\"\",\"\",E18+E19)",
+                "F20": "=IF(F18=\"\",\"\",F18+F19)",
+                "G20": "=IF(G18=\"\",\"\",G18+G19)",
+                "H20": "=IF(H18=\"\",\"\",H18+H19)",
+                "I20": "=IF(I18=\"\",\"\",I18+I19)",
+                "J20": "=IF(J18=\"\",\"\",J18+J19)",
+                "K20": "=IF(K18=\"\",\"\",K18+K19)",
+                "L20": "=IF(L18=\"\",\"\",L18+L19)",
+                "M20": "=IF(M18=\"\",\"\",M18+M19)",
+                "N20": "=IF(N18=\"\",\"\",N18+N19)",
+                "O20": "=IF(O18=\"\",\"\",O18+O19)",
+                "P20": "=IF(P18=\"\",\"\",P18+P19)",
+                "D20": "=IFERROR((B20-C20)/ABS(C20),\"\")",
+                "A21": "=_t(\"Cost of Revenue\")",
+                "B21": "=OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$3,Data!$B$2)",
+                "C21": "=OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$8,Data!$B$7)",
+                "E21": "=IF(Data!$D$16,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$16,Data!$C$16),\"\")",
+                "F21": "=IF(Data!$D$17,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$17,Data!$C$17),\"\")",
+                "G21": "=IF(Data!$D$18,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$18,Data!$C$18),\"\")",
+                "H21": "=IF(Data!$D$19,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$19,Data!$C$19),\"\")",
+                "I21": "=IF(Data!$D$20,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$20,Data!$C$20),\"\")",
+                "J21": "=IF(Data!$D$21,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$21,Data!$C$21),\"\")",
+                "K21": "=IF(Data!$D$22,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$22,Data!$C$22),\"\")",
+                "L21": "=IF(Data!$D$23,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$23,Data!$C$23),\"\")",
+                "M21": "=IF(Data!$D$24,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$24,Data!$C$24),\"\")",
+                "N21": "=IF(Data!$D$25,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$25,Data!$C$25),\"\")",
+                "O21": "=IF(Data!$D$26,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$26,Data!$C$26),\"\")",
+                "P21": "=IF(Data!$D$27,OM.ACCOUNT.BALANCE(\"expense_direct_cost\",Data!$B$27,Data!$C$27),\"\")",
+                "D21": "=IFERROR((B21-C21)/ABS(C21),\"\")",
+                "A22": "=_t(\"Gross Profit\")",
+                "B22": "=IF(B20=\"\",\"\",B20-B21)",
+                "C22": "=IF(C20=\"\",\"\",C20-C21)",
+                "E22": "=IF(E20=\"\",\"\",E20-E21)",
+                "F22": "=IF(F20=\"\",\"\",F20-F21)",
+                "G22": "=IF(G20=\"\",\"\",G20-G21)",
+                "H22": "=IF(H20=\"\",\"\",H20-H21)",
+                "I22": "=IF(I20=\"\",\"\",I20-I21)",
+                "J22": "=IF(J20=\"\",\"\",J20-J21)",
+                "K22": "=IF(K20=\"\",\"\",K20-K21)",
+                "L22": "=IF(L20=\"\",\"\",L20-L21)",
+                "M22": "=IF(M20=\"\",\"\",M20-M21)",
+                "N22": "=IF(N20=\"\",\"\",N20-N21)",
+                "O22": "=IF(O20=\"\",\"\",O20-O21)",
+                "P22": "=IF(P20=\"\",\"\",P20-P21)",
+                "D22": "=IFERROR((B22-C22)/ABS(C22),\"\")",
+                "A23": "=_t(\"Operating Expenses\")",
+                "B23": "=OM.ACCOUNT.BALANCE(\"expense\",Data!$B$3,Data!$B$2)",
+                "C23": "=OM.ACCOUNT.BALANCE(\"expense\",Data!$B$8,Data!$B$7)",
+                "E23": "=IF(Data!$D$16,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$16,Data!$C$16),\"\")",
+                "F23": "=IF(Data!$D$17,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$17,Data!$C$17),\"\")",
+                "G23": "=IF(Data!$D$18,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$18,Data!$C$18),\"\")",
+                "H23": "=IF(Data!$D$19,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$19,Data!$C$19),\"\")",
+                "I23": "=IF(Data!$D$20,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$20,Data!$C$20),\"\")",
+                "J23": "=IF(Data!$D$21,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$21,Data!$C$21),\"\")",
+                "K23": "=IF(Data!$D$22,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$22,Data!$C$22),\"\")",
+                "L23": "=IF(Data!$D$23,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$23,Data!$C$23),\"\")",
+                "M23": "=IF(Data!$D$24,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$24,Data!$C$24),\"\")",
+                "N23": "=IF(Data!$D$25,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$25,Data!$C$25),\"\")",
+                "O23": "=IF(Data!$D$26,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$26,Data!$C$26),\"\")",
+                "P23": "=IF(Data!$D$27,OM.ACCOUNT.BALANCE(\"expense\",Data!$B$27,Data!$C$27),\"\")",
+                "D23": "=IFERROR((B23-C23)/ABS(C23),\"\")",
+                "A24": "=_t(\"Depreciation\")",
+                "B24": "=OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$3,Data!$B$2)",
+                "C24": "=OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$8,Data!$B$7)",
+                "E24": "=IF(Data!$D$16,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$16,Data!$C$16),\"\")",
+                "F24": "=IF(Data!$D$17,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$17,Data!$C$17),\"\")",
+                "G24": "=IF(Data!$D$18,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$18,Data!$C$18),\"\")",
+                "H24": "=IF(Data!$D$19,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$19,Data!$C$19),\"\")",
+                "I24": "=IF(Data!$D$20,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$20,Data!$C$20),\"\")",
+                "J24": "=IF(Data!$D$21,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$21,Data!$C$21),\"\")",
+                "K24": "=IF(Data!$D$22,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$22,Data!$C$22),\"\")",
+                "L24": "=IF(Data!$D$23,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$23,Data!$C$23),\"\")",
+                "M24": "=IF(Data!$D$24,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$24,Data!$C$24),\"\")",
+                "N24": "=IF(Data!$D$25,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$25,Data!$C$25),\"\")",
+                "O24": "=IF(Data!$D$26,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$26,Data!$C$26),\"\")",
+                "P24": "=IF(Data!$D$27,OM.ACCOUNT.BALANCE(\"expense_depreciation\",Data!$B$27,Data!$C$27),\"\")",
+                "D24": "=IFERROR((B24-C24)/ABS(C24),\"\")",
+                "A25": "=_t(\"Other Expenses\")",
+                "B25": "=OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$3,Data!$B$2)",
+                "C25": "=OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$8,Data!$B$7)",
+                "E25": "=IF(Data!$D$16,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$16,Data!$C$16),\"\")",
+                "F25": "=IF(Data!$D$17,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$17,Data!$C$17),\"\")",
+                "G25": "=IF(Data!$D$18,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$18,Data!$C$18),\"\")",
+                "H25": "=IF(Data!$D$19,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$19,Data!$C$19),\"\")",
+                "I25": "=IF(Data!$D$20,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$20,Data!$C$20),\"\")",
+                "J25": "=IF(Data!$D$21,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$21,Data!$C$21),\"\")",
+                "K25": "=IF(Data!$D$22,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$22,Data!$C$22),\"\")",
+                "L25": "=IF(Data!$D$23,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$23,Data!$C$23),\"\")",
+                "M25": "=IF(Data!$D$24,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$24,Data!$C$24),\"\")",
+                "N25": "=IF(Data!$D$25,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$25,Data!$C$25),\"\")",
+                "O25": "=IF(Data!$D$26,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$26,Data!$C$26),\"\")",
+                "P25": "=IF(Data!$D$27,OM.ACCOUNT.BALANCE(\"expense_other\",Data!$B$27,Data!$C$27),\"\")",
+                "D25": "=IFERROR((B25-C25)/ABS(C25),\"\")",
+                "A26": "=_t(\"Total Expenses\")",
+                "B26": "=IF(B21=\"\",\"\",B21+B23+B24+B25)",
+                "C26": "=IF(C21=\"\",\"\",C21+C23+C24+C25)",
+                "E26": "=IF(E21=\"\",\"\",E21+E23+E24+E25)",
+                "F26": "=IF(F21=\"\",\"\",F21+F23+F24+F25)",
+                "G26": "=IF(G21=\"\",\"\",G21+G23+G24+G25)",
+                "H26": "=IF(H21=\"\",\"\",H21+H23+H24+H25)",
+                "I26": "=IF(I21=\"\",\"\",I21+I23+I24+I25)",
+                "J26": "=IF(J21=\"\",\"\",J21+J23+J24+J25)",
+                "K26": "=IF(K21=\"\",\"\",K21+K23+K24+K25)",
+                "L26": "=IF(L21=\"\",\"\",L21+L23+L24+L25)",
+                "M26": "=IF(M21=\"\",\"\",M21+M23+M24+M25)",
+                "N26": "=IF(N21=\"\",\"\",N21+N23+N24+N25)",
+                "O26": "=IF(O21=\"\",\"\",O21+O23+O24+O25)",
+                "P26": "=IF(P21=\"\",\"\",P21+P23+P24+P25)",
+                "D26": "=IFERROR((B26-C26)/ABS(C26),\"\")",
+                "A27": "=_t(\"Net Profit\")",
+                "B27": "=IF(B20=\"\",\"\",B20-B26)",
+                "C27": "=IF(C20=\"\",\"\",C20-C26)",
+                "E27": "=IF(E20=\"\",\"\",E20-E26)",
+                "F27": "=IF(F20=\"\",\"\",F20-F26)",
+                "G27": "=IF(G20=\"\",\"\",G20-G26)",
+                "H27": "=IF(H20=\"\",\"\",H20-H26)",
+                "I27": "=IF(I20=\"\",\"\",I20-I26)",
+                "J27": "=IF(J20=\"\",\"\",J20-J26)",
+                "K27": "=IF(K20=\"\",\"\",K20-K26)",
+                "L27": "=IF(L20=\"\",\"\",L20-L26)",
+                "M27": "=IF(M20=\"\",\"\",M20-M26)",
+                "N27": "=IF(N20=\"\",\"\",N20-N26)",
+                "O27": "=IF(O20=\"\",\"\",O20-O26)",
+                "P27": "=IF(P20=\"\",\"\",P20-P26)",
+                "D27": "=IFERROR((B27-C27)/ABS(C27),\"\")",
+                "A28": "=_t(\"Gross Margin\")",
+                "B28": "=IF(B20=\"\",\"\",IFERROR(B22/B20,0))",
+                "C28": "=IF(C20=\"\",\"\",IFERROR(C22/C20,0))",
+                "E28": "=IF(E20=\"\",\"\",IFERROR(E22/E20,0))",
+                "F28": "=IF(F20=\"\",\"\",IFERROR(F22/F20,0))",
+                "G28": "=IF(G20=\"\",\"\",IFERROR(G22/G20,0))",
+                "H28": "=IF(H20=\"\",\"\",IFERROR(H22/H20,0))",
+                "I28": "=IF(I20=\"\",\"\",IFERROR(I22/I20,0))",
+                "J28": "=IF(J20=\"\",\"\",IFERROR(J22/J20,0))",
+                "K28": "=IF(K20=\"\",\"\",IFERROR(K22/K20,0))",
+                "L28": "=IF(L20=\"\",\"\",IFERROR(L22/L20,0))",
+                "M28": "=IF(M20=\"\",\"\",IFERROR(M22/M20,0))",
+                "N28": "=IF(N20=\"\",\"\",IFERROR(N22/N20,0))",
+                "O28": "=IF(O20=\"\",\"\",IFERROR(O22/O20,0))",
+                "P28": "=IF(P20=\"\",\"\",IFERROR(P22/P20,0))",
+                "A29": "=_t(\"Net Margin\")",
+                "B29": "=IF(B20=\"\",\"\",IFERROR(B27/B20,0))",
+                "C29": "=IF(C20=\"\",\"\",IFERROR(C27/C20,0))",
+                "E29": "=IF(E20=\"\",\"\",IFERROR(E27/E20,0))",
+                "F29": "=IF(F20=\"\",\"\",IFERROR(F27/F20,0))",
+                "G29": "=IF(G20=\"\",\"\",IFERROR(G27/G20,0))",
+                "H29": "=IF(H20=\"\",\"\",IFERROR(H27/H20,0))",
+                "I29": "=IF(I20=\"\",\"\",IFERROR(I27/I20,0))",
+                "J29": "=IF(J20=\"\",\"\",IFERROR(J27/J20,0))",
+                "K29": "=IF(K20=\"\",\"\",IFERROR(K27/K20,0))",
+                "L29": "=IF(L20=\"\",\"\",IFERROR(L27/L20,0))",
+                "M29": "=IF(M20=\"\",\"\",IFERROR(M27/M20,0))",
+                "N29": "=IF(N20=\"\",\"\",IFERROR(N27/N20,0))",
+                "O29": "=IF(O20=\"\",\"\",IFERROR(O27/O20,0))",
+                "P29": "=IF(P20=\"\",\"\",IFERROR(P27/P20,0))"
             },
             "styles": {
                 "A1": 3,
@@ -1147,8 +733,12 @@
             "figures": [
                 {
                     "id": "c810aee0-49c7-5a96-aa77-cbcc8bda44ce",
-                    "x": 0,
-                    "y": 30,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 0,
+                        "y": 30
+                    },
                     "width": 1180,
                     "height": 328,
                     "tag": "chart",
@@ -1180,6 +770,7 @@
                             }
                         ],
                         "dataSetsHaveTitle": false,
+                        "chartId": "c810aee0-49c7-5a96-aa77-cbcc8bda44ce",
                         "stacked": false,
                         "aggregated": false
                     }
@@ -1217,240 +808,84 @@
             },
             "merges": [],
             "cells": {
-                "G1": {
-                    "content": "=_t(\"Same Period Last Year\")"
-                },
-                "G2": {
-                    "content": "=_t(\"Previous Period\")"
-                },
-                "A1": {
-                    "content": "=_t(\"Period\")"
-                },
-                "B1": {
-                    "content": "=ODOO.FILTER.VALUE(\"Period\")"
-                },
-                "A2": {
-                    "content": "=_t(\"End\")"
-                },
-                "B2": {
-                    "content": "=IF(ISNUMBER(C1),C1,TODAY())"
-                },
-                "A3": {
-                    "content": "=_t(\"Start\")"
-                },
-                "B3": {
-                    "content": "=IF(ISNUMBER(B1),B1,ODOO.FISCALYEAR.START(B2))"
-                },
-                "A4": {
-                    "content": "=_t(\"Compare with\")"
-                },
-                "B4": {
-                    "content": "=ODOO.FILTER.VALUE(\"Compare With\")"
-                },
-                "A5": {
-                    "content": "=_t(\"Previous period\")"
-                },
-                "B5": {
-                    "content": "=B4=G2"
-                },
-                "A6": {
-                    "content": "=_t(\"Months in the period\")"
-                },
-                "B6": {
-                    "content": "=IF(AND(DAY(B3)=1,B2=EOMONTH(B2,0)),(YEAR(B2)-YEAR(B3))*12+MONTH(B2)-MONTH(B3)+1,0)"
-                },
-                "A7": {
-                    "content": "=_t(\"Comparison end\")"
-                },
-                "B7": {
-                    "content": "=IF(B5,B3-1,EDATE(B2,-12))"
-                },
-                "A8": {
-                    "content": "=_t(\"Comparison start\")"
-                },
-                "B8": {
-                    "content": "=IF(B5,IF(B6,EDATE(B3,-B6),B3-(B2-B3)-1),EDATE(B3,-12))"
-                },
-                "A9": {
-                    "content": "=_t(\"Fiscal year start\")"
-                },
-                "B9": {
-                    "content": "=ODOO.FISCALYEAR.START(B2)"
-                },
-                "A10": {
-                    "content": "=_t(\"Comparison fiscal year start\")"
-                },
-                "B10": {
-                    "content": "=ODOO.FISCALYEAR.START(B7)"
-                },
-                "A11": {
-                    "content": "=_t(\"Description\")"
-                },
-                "B11": {
-                    "content": "=CONCATENATE(TEXT(B3,\"mm/dd/yyyy\"),_t(\" to \"),TEXT(B2,\"mm/dd/yyyy\"),_t(\", compared with \"),TEXT(B8,\"mm/dd/yyyy\"),_t(\" to \"),TEXT(B7,\"mm/dd/yyyy\"))"
-                },
-                "A12": {
-                    "content": "=_t(\"Comparison\")"
-                },
-                "B12": {
-                    "content": "=IF(B5,_t(\"Previous Period\"),_t(\"Last Year\"))"
-                },
-                "A15": {
-                    "content": "=_t(\"Month\")"
-                },
-                "B15": {
-                    "content": "=_t(\"From\")"
-                },
-                "C15": {
-                    "content": "=_t(\"To\")"
-                },
-                "D15": {
-                    "content": "=_t(\"In the period\")"
-                },
-                "A16": {
-                    "content": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),0)"
-                },
-                "B16": {
-                    "content": "=MAX(A16,Data!$B$3)"
-                },
-                "C16": {
-                    "content": "=MIN(EOMONTH(A16,0),Data!$B$2)"
-                },
-                "D16": {
-                    "content": "=A16<=Data!$B$2"
-                },
-                "A17": {
-                    "content": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),1)"
-                },
-                "B17": {
-                    "content": "=MAX(A17,Data!$B$3)"
-                },
-                "C17": {
-                    "content": "=MIN(EOMONTH(A17,0),Data!$B$2)"
-                },
-                "D17": {
-                    "content": "=A17<=Data!$B$2"
-                },
-                "A18": {
-                    "content": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),2)"
-                },
-                "B18": {
-                    "content": "=MAX(A18,Data!$B$3)"
-                },
-                "C18": {
-                    "content": "=MIN(EOMONTH(A18,0),Data!$B$2)"
-                },
-                "D18": {
-                    "content": "=A18<=Data!$B$2"
-                },
-                "A19": {
-                    "content": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),3)"
-                },
-                "B19": {
-                    "content": "=MAX(A19,Data!$B$3)"
-                },
-                "C19": {
-                    "content": "=MIN(EOMONTH(A19,0),Data!$B$2)"
-                },
-                "D19": {
-                    "content": "=A19<=Data!$B$2"
-                },
-                "A20": {
-                    "content": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),4)"
-                },
-                "B20": {
-                    "content": "=MAX(A20,Data!$B$3)"
-                },
-                "C20": {
-                    "content": "=MIN(EOMONTH(A20,0),Data!$B$2)"
-                },
-                "D20": {
-                    "content": "=A20<=Data!$B$2"
-                },
-                "A21": {
-                    "content": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),5)"
-                },
-                "B21": {
-                    "content": "=MAX(A21,Data!$B$3)"
-                },
-                "C21": {
-                    "content": "=MIN(EOMONTH(A21,0),Data!$B$2)"
-                },
-                "D21": {
-                    "content": "=A21<=Data!$B$2"
-                },
-                "A22": {
-                    "content": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),6)"
-                },
-                "B22": {
-                    "content": "=MAX(A22,Data!$B$3)"
-                },
-                "C22": {
-                    "content": "=MIN(EOMONTH(A22,0),Data!$B$2)"
-                },
-                "D22": {
-                    "content": "=A22<=Data!$B$2"
-                },
-                "A23": {
-                    "content": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),7)"
-                },
-                "B23": {
-                    "content": "=MAX(A23,Data!$B$3)"
-                },
-                "C23": {
-                    "content": "=MIN(EOMONTH(A23,0),Data!$B$2)"
-                },
-                "D23": {
-                    "content": "=A23<=Data!$B$2"
-                },
-                "A24": {
-                    "content": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),8)"
-                },
-                "B24": {
-                    "content": "=MAX(A24,Data!$B$3)"
-                },
-                "C24": {
-                    "content": "=MIN(EOMONTH(A24,0),Data!$B$2)"
-                },
-                "D24": {
-                    "content": "=A24<=Data!$B$2"
-                },
-                "A25": {
-                    "content": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),9)"
-                },
-                "B25": {
-                    "content": "=MAX(A25,Data!$B$3)"
-                },
-                "C25": {
-                    "content": "=MIN(EOMONTH(A25,0),Data!$B$2)"
-                },
-                "D25": {
-                    "content": "=A25<=Data!$B$2"
-                },
-                "A26": {
-                    "content": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),10)"
-                },
-                "B26": {
-                    "content": "=MAX(A26,Data!$B$3)"
-                },
-                "C26": {
-                    "content": "=MIN(EOMONTH(A26,0),Data!$B$2)"
-                },
-                "D26": {
-                    "content": "=A26<=Data!$B$2"
-                },
-                "A27": {
-                    "content": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),11)"
-                },
-                "B27": {
-                    "content": "=MAX(A27,Data!$B$3)"
-                },
-                "C27": {
-                    "content": "=MIN(EOMONTH(A27,0),Data!$B$2)"
-                },
-                "D27": {
-                    "content": "=A27<=Data!$B$2"
-                }
+                "G1": "=_t(\"Same Period Last Year\")",
+                "G2": "=_t(\"Previous Period\")",
+                "A1": "=_t(\"Period\")",
+                "B1": "=ODOO.FILTER.VALUE(\"Period\")",
+                "A2": "=_t(\"End\")",
+                "B2": "=IF(ISNUMBER(C1),C1,TODAY())",
+                "A3": "=_t(\"Start\")",
+                "B3": "=IF(ISNUMBER(B1),B1,ODOO.FISCALYEAR.START(B2))",
+                "A4": "=_t(\"Compare with\")",
+                "B4": "=ODOO.FILTER.VALUE(\"Compare With\")",
+                "A5": "=_t(\"Previous period\")",
+                "B5": "=B4=G2",
+                "A6": "=_t(\"Months in the period\")",
+                "B6": "=IF(AND(DAY(B3)=1,B2=EOMONTH(B2,0)),(YEAR(B2)-YEAR(B3))*12+MONTH(B2)-MONTH(B3)+1,0)",
+                "A7": "=_t(\"Comparison end\")",
+                "B7": "=IF(B5,B3-1,EDATE(B2,-12))",
+                "A8": "=_t(\"Comparison start\")",
+                "B8": "=IF(B5,IF(B6,EDATE(B3,-B6),B3-(B2-B3)-1),EDATE(B3,-12))",
+                "A9": "=_t(\"Fiscal year start\")",
+                "B9": "=ODOO.FISCALYEAR.START(B2)",
+                "A10": "=_t(\"Comparison fiscal year start\")",
+                "B10": "=ODOO.FISCALYEAR.START(B7)",
+                "A11": "=_t(\"Description\")",
+                "B11": "=CONCATENATE(TEXT(B3,\"mm/dd/yyyy\"),_t(\" to \"),TEXT(B2,\"mm/dd/yyyy\"),_t(\", compared with \"),TEXT(B8,\"mm/dd/yyyy\"),_t(\" to \"),TEXT(B7,\"mm/dd/yyyy\"))",
+                "A12": "=_t(\"Comparison\")",
+                "B12": "=IF(B5,_t(\"Previous Period\"),_t(\"Last Year\"))",
+                "A15": "=_t(\"Month\")",
+                "B15": "=_t(\"From\")",
+                "C15": "=_t(\"To\")",
+                "D15": "=_t(\"In the period\")",
+                "A16": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),0)",
+                "B16": "=MAX(A16,Data!$B$3)",
+                "C16": "=MIN(EOMONTH(A16,0),Data!$B$2)",
+                "D16": "=A16<=Data!$B$2",
+                "A17": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),1)",
+                "B17": "=MAX(A17,Data!$B$3)",
+                "C17": "=MIN(EOMONTH(A17,0),Data!$B$2)",
+                "D17": "=A17<=Data!$B$2",
+                "A18": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),2)",
+                "B18": "=MAX(A18,Data!$B$3)",
+                "C18": "=MIN(EOMONTH(A18,0),Data!$B$2)",
+                "D18": "=A18<=Data!$B$2",
+                "A19": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),3)",
+                "B19": "=MAX(A19,Data!$B$3)",
+                "C19": "=MIN(EOMONTH(A19,0),Data!$B$2)",
+                "D19": "=A19<=Data!$B$2",
+                "A20": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),4)",
+                "B20": "=MAX(A20,Data!$B$3)",
+                "C20": "=MIN(EOMONTH(A20,0),Data!$B$2)",
+                "D20": "=A20<=Data!$B$2",
+                "A21": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),5)",
+                "B21": "=MAX(A21,Data!$B$3)",
+                "C21": "=MIN(EOMONTH(A21,0),Data!$B$2)",
+                "D21": "=A21<=Data!$B$2",
+                "A22": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),6)",
+                "B22": "=MAX(A22,Data!$B$3)",
+                "C22": "=MIN(EOMONTH(A22,0),Data!$B$2)",
+                "D22": "=A22<=Data!$B$2",
+                "A23": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),7)",
+                "B23": "=MAX(A23,Data!$B$3)",
+                "C23": "=MIN(EOMONTH(A23,0),Data!$B$2)",
+                "D23": "=A23<=Data!$B$2",
+                "A24": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),8)",
+                "B24": "=MAX(A24,Data!$B$3)",
+                "C24": "=MIN(EOMONTH(A24,0),Data!$B$2)",
+                "D24": "=A24<=Data!$B$2",
+                "A25": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),9)",
+                "B25": "=MAX(A25,Data!$B$3)",
+                "C25": "=MIN(EOMONTH(A25,0),Data!$B$2)",
+                "D25": "=A25<=Data!$B$2",
+                "A26": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),10)",
+                "B26": "=MAX(A26,Data!$B$3)",
+                "C26": "=MIN(EOMONTH(A26,0),Data!$B$2)",
+                "D26": "=A26<=Data!$B$2",
+                "A27": "=EDATE(DATE(YEAR(Data!$B$3),MONTH(Data!$B$3),1),11)",
+                "B27": "=MAX(A27,Data!$B$3)",
+                "C27": "=MIN(EOMONTH(A27,0),Data!$B$2)",
+                "D27": "=A27<=Data!$B$2"
             },
             "styles": {
                 "G1": 1,
@@ -1604,19 +1039,24 @@
             "id": "225ab739-ec10-553d-b422-02b11ea7371f",
             "type": "date",
             "label": "Period",
-            "defaultValue": "year_to_date",
-            "rangeType": "relative"
+            "defaultValue": "year_to_date"
         },
         {
             "id": "21d2d19e-53b6-5590-9002-37cec3449b5b",
             "type": "text",
             "label": "Compare With",
-            "defaultValue": "Same Period Last Year",
-            "rangeOfAllowedValues": "Data!G1:G2"
+            "rangesOfAllowedValues": [
+                "Data!G1:G2"
+            ],
+            "defaultValue": {
+                "operator": "in",
+                "strings": [
+                    "Same Period Last Year"
+                ]
+            }
         }
     ],
     "lists": {},
     "listNextId": 1,
-    "chartOdooMenusReferences": {},
-    "odooVersion": 12
+    "chartOdooMenusReferences": {}
 }

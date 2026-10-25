@@ -2,8 +2,9 @@ from collections import defaultdict
 
 from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError
+from odoo.fields import Domain
 
-# computed, non-stored amounts that read_group() aggregates by hand
+# computed, non-stored amounts that are aggregated by hand for grouped views
 COMPUTED_AMOUNT_FIELDS = ('practical_amount', 'theoritical_amount', 'percentage')
 
 
@@ -15,8 +16,7 @@ class AccountBudgetPost(models.Model):
     name = fields.Char('Name', required=True)
     account_ids = fields.Many2many(
         'account.account', 'account_budget_rel', 'budget_id',
-        'account_id', 'Accounts',
-        domain=[('deprecated', '=', False)]
+        'account_id', 'Accounts'
     )
     company_id = fields.Many2one('res.company', 'Company', required=True, default=lambda self: self.env.company)
 
@@ -86,9 +86,7 @@ class CrossoveredBudgetLines(models.Model):
     name = fields.Char(compute='_compute_line_name')
     crossovered_budget_id = fields.Many2one('crossovered.budget', 'Budget', ondelete='cascade', index=True, required=True)
     analytic_account_id = fields.Many2one('account.analytic.account', 'Analytic Account')
-    # account.analytic.group no longer exists: analytic_account_id.plan_id points at
-    # account.analytic.plan, and a wrong comodel makes fields_get() raise a KeyError
-    analytic_plan_id = fields.Many2one('account.analytic.plan', 'Analytic Plan', related='analytic_account_id.plan_id', readonly=True)
+    analytic_plan_id = fields.Many2one(related='analytic_account_id.plan_id')
     general_budget_id = fields.Many2one('account.budget.post', 'Budgetary Position')
     date_from = fields.Date('Start Date', required=True)
     date_to = fields.Date('End Date', required=True)
@@ -117,48 +115,59 @@ class CrossoveredBudgetLines(models.Model):
         # stored, so the ORM no longer advertises an aggregator for them. Without one
         # the pivot and graph views refuse them as measures ("No aggregate function
         # has been provided for the measure ...") and the list view shows no group
-        # totals. read_group() below computes them by hand, so tell the client they
-        # can be aggregated.
+        # totals. They are aggregated by hand below, so tell the client they can be.
         if attributes is None or 'aggregator' in attributes:
             for fname in COMPUTED_AMOUNT_FIELDS:
                 if fname in res:
                     res[fname]['aggregator'] = 'sum'
         return res
 
+    def _split_computed_aggregates(self, aggregates):
+        """ Split the aggregates on the non-stored computed amounts, which cannot be
+        aggregated in SQL, from the ones the ORM can handle.
+
+        :return: (sql aggregates, {aggregate spec: field name})
+        """
+        computed_specs = {spec: spec.split(':', 1)[0] for spec in aggregates
+                          if spec.split(':', 1)[0] in COMPUTED_AMOUNT_FIELDS}
+        return [spec for spec in aggregates if spec not in computed_specs], computed_specs
+
+    def _fill_computed_aggregates(self, domain, groups, computed_specs):
+        """ Compute the non-stored amount fields manually for each group. """
+        lines_by_group = [
+            self.search(Domain(domain or []) & Domain(group.get('__extra_domain') or []))
+            for group in groups
+        ]
+        for group_line, lines in zip(groups, lines_by_group):
+            practical_amount = sum(lines.mapped('practical_amount'))
+            theoritical_amount = sum(lines.mapped('theoritical_amount'))
+            values = {
+                'practical_amount': practical_amount,
+                'theoritical_amount': theoritical_amount,
+                # same ratio as on the lines, weighted by the theoretical amounts
+                'percentage': practical_amount / theoritical_amount if theoritical_amount else 0.0,
+            }
+            for spec, field_name in computed_specs.items():
+                group_line[spec] = values[field_name]
+
     @api.model
-    def read_group(self, domain, fields, groupby, offset=0, limit=None, orderby=False, lazy=True):
-        # overrides the default read_group in order to compute the computed fields manually for the group.
-        # A field is asked as `field`, `field:agg` or, by the spreadsheets, `name:agg(field)`: the value of a
-        # computed one is returned under its name.
-        computed = {}
-        stored = []
-        for spec in fields:
-            name, __, aggregate = spec.partition(':')
-            field_name = aggregate[aggregate.index('(') + 1:-1] if '(' in aggregate else name
-            if field_name in COMPUTED_AMOUNT_FIELDS:
-                computed[name] = field_name
-            else:
-                stored.append(spec)
-        result = super(CrossoveredBudgetLines, self).read_group(domain, stored, groupby, offset=offset, limit=limit,
-                                                                orderby=orderby, lazy=lazy)
-        if computed:
-            for group_line in result:
-                lines = self.search(group_line['__domain'] if '__domain' in group_line else domain)
-                practical = sum(lines.mapped('practical_amount'))
-                theoritical = sum(lines.mapped('theoritical_amount'))
-                values = {
-                    'practical_amount': practical,
-                    'theoritical_amount': theoritical,
-                    # weighted average, as a ratio like _compute_percentage: the views render it with
-                    # widget="percentage", which is what turns it into a percentage
-                    'percentage': float(practical / theoritical) if theoritical else 0,
-                }
-                for name, field_name in computed.items():
-                    group_line[name] = values[field_name]
-                if 'percentage' in computed.values():
-                    # the amounts the percentage is made of, as before
-                    group_line.setdefault('practical_amount', practical)
-                    group_line.setdefault('theoritical_amount', theoritical)
+    def formatted_read_group(self, domain, groupby=(), aggregates=(), having=(), offset=0, limit=None, order=None):
+        # the web client (list and graph views) goes through this method
+        aggregates, computed_specs = self._split_computed_aggregates(aggregates)
+        result = super().formatted_read_group(domain, groupby, aggregates, having=having,
+                                              offset=offset, limit=limit, order=order)
+        if computed_specs:
+            self._fill_computed_aggregates(domain, result, computed_specs)
+        return result
+
+    @api.model
+    def formatted_read_grouping_sets(self, domain, grouping_sets, aggregates=(), *, order=None):
+        # same as formatted_read_group, used by the pivot view
+        aggregates, computed_specs = self._split_computed_aggregates(aggregates)
+        result = super().formatted_read_grouping_sets(domain, grouping_sets, aggregates, order=order)
+        if computed_specs:
+            for groups in result:
+                self._fill_computed_aggregates(domain, groups, computed_specs)
         return result
 
     def _is_above_budget(self):
@@ -241,8 +250,8 @@ class CrossoveredBudgetLines(models.Model):
                 else:
                     theo_amt = line.planned_amount
             else:
-                theo_amt = 0.00
-                if line.date_from and line.date_to:
+                theo_amt = 0
+                if line.date_to and line.date_from:
                     line_timedelta = line.date_to - line.date_from
                     elapsed_timedelta = today - line.date_from
 

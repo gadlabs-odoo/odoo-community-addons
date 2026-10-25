@@ -15,12 +15,11 @@ class AssetDepreciationConfirmationWizard(models.TransientModel):
 
     def asset_compute(self):
         self.ensure_one()
-        context = self._context
+        context = self.env.context
         created_move_ids = self.env['account.asset.asset'].compute_generated_entries(self.date, asset_type=context.get('asset_type'))
 
         return {
             'name': _('Created Asset Moves') if context.get('asset_type') == 'purchase' else _('Created Revenue Moves'),
-            'view_type': 'form',
             'view_mode': 'list,form',
             'res_model': 'account.move',
             'view_id': False,

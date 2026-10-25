@@ -1,5 +1,5 @@
 {
-    "version": 22,
+    "version": "18.5.10",
     "sheets": [
         {
             "id": "279eb8be-c387-5f8b-bd42-5e76d471e656",
@@ -63,519 +63,164 @@
             },
             "merges": [],
             "cells": {
-                "A1": {
-                    "content": "01/01/2026 to 10/01/2026, compared with 01/01/2025 to 10/01/2025"
-                },
-                "A17": {
-                    "content": "Profit and Loss"
-                },
-                "B17": {
-                    "content": "Period"
-                },
-                "C17": {
-                    "content": "Last Year"
-                },
-                "D17": {
-                    "content": "Change"
-                },
-                "E17": {
-                    "content": "46023"
-                },
-                "F17": {
-                    "content": "46054"
-                },
-                "G17": {
-                    "content": "46082"
-                },
-                "H17": {
-                    "content": "46113"
-                },
-                "I17": {
-                    "content": "46143"
-                },
-                "J17": {
-                    "content": "46174"
-                },
-                "K17": {
-                    "content": "46204"
-                },
-                "L17": {
-                    "content": "46235"
-                },
-                "M17": {
-                    "content": "46266"
-                },
-                "N17": {
-                    "content": "46296"
-                },
-                "A18": {
-                    "content": "Revenue"
-                },
-                "B18": {
-                    "content": "2500"
-                },
-                "C18": {
-                    "content": "0"
-                },
-                "E18": {
-                    "content": "0"
-                },
-                "F18": {
-                    "content": "0"
-                },
-                "G18": {
-                    "content": "0"
-                },
-                "H18": {
-                    "content": "0"
-                },
-                "I18": {
-                    "content": "0"
-                },
-                "J18": {
-                    "content": "0"
-                },
-                "K18": {
-                    "content": "0"
-                },
-                "L18": {
-                    "content": "0"
-                },
-                "M18": {
-                    "content": "-29250"
-                },
-                "N18": {
-                    "content": "31750"
-                },
-                "A19": {
-                    "content": "Other Income"
-                },
-                "B19": {
-                    "content": "0"
-                },
-                "C19": {
-                    "content": "0"
-                },
-                "E19": {
-                    "content": "0"
-                },
-                "F19": {
-                    "content": "0"
-                },
-                "G19": {
-                    "content": "0"
-                },
-                "H19": {
-                    "content": "0"
-                },
-                "I19": {
-                    "content": "0"
-                },
-                "J19": {
-                    "content": "0"
-                },
-                "K19": {
-                    "content": "0"
-                },
-                "L19": {
-                    "content": "0"
-                },
-                "M19": {
-                    "content": "0"
-                },
-                "N19": {
-                    "content": "0"
-                },
-                "A20": {
-                    "content": "Total Income"
-                },
-                "B20": {
-                    "content": "2500"
-                },
-                "C20": {
-                    "content": "0"
-                },
-                "E20": {
-                    "content": "0"
-                },
-                "F20": {
-                    "content": "0"
-                },
-                "G20": {
-                    "content": "0"
-                },
-                "H20": {
-                    "content": "0"
-                },
-                "I20": {
-                    "content": "0"
-                },
-                "J20": {
-                    "content": "0"
-                },
-                "K20": {
-                    "content": "0"
-                },
-                "L20": {
-                    "content": "0"
-                },
-                "M20": {
-                    "content": "-29250"
-                },
-                "N20": {
-                    "content": "31750"
-                },
-                "A21": {
-                    "content": "Cost of Revenue"
-                },
-                "B21": {
-                    "content": "0"
-                },
-                "C21": {
-                    "content": "0"
-                },
-                "E21": {
-                    "content": "0"
-                },
-                "F21": {
-                    "content": "0"
-                },
-                "G21": {
-                    "content": "0"
-                },
-                "H21": {
-                    "content": "0"
-                },
-                "I21": {
-                    "content": "0"
-                },
-                "J21": {
-                    "content": "0"
-                },
-                "K21": {
-                    "content": "0"
-                },
-                "L21": {
-                    "content": "0"
-                },
-                "M21": {
-                    "content": "0"
-                },
-                "N21": {
-                    "content": "0"
-                },
-                "A22": {
-                    "content": "Gross Profit"
-                },
-                "B22": {
-                    "content": "2500"
-                },
-                "C22": {
-                    "content": "0"
-                },
-                "E22": {
-                    "content": "0"
-                },
-                "F22": {
-                    "content": "0"
-                },
-                "G22": {
-                    "content": "0"
-                },
-                "H22": {
-                    "content": "0"
-                },
-                "I22": {
-                    "content": "0"
-                },
-                "J22": {
-                    "content": "0"
-                },
-                "K22": {
-                    "content": "0"
-                },
-                "L22": {
-                    "content": "0"
-                },
-                "M22": {
-                    "content": "-29250"
-                },
-                "N22": {
-                    "content": "31750"
-                },
-                "A23": {
-                    "content": "Operating Expenses"
-                },
-                "B23": {
-                    "content": "0"
-                },
-                "C23": {
-                    "content": "0"
-                },
-                "E23": {
-                    "content": "0"
-                },
-                "F23": {
-                    "content": "0"
-                },
-                "G23": {
-                    "content": "0"
-                },
-                "H23": {
-                    "content": "0"
-                },
-                "I23": {
-                    "content": "0"
-                },
-                "J23": {
-                    "content": "0"
-                },
-                "K23": {
-                    "content": "0"
-                },
-                "L23": {
-                    "content": "0"
-                },
-                "M23": {
-                    "content": "0"
-                },
-                "N23": {
-                    "content": "0"
-                },
-                "A24": {
-                    "content": "Depreciation"
-                },
-                "B24": {
-                    "content": "0"
-                },
-                "C24": {
-                    "content": "0"
-                },
-                "E24": {
-                    "content": "0"
-                },
-                "F24": {
-                    "content": "0"
-                },
-                "G24": {
-                    "content": "0"
-                },
-                "H24": {
-                    "content": "0"
-                },
-                "I24": {
-                    "content": "0"
-                },
-                "J24": {
-                    "content": "0"
-                },
-                "K24": {
-                    "content": "0"
-                },
-                "L24": {
-                    "content": "0"
-                },
-                "M24": {
-                    "content": "0"
-                },
-                "N24": {
-                    "content": "0"
-                },
-                "A25": {
-                    "content": "Other Expenses"
-                },
-                "B25": {
-                    "content": "0"
-                },
-                "C25": {
-                    "content": "0"
-                },
-                "E25": {
-                    "content": "0"
-                },
-                "F25": {
-                    "content": "0"
-                },
-                "G25": {
-                    "content": "0"
-                },
-                "H25": {
-                    "content": "0"
-                },
-                "I25": {
-                    "content": "0"
-                },
-                "J25": {
-                    "content": "0"
-                },
-                "K25": {
-                    "content": "0"
-                },
-                "L25": {
-                    "content": "0"
-                },
-                "M25": {
-                    "content": "0"
-                },
-                "N25": {
-                    "content": "0"
-                },
-                "A26": {
-                    "content": "Total Expenses"
-                },
-                "B26": {
-                    "content": "0"
-                },
-                "C26": {
-                    "content": "0"
-                },
-                "E26": {
-                    "content": "0"
-                },
-                "F26": {
-                    "content": "0"
-                },
-                "G26": {
-                    "content": "0"
-                },
-                "H26": {
-                    "content": "0"
-                },
-                "I26": {
-                    "content": "0"
-                },
-                "J26": {
-                    "content": "0"
-                },
-                "K26": {
-                    "content": "0"
-                },
-                "L26": {
-                    "content": "0"
-                },
-                "M26": {
-                    "content": "0"
-                },
-                "N26": {
-                    "content": "0"
-                },
-                "A27": {
-                    "content": "Net Profit"
-                },
-                "B27": {
-                    "content": "2500"
-                },
-                "C27": {
-                    "content": "0"
-                },
-                "E27": {
-                    "content": "0"
-                },
-                "F27": {
-                    "content": "0"
-                },
-                "G27": {
-                    "content": "0"
-                },
-                "H27": {
-                    "content": "0"
-                },
-                "I27": {
-                    "content": "0"
-                },
-                "J27": {
-                    "content": "0"
-                },
-                "K27": {
-                    "content": "0"
-                },
-                "L27": {
-                    "content": "0"
-                },
-                "M27": {
-                    "content": "-29250"
-                },
-                "N27": {
-                    "content": "31750"
-                },
-                "A28": {
-                    "content": "Gross Margin"
-                },
-                "B28": {
-                    "content": "1"
-                },
-                "C28": {
-                    "content": "0"
-                },
-                "E28": {
-                    "content": "0"
-                },
-                "F28": {
-                    "content": "0"
-                },
-                "G28": {
-                    "content": "0"
-                },
-                "H28": {
-                    "content": "0"
-                },
-                "I28": {
-                    "content": "0"
-                },
-                "J28": {
-                    "content": "0"
-                },
-                "K28": {
-                    "content": "0"
-                },
-                "L28": {
-                    "content": "0"
-                },
-                "M28": {
-                    "content": "1"
-                },
-                "N28": {
-                    "content": "1"
-                },
-                "A29": {
-                    "content": "Net Margin"
-                },
-                "B29": {
-                    "content": "1"
-                },
-                "C29": {
-                    "content": "0"
-                },
-                "E29": {
-                    "content": "0"
-                },
-                "F29": {
-                    "content": "0"
-                },
-                "G29": {
-                    "content": "0"
-                },
-                "H29": {
-                    "content": "0"
-                },
-                "I29": {
-                    "content": "0"
-                },
-                "J29": {
-                    "content": "0"
-                },
-                "K29": {
-                    "content": "0"
-                },
-                "L29": {
-                    "content": "0"
-                },
-                "M29": {
-                    "content": "1"
-                },
-                "N29": {
-                    "content": "1"
-                }
+                "A1": "01/01/2026 to 09/30/2026, compared with 01/01/2025 to 09/30/2025",
+                "A17": "Profit and Loss",
+                "B17": "Period",
+                "C17": "Last Year",
+                "D17": "Change",
+                "E17": "46023",
+                "F17": "46054",
+                "G17": "46082",
+                "H17": "46113",
+                "I17": "46143",
+                "J17": "46174",
+                "K17": "46204",
+                "L17": "46235",
+                "M17": "46266",
+                "A18": "Revenue",
+                "B18": "50074",
+                "C18": "0",
+                "E18": "0",
+                "F18": "0",
+                "G18": "0",
+                "H18": "0",
+                "I18": "0",
+                "J18": "0",
+                "K18": "0",
+                "L18": "-28475",
+                "M18": "78549",
+                "A19": "Other Income",
+                "B19": "0",
+                "C19": "0",
+                "E19": "0",
+                "F19": "0",
+                "G19": "0",
+                "H19": "0",
+                "I19": "0",
+                "J19": "0",
+                "K19": "0",
+                "L19": "0",
+                "M19": "0",
+                "A20": "Total Income",
+                "B20": "50074",
+                "C20": "0",
+                "E20": "0",
+                "F20": "0",
+                "G20": "0",
+                "H20": "0",
+                "I20": "0",
+                "J20": "0",
+                "K20": "0",
+                "L20": "-28475",
+                "M20": "78549",
+                "A21": "Cost of Revenue",
+                "B21": "0",
+                "C21": "0",
+                "E21": "0",
+                "F21": "0",
+                "G21": "0",
+                "H21": "0",
+                "I21": "0",
+                "J21": "0",
+                "K21": "0",
+                "L21": "0",
+                "M21": "0",
+                "A22": "Gross Profit",
+                "B22": "50074",
+                "C22": "0",
+                "E22": "0",
+                "F22": "0",
+                "G22": "0",
+                "H22": "0",
+                "I22": "0",
+                "J22": "0",
+                "K22": "0",
+                "L22": "-28475",
+                "M22": "78549",
+                "A23": "Operating Expenses",
+                "B23": "622.27",
+                "C23": "0",
+                "E23": "0",
+                "F23": "0",
+                "G23": "0",
+                "H23": "0",
+                "I23": "0",
+                "J23": "0",
+                "K23": "0",
+                "L23": "0",
+                "M23": "622.27",
+                "A24": "Depreciation",
+                "B24": "6666.64",
+                "C24": "0",
+                "E24": "833.33",
+                "F24": "833.33",
+                "G24": "833.33",
+                "H24": "833.33",
+                "I24": "833.33",
+                "J24": "833.33",
+                "K24": "833.33",
+                "L24": "833.33",
+                "M24": "0",
+                "A25": "Other Expenses",
+                "B25": "0",
+                "C25": "0",
+                "E25": "0",
+                "F25": "0",
+                "G25": "0",
+                "H25": "0",
+                "I25": "0",
+                "J25": "0",
+                "K25": "0",
+                "L25": "0",
+                "M25": "0",
+                "A26": "Total Expenses",
+                "B26": "7288.91",
+                "C26": "0",
+                "E26": "833.33",
+                "F26": "833.33",
+                "G26": "833.33",
+                "H26": "833.33",
+                "I26": "833.33",
+                "J26": "833.33",
+                "K26": "833.33",
+                "L26": "833.33",
+                "M26": "622.27",
+                "A27": "Net Profit",
+                "B27": "42785.09",
+                "C27": "0",
+                "E27": "-833.33",
+                "F27": "-833.33",
+                "G27": "-833.33",
+                "H27": "-833.33",
+                "I27": "-833.33",
+                "J27": "-833.33",
+                "K27": "-833.33",
+                "L27": "-29308.33",
+                "M27": "77926.73",
+                "A28": "Gross Margin",
+                "B28": "1",
+                "C28": "0",
+                "E28": "0",
+                "F28": "0",
+                "G28": "0",
+                "H28": "0",
+                "I28": "0",
+                "J28": "0",
+                "K28": "0",
+                "L28": "1",
+                "M28": "1",
+                "A29": "Net Margin",
+                "B29": "0.8544372328953148",
+                "C29": "0",
+                "E29": "0",
+                "F29": "0",
+                "G29": "0",
+                "H29": "0",
+                "I29": "0",
+                "J29": "0",
+                "K29": "0",
+                "L29": "1.029265320456541",
+                "M29": "0.9920779386115672"
             },
             "styles": {
                 "A1": 1,
@@ -604,7 +249,6 @@
                 "K17": 2,
                 "L17": 2,
                 "M17": 2,
-                "N17": 2,
                 "B18": 4,
                 "C18": 4,
                 "E18": 4,
@@ -616,7 +260,6 @@
                 "K18": 4,
                 "L18": 4,
                 "M18": 4,
-                "N18": 4,
                 "B19": 4,
                 "C19": 4,
                 "E19": 4,
@@ -628,7 +271,6 @@
                 "K19": 4,
                 "L19": 4,
                 "M19": 4,
-                "N19": 4,
                 "B20": 4,
                 "C20": 4,
                 "E20": 4,
@@ -640,7 +282,6 @@
                 "K20": 4,
                 "L20": 4,
                 "M20": 4,
-                "N20": 4,
                 "B21": 4,
                 "C21": 4,
                 "E21": 4,
@@ -652,7 +293,6 @@
                 "K21": 4,
                 "L21": 4,
                 "M21": 4,
-                "N21": 4,
                 "B22": 4,
                 "C22": 4,
                 "E22": 4,
@@ -664,7 +304,6 @@
                 "K22": 4,
                 "L22": 4,
                 "M22": 4,
-                "N22": 4,
                 "B23": 4,
                 "C23": 4,
                 "E23": 4,
@@ -676,7 +315,6 @@
                 "K23": 4,
                 "L23": 4,
                 "M23": 4,
-                "N23": 4,
                 "B24": 4,
                 "C24": 4,
                 "E24": 4,
@@ -688,7 +326,6 @@
                 "K24": 4,
                 "L24": 4,
                 "M24": 4,
-                "N24": 4,
                 "B25": 4,
                 "C25": 4,
                 "E25": 4,
@@ -700,7 +337,6 @@
                 "K25": 4,
                 "L25": 4,
                 "M25": 4,
-                "N25": 4,
                 "B26": 4,
                 "C26": 4,
                 "E26": 4,
@@ -712,7 +348,6 @@
                 "K26": 4,
                 "L26": 4,
                 "M26": 4,
-                "N26": 4,
                 "B27": 4,
                 "C27": 4,
                 "E27": 4,
@@ -724,7 +359,6 @@
                 "K27": 4,
                 "L27": 4,
                 "M27": 4,
-                "N27": 4,
                 "B28": 1,
                 "C28": 1,
                 "E28": 1,
@@ -736,7 +370,6 @@
                 "K28": 1,
                 "L28": 1,
                 "M28": 1,
-                "N28": 1,
                 "B29": 1,
                 "C29": 1,
                 "E29": 1,
@@ -747,24 +380,24 @@
                 "J29": 1,
                 "K29": 1,
                 "L29": 1,
-                "M29": 1,
-                "N29": 1
+                "M29": 1
             },
             "borders": {
-                "A18:P18": 1,
-                "A28:P28": 1,
-                "A19:P26": 2,
-                "A29:P29": 2,
-                "A27:P27": 3,
-                "A30:P30": 3
+                "A18:P25": 1,
+                "A28:P29": 1,
+                "A27:P27": 2
             },
             "conditionalFormats": [],
             "dataValidationRules": [],
             "figures": [
                 {
                     "id": "c810aee0-49c7-5a96-aa77-cbcc8bda44ce",
-                    "x": 0,
-                    "y": 30,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 0,
+                        "y": 30
+                    },
                     "width": 1180,
                     "height": 328,
                     "tag": "chart",
@@ -795,7 +428,9 @@
                             "color": "#01666B",
                             "bold": true
                         },
-                        "aggregated": false
+                        "aggregated": false,
+                        "humanize": true,
+                        "chartId": "c810aee0-49c7-5a96-aa77-cbcc8bda44ce"
                     }
                 }
             ],
@@ -829,240 +464,85 @@
             },
             "merges": [],
             "cells": {
-                "A1": {
-                    "content": "Period"
-                },
-                "B1": {
-                    "content": "Year to Date"
-                },
-                "G1": {
-                    "content": "Same Period Last Year"
-                },
-                "A2": {
-                    "content": "End"
-                },
-                "B2": {
-                    "content": "46296"
-                },
-                "G2": {
-                    "content": "Previous Period"
-                },
-                "A3": {
-                    "content": "Start"
-                },
-                "B3": {
-                    "content": "46023"
-                },
-                "A4": {
-                    "content": "Compare with"
-                },
-                "B4": {
-                    "content": "Same Period Last Year"
-                },
-                "A5": {
-                    "content": "Previous period"
-                },
-                "B5": {
-                    "content": "FALSE"
-                },
-                "A6": {
-                    "content": "Months in the period"
-                },
-                "B6": {
-                    "content": "0"
-                },
-                "A7": {
-                    "content": "Comparison end"
-                },
-                "B7": {
-                    "content": "45931"
-                },
-                "A8": {
-                    "content": "Comparison start"
-                },
-                "B8": {
-                    "content": "45658"
-                },
-                "A9": {
-                    "content": "Fiscal year start"
-                },
-                "B9": {
-                    "content": "46023"
-                },
-                "A10": {
-                    "content": "Comparison fiscal year start"
-                },
-                "B10": {
-                    "content": "45658"
-                },
-                "A11": {
-                    "content": "Description"
-                },
-                "B11": {
-                    "content": "01/01/2026 to 10/01/2026, compared with 01/01/2025 to 10/01/2025"
-                },
-                "A12": {
-                    "content": "Comparison"
-                },
-                "B12": {
-                    "content": "Last Year"
-                },
-                "A15": {
-                    "content": "Month"
-                },
-                "B15": {
-                    "content": "From"
-                },
-                "C15": {
-                    "content": "To"
-                },
-                "D15": {
-                    "content": "In the period"
-                },
-                "A16": {
-                    "content": "46023"
-                },
-                "B16": {
-                    "content": "46023"
-                },
-                "C16": {
-                    "content": "46053"
-                },
-                "D16": {
-                    "content": "TRUE"
-                },
-                "A17": {
-                    "content": "46054"
-                },
-                "B17": {
-                    "content": "46054"
-                },
-                "C17": {
-                    "content": "46081"
-                },
-                "D17": {
-                    "content": "TRUE"
-                },
-                "A18": {
-                    "content": "46082"
-                },
-                "B18": {
-                    "content": "46082"
-                },
-                "C18": {
-                    "content": "46112"
-                },
-                "D18": {
-                    "content": "TRUE"
-                },
-                "A19": {
-                    "content": "46113"
-                },
-                "B19": {
-                    "content": "46113"
-                },
-                "C19": {
-                    "content": "46142"
-                },
-                "D19": {
-                    "content": "TRUE"
-                },
-                "A20": {
-                    "content": "46143"
-                },
-                "B20": {
-                    "content": "46143"
-                },
-                "C20": {
-                    "content": "46173"
-                },
-                "D20": {
-                    "content": "TRUE"
-                },
-                "A21": {
-                    "content": "46174"
-                },
-                "B21": {
-                    "content": "46174"
-                },
-                "C21": {
-                    "content": "46203"
-                },
-                "D21": {
-                    "content": "TRUE"
-                },
-                "A22": {
-                    "content": "46204"
-                },
-                "B22": {
-                    "content": "46204"
-                },
-                "C22": {
-                    "content": "46234"
-                },
-                "D22": {
-                    "content": "TRUE"
-                },
-                "A23": {
-                    "content": "46235"
-                },
-                "B23": {
-                    "content": "46235"
-                },
-                "C23": {
-                    "content": "46265"
-                },
-                "D23": {
-                    "content": "TRUE"
-                },
-                "A24": {
-                    "content": "46266"
-                },
-                "B24": {
-                    "content": "46266"
-                },
-                "C24": {
-                    "content": "46295"
-                },
-                "D24": {
-                    "content": "TRUE"
-                },
-                "A25": {
-                    "content": "46296"
-                },
-                "B25": {
-                    "content": "46296"
-                },
-                "C25": {
-                    "content": "46296"
-                },
-                "D25": {
-                    "content": "TRUE"
-                },
-                "A26": {
-                    "content": "46327"
-                },
-                "B26": {
-                    "content": "46327"
-                },
-                "C26": {
-                    "content": "46296"
-                },
-                "D26": {
-                    "content": "FALSE"
-                },
-                "A27": {
-                    "content": "46357"
-                },
-                "B27": {
-                    "content": "46357"
-                },
-                "C27": {
-                    "content": "46296"
-                },
-                "D27": {
-                    "content": "FALSE"
-                }
+                "A1": "Period",
+                "B1": "46023",
+                "C1": "46295",
+                "G1": "Same Period Last Year",
+                "A2": "End",
+                "B2": "46295",
+                "G2": "Previous Period",
+                "A3": "Start",
+                "B3": "46023",
+                "A4": "Compare with",
+                "B4": "Same Period Last Year",
+                "A5": "Previous period",
+                "B5": "FALSE",
+                "A6": "Months in the period",
+                "B6": "9",
+                "A7": "Comparison end",
+                "B7": "45930",
+                "A8": "Comparison start",
+                "B8": "45658",
+                "A9": "Fiscal year start",
+                "B9": "46023",
+                "A10": "Comparison fiscal year start",
+                "B10": "45658",
+                "A11": "Description",
+                "B11": "01/01/2026 to 09/30/2026, compared with 01/01/2025 to 09/30/2025",
+                "A12": "Comparison",
+                "B12": "Last Year",
+                "A15": "Month",
+                "B15": "From",
+                "C15": "To",
+                "D15": "In the period",
+                "A16": "46023",
+                "B16": "46023",
+                "C16": "46053",
+                "D16": "TRUE",
+                "A17": "46054",
+                "B17": "46054",
+                "C17": "46081",
+                "D17": "TRUE",
+                "A18": "46082",
+                "B18": "46082",
+                "C18": "46112",
+                "D18": "TRUE",
+                "A19": "46113",
+                "B19": "46113",
+                "C19": "46142",
+                "D19": "TRUE",
+                "A20": "46143",
+                "B20": "46143",
+                "C20": "46173",
+                "D20": "TRUE",
+                "A21": "46174",
+                "B21": "46174",
+                "C21": "46203",
+                "D21": "TRUE",
+                "A22": "46204",
+                "B22": "46204",
+                "C22": "46234",
+                "D22": "TRUE",
+                "A23": "46235",
+                "B23": "46235",
+                "C23": "46265",
+                "D23": "TRUE",
+                "A24": "46266",
+                "B24": "46266",
+                "C24": "46295",
+                "D24": "TRUE",
+                "A25": "46296",
+                "B25": "46296",
+                "C25": "46295",
+                "D25": "FALSE",
+                "A26": "46327",
+                "B26": "46327",
+                "C26": "46295",
+                "D26": "FALSE",
+                "A27": "46357",
+                "B27": "46357",
+                "C27": "46295",
+                "D27": "FALSE"
             },
             "styles": {
                 "A15:D15": 2,
@@ -1179,17 +659,7 @@
         "2": {
             "top": {
                 "style": "thin",
-                "color": "#D9D9D9"
-            },
-            "bottom": {
-                "style": "thin",
-                "color": "#D9D9D9"
-            }
-        },
-        "3": {
-            "top": {
-                "style": "thin",
-                "color": "#D9D9D9"
+                "color": "#01666B"
             }
         }
     },
@@ -1202,7 +672,7 @@
             "thousandsSeparator": ",",
             "decimalSeparator": ".",
             "dateFormat": "mm/dd/yyyy",
-            "timeFormat": "hh:mm:ss",
+            "timeFormat": "hh:mm:ss a",
             "formulaArgSeparator": ",",
             "weekStart": 7
         }
@@ -1210,7 +680,6 @@
     "pivots": {},
     "pivotNextId": 1,
     "customTableStyles": {},
-    "odooVersion": 12,
     "globalFilters": [],
     "lists": {},
     "listNextId": 1,

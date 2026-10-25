@@ -125,10 +125,8 @@ class AccountBankStatementLine(models.Model):
         }
         models = self.env['account.reconcile.model'].search([
             ('company_id', '=', self.company_id.id),
-            # the counterpart models of Odoo 18, applied from the screen: the ones writing a journal entry,
-            # not the ones creating an invoice or a bill
-            ('rule_type', 'in', ('writeoff_button', 'writeoff_suggestion')),
-            ('counterpart_type', '=', 'general'),
+            ('rule_type', '!=', 'matching_rule'),
+            ('mapped_partner_id', '=', False),
         ])
         data['models'] = [
             {'id': model.id, 'name': model.name, 'applicable': model._om_is_applicable(self)}

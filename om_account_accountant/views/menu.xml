@@ -11,7 +11,7 @@
               groups="base.group_no_one"/>
 
     <record id="account.menu_action_account_moves_all" model="ir.ui.menu">
-        <field name="groups_id" eval="[(5,0,0)]" />
+        <field name="group_ids" eval="[(5,0,0)]" />
     </record>
 
     <record id="account.menu_action_account_moves_all" model="ir.ui.menu">
@@ -44,7 +44,7 @@
          installed alone; this module only gathers them. -->
 
     <!-- Accounting: the closing comes last, after the daily work -->
-    <record id="om_fiscal_year.menu_account_closing" model="ir.ui.menu">
+    <record id="account.account_closing_menu" model="ir.ui.menu">
         <field name="sequence">90</field>
     </record>
 

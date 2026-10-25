@@ -2,9 +2,7 @@ import logging
 import re
 
 from odoo import api, fields, models, Command, _
-from odoo.exceptions import UserError
-
-from .tools import lock_rows
+from odoo.exceptions import LockError, UserError
 
 _logger = logging.getLogger(__name__)
 
@@ -193,15 +191,21 @@ class AccountBankStatementLine(models.Model):
         lines = []
         # what the counterparts still have to cover, as a journal item amount in transaction currency
         to_cover = -self.amount_residual
+        # the direction of the transaction: once covered, what is left to cover is 0, not the other way round
+        cover_sign = 1 if to_cover > 0 else -1
         for match in proposal.get('matches') or []:
             aml = AccountMoveLine.browse(match['aml_id'])
             amount = match.get('amount')
             aml_amount = self._om_to_transaction_amount(aml.currency_id, aml.amount_residual_currency,
                                                         aml.amount_residual)
-            if amount is None and not trans_currency.is_zero(aml_amount) and (aml_amount > 0) == (to_cover > 0) \
-                    and trans_currency.compare_amounts(abs(aml_amount), abs(to_cover)) > 0:
+            left = max(to_cover * cover_sign, 0.0)
+            if amount is None and not trans_currency.is_zero(aml_amount) and (aml_amount > 0) == (cover_sign > 0) \
+                    and trans_currency.compare_amounts(abs(aml_amount), left) > 0:
+                if trans_currency.is_zero(left):
+                    # nothing left to cover: a line of zero cannot be reconciled
+                    continue
                 # by default an item is only matched up to the amount of the transaction
-                amount = aml.currency_id.round(abs(aml.amount_residual_currency) * abs(to_cover) / abs(aml_amount))
+                amount = aml.currency_id.round(abs(aml.amount_residual_currency) * left / abs(aml_amount))
             vals = self._om_prepare_match_line_vals(aml, amount)
             to_cover += self._om_to_transaction_amount(
                 self.env['res.currency'].browse(vals['currency_id']), vals['amount_currency'], vals['balance'])
@@ -261,7 +265,9 @@ class AccountBankStatementLine(models.Model):
         """
         self.ensure_one()
         self._om_check_access()
-        if not lock_rows(self):
+        try:
+            self.lock_for_update()
+        except LockError:
             raise UserError(_('This transaction is being reconciled by someone else, please try again in a moment.'))
         if self.is_reconciled:
             raise UserError(_('The transaction %s is already reconciled.', self.display_name))
@@ -459,27 +465,19 @@ class AccountBankStatementLine(models.Model):
         if self.is_reconciled:
             return False
         company_models = models.filtered(lambda model: model.company_id == self.company_id)
-        # Odoo 18: the partner mapping lines of the matching rules give the partner of the transaction
-        if not self.partner_id:
-            for model in company_models.filtered('partner_mapping_line_ids'):
-                partner = model._om_is_applicable(self) and model._om_get_mapped_partner(self)
-                if partner:
-                    self.partner_id = partner
-                    break
-        # the models validated automatically: a button is only applied by hand, and a counterpart model
-        # creating an invoice or a bill is left to the core
+        for model in company_models.filtered('mapped_partner_id'):
+            if not self.partner_id and model._om_is_applicable(self):
+                self.partner_id = model.mapped_partner_id
+                break
         for model in company_models.filtered(
-                lambda model: model.auto_reconcile and (
-                    model.rule_type == 'invoice_matching'
-                    or (model.rule_type == 'writeoff_suggestion' and model.counterpart_type == 'general'))):
+                lambda model: model.trigger == 'auto_reconcile' and not model.mapped_partner_id):
             if not model._om_is_applicable(self):
                 continue
             proposal = model._om_get_proposal(self)
             if proposal and self._om_is_complete(proposal):
                 self._om_reconcile(proposal)
-                if model.to_check:
-                    # Odoo 18 marks the entries to check, where 19 schedules an activity
-                    self.move_id.checked = False
+                if model.next_activity_type_id:
+                    self.move_id.activity_schedule(activity_type_id=model.next_activity_type_id.id)
                 return True
         if self.company_id.om_reconcile_auto:
             scored = self._om_scored_candidates(limit=2)

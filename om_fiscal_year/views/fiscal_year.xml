@@ -90,7 +90,7 @@
     <menuitem id="menu_fiscal_year_closing"
               name="Year-End Closing"
               sequence="10"
-              parent="menu_account_closing"
+              parent="account.account_closing_menu"
               action="actions_account_fiscal_year"
               groups="account.group_account_manager"/>
 

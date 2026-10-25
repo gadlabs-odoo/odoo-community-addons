@@ -108,7 +108,7 @@ msgstr ""
 
 #. module: accounting_pdf_reports
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_agedpartnerbalance
-msgid "<strong>Start Date:</strong>"
+msgid "<strong>As of Date:</strong>"
 msgstr ""
 
 #. module: accounting_pdf_reports
@@ -204,12 +204,12 @@ msgstr ""
 #: model:ir.ui.menu,name:accounting_pdf_reports.menu_aged_trial_balance
 #: model_terms:ir.ui.view,arch_db:accounting_pdf_reports.report_agedpartnerbalance
 msgid "Aged Partner Balance"
-msgstr "Eski İş Ortağı Bakiyesi"
+msgstr "Yaşlandırılmış İş Ortağı Bakiyesi"
 
 #. module: accounting_pdf_reports
 #: model:ir.model,name:accounting_pdf_reports.model_report_accounting_pdf_reports_report_agedpartnerbalance
 msgid "Aged Partner Balance Report"
-msgstr "Yaşlı İş Ortağı Bakiyesi Raporu"
+msgstr "Yaşlandırılmış İş Ortağı Bakiyesi Raporu"
 
 #. module: accounting_pdf_reports
 #: model:ir.actions.act_window,name:accounting_pdf_reports.action_account_aged_payable
@@ -221,7 +221,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:accounting_pdf_reports.action_account_aged_receivable
 #: model:ir.ui.menu,name:accounting_pdf_reports.menu_aged_receivable
 msgid "Aged Receivable"
-msgstr "Yaşlı Alacak"
+msgstr "Yaşlandırılmış Alacaklar"
 
 #. module: accounting_pdf_reports
 #: model:ir.model.fields.selection,name:accounting_pdf_reports.selection__account_balance_report__display_account__all
@@ -274,6 +274,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_report_general_ledger__analytic_account_ids
 msgid "Analytic Accounts"
 msgstr ""
+
+#. module: accounting_pdf_reports
+#: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_aged_trial_balance__date_from
+msgid "As of Date"
+msgstr "Rapor Tarihi"
 
 #. module: accounting_pdf_reports
 #: model:account.financial.report,name:accounting_pdf_reports.account_financial_report_assets0
@@ -1007,7 +1012,6 @@ msgid "Sort by"
 msgstr ""
 
 #. module: accounting_pdf_reports
-#: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_aged_trial_balance__date_from
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_balance_report__date_from
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_common_account_report__date_from
 #: model:ir.model.fields,field_description:accounting_pdf_reports.field_account_common_partner_report__date_from
@@ -1168,7 +1172,8 @@ msgid "You must set a period length greater than 0."
 msgstr ""
 
 #. module: accounting_pdf_reports
+#. odoo-python
 #: code:addons/accounting_pdf_reports/wizard/aged_partner.py:0
 #, python-format
-msgid "You must set a start date."
+msgid "You must set an as of date."
 msgstr ""

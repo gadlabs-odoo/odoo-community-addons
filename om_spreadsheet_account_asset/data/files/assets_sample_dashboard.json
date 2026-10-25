@@ -1,5 +1,5 @@
 {
-    "version": 22,
+    "version": "18.5.10",
     "sheets": [
         {
             "id": "bb008e58-5a44-52b5-a422-4642d3f0c3cb",
@@ -23,53 +23,24 @@
             },
             "merges": [],
             "cells": {
-                "A27": {
-                    "content": "Running Assets by Category"
-                },
-                "A28": {
-                    "content": "Vehicles"
-                },
-                "B28": {
-                    "content": "32000"
-                },
-                "C28": {
-                    "content": "1"
-                },
-                "A29": {
-                    "content": "Computers"
-                },
-                "B29": {
-                    "content": "19800"
-                },
-                "C29": {
-                    "content": "2"
-                },
-                "A30": {
-                    "content": "Office Furniture"
-                },
-                "B30": {
-                    "content": "8400"
-                },
-                "C30": {
-                    "content": "1"
-                },
-                "A31": {
-                    "content": "Total"
-                },
-                "B31": {
-                    "content": "60200"
-                },
-                "C31": {
-                    "content": "4"
-                }
+                "A27": "Running Assets by Category",
+                "A28": "Assets by Category",
+                "B28": "Gross Value",
+                "C28": "Count",
+                "A29": "Vehicles",
+                "B29": "30000",
+                "C29": "1",
+                "A30": "Office Equipment",
+                "B30": "12000",
+                "C30": "2",
+                "A31": "Total",
+                "B31": "42000",
+                "C31": "3"
             },
             "styles": {
                 "A27:D27": 1
             },
             "formats": {
-                "A28": 4,
-                "B28": 5,
-                "C28": 6,
                 "A29": 4,
                 "B29": 5,
                 "C29": 6,
@@ -85,8 +56,12 @@
             "figures": [
                 {
                     "id": "e8a69d0b-d70e-5e75-9d88-559b54c5d6bf",
-                    "x": 0,
-                    "y": 0,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "width": 317,
                     "height": 110,
                     "tag": "chart",
@@ -102,13 +77,18 @@
                         "type": "scorecard",
                         "background": "",
                         "keyValue": "Data!B1",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "e8a69d0b-d70e-5e75-9d88-559b54c5d6bf"
                     }
                 },
                 {
                     "id": "83699d60-e871-5ec1-9f71-6995c166151d",
-                    "x": 327,
-                    "y": 0,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 327,
+                        "y": 0
+                    },
                     "width": 317,
                     "height": 110,
                     "tag": "chart",
@@ -124,13 +104,18 @@
                         "type": "scorecard",
                         "background": "",
                         "keyValue": "Data!B3",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "83699d60-e871-5ec1-9f71-6995c166151d"
                     }
                 },
                 {
                     "id": "351b9b08-d044-5f68-ae0c-7f1c31176236",
-                    "x": 654,
-                    "y": 0,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 654,
+                        "y": 0
+                    },
                     "width": 317,
                     "height": 110,
                     "tag": "chart",
@@ -146,13 +131,18 @@
                         "type": "scorecard",
                         "background": "",
                         "keyValue": "Data!B4",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "351b9b08-d044-5f68-ae0c-7f1c31176236"
                     }
                 },
                 {
                     "id": "89a37136-46af-5508-a8cc-06780948b182",
-                    "x": 0,
-                    "y": 120,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 0,
+                        "y": 120
+                    },
                     "width": 317,
                     "height": 110,
                     "tag": "chart",
@@ -168,13 +158,18 @@
                         "type": "scorecard",
                         "background": "",
                         "keyValue": "Data!B5",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "89a37136-46af-5508-a8cc-06780948b182"
                     }
                 },
                 {
                     "id": "91e616fb-1214-5f0b-b292-6c0ca3ddc2c1",
-                    "x": 327,
-                    "y": 120,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 327,
+                        "y": 120
+                    },
                     "width": 317,
                     "height": 110,
                     "tag": "chart",
@@ -190,13 +185,18 @@
                         "type": "scorecard",
                         "background": "",
                         "keyValue": "Data!B6",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "91e616fb-1214-5f0b-b292-6c0ca3ddc2c1"
                     }
                 },
                 {
                     "id": "1233bd1d-697e-5fd5-b007-55dc4c4fb6ef",
-                    "x": 654,
-                    "y": 120,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 654,
+                        "y": 120
+                    },
                     "width": 317,
                     "height": 110,
                     "tag": "chart",
@@ -212,13 +212,18 @@
                         "type": "scorecard",
                         "background": "",
                         "keyValue": "Data!B7",
-                        "humanize": true
+                        "humanize": true,
+                        "chartId": "1233bd1d-697e-5fd5-b007-55dc4c4fb6ef"
                     }
                 },
                 {
                     "id": "87b5087f-6aad-58b5-830d-3288949b9568",
-                    "x": 0,
-                    "y": 240,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 0,
+                        "y": 240
+                    },
                     "width": 590,
                     "height": 340,
                     "tag": "chart",
@@ -243,33 +248,51 @@
                             "bold": true
                         },
                         "stacked": true,
-                        "aggregated": false
+                        "aggregated": false,
+                        "humanize": true,
+                        "chartId": "87b5087f-6aad-58b5-830d-3288949b9568"
                     }
                 },
                 {
                     "id": "f6f94b33-cb9f-55f2-b986-aa5f9961385a",
-                    "x": 600,
-                    "y": 240,
+                    "col": 0,
+                    "row": 0,
+                    "offset": {
+                        "x": 600,
+                        "y": 240
+                    },
                     "width": 370,
                     "height": 340,
-                    "tag": "chart",
+                    "tag": "carousel",
                     "data": {
-                        "type": "pie",
+                        "chartDefinitions": {
+                            "bf803c60-c2aa-5724-8007-10b867a16c52": {
+                                "type": "pie",
+                                "title": {},
+                                "legendPosition": "top",
+                                "humanize": true,
+                                "labelRange": "Data!U1:U1",
+                                "dataSets": [
+                                    {
+                                        "dataRange": "Data!V1:V1"
+                                    }
+                                ],
+                                "dataSetsHaveTitle": false
+                            }
+                        },
+                        "items": [
+                            {
+                                "type": "chart",
+                                "chartId": "bf803c60-c2aa-5724-8007-10b867a16c52"
+                            }
+                        ],
                         "title": {
                             "text": "By Category",
                             "fontSize": 16,
                             "bold": true,
                             "color": "#01666B"
                         },
-                        "legendPosition": "top",
-                        "humanize": true,
-                        "labelRange": "Data!U1:U1",
-                        "dataSets": [
-                            {
-                                "dataRange": "Data!V1:V1"
-                            }
-                        ],
-                        "dataSetsHaveTitle": false
+                        "fieldMatching": {}
                     }
                 }
             ],
@@ -297,165 +320,64 @@
             },
             "merges": [],
             "cells": {
-                "A1": {
-                    "content": "Gross value of the running assets"
-                },
-                "B1": {
-                    "content": "60200"
-                },
-                "D1": {
-                    "content": "Month"
-                },
-                "E1": {
-                    "content": "Posted"
-                },
-                "F1": {
-                    "content": "To Post"
-                },
-                "A2": {
-                    "content": "Depreciation posted"
-                },
-                "B2": {
-                    "content": "8166.64"
-                },
-                "D2": {
-                    "content": "45962"
-                },
-                "A3": {
-                    "content": "Accumulated depreciation"
-                },
-                "B3": {
-                    "content": "8166.64"
-                },
-                "D3": {
-                    "content": "45992"
-                },
-                "A4": {
-                    "content": "Book value"
-                },
-                "B4": {
-                    "content": "52033.36"
-                },
-                "D4": {
-                    "content": "46023"
-                },
-                "E4": {
-                    "content": "200"
-                },
-                "F4": {
-                    "content": "0"
-                },
-                "A5": {
-                    "content": "Running assets"
-                },
-                "B5": {
-                    "content": "4"
-                },
-                "D5": {
-                    "content": "46054"
-                },
-                "E5": {
-                    "content": "733.33"
-                },
-                "F5": {
-                    "content": "0"
-                },
-                "A6": {
-                    "content": "Depreciation posted in the period"
-                },
-                "B6": {
-                    "content": "8166.64"
-                },
-                "D6": {
-                    "content": "46082"
-                },
-                "E6": {
-                    "content": "833.33"
-                },
-                "F6": {
-                    "content": "0"
-                },
-                "A7": {
-                    "content": "Depreciation to post in the period"
-                },
-                "B7": {
-                    "content": "52033.36"
-                },
-                "D7": {
-                    "content": "46113"
-                },
-                "E7": {
-                    "content": "833.33"
-                },
-                "F7": {
-                    "content": "0"
-                },
-                "D8": {
-                    "content": "46143"
-                },
-                "E8": {
-                    "content": "833.33"
-                },
-                "F8": {
-                    "content": "0"
-                },
-                "D9": {
-                    "content": "46174"
-                },
-                "E9": {
-                    "content": "1183.33"
-                },
-                "F9": {
-                    "content": "0"
-                },
-                "A10": {
-                    "content": "Period start"
-                },
-                "B10": {
-                    "content": "2026"
-                },
-                "D10": {
-                    "content": "46204"
-                },
-                "E10": {
-                    "content": "1183.33"
-                },
-                "F10": {
-                    "content": "0"
-                },
-                "A11": {
-                    "content": "First month"
-                },
-                "B11": {
-                    "content": "45962"
-                },
-                "D11": {
-                    "content": "46235"
-                },
-                "E11": {
-                    "content": "1183.33"
-                },
-                "F11": {
-                    "content": "0"
-                },
-                "D12": {
-                    "content": "46266"
-                },
-                "E12": {
-                    "content": "1183.33"
-                },
-                "F12": {
-                    "content": "0"
-                },
-                "D13": {
-                    "content": "46296"
-                },
-                "E13": {
-                    "content": "0"
-                },
-                "F13": {
-                    "content": "1183.33"
-                }
+                "A1": "Gross value of the running assets",
+                "B1": "42000",
+                "D1": "Month",
+                "E1": "Posted",
+                "F1": "To Post",
+                "A2": "Depreciation posted",
+                "B2": "6666.64",
+                "D2": "46023",
+                "E2": "833.33",
+                "F2": "0",
+                "A3": "Accumulated depreciation",
+                "B3": "6666.64",
+                "D3": "46054",
+                "E3": "833.33",
+                "F3": "0",
+                "A4": "Book value",
+                "B4": "35333.36",
+                "D4": "46082",
+                "E4": "833.33",
+                "F4": "0",
+                "A5": "Running assets",
+                "B5": "3",
+                "D5": "46113",
+                "E5": "833.33",
+                "F5": "0",
+                "A6": "Depreciation posted in the period",
+                "B6": "6666.64",
+                "D6": "46143",
+                "E6": "833.33",
+                "F6": "0",
+                "A7": "Depreciation to post in the period",
+                "B7": "3333.32",
+                "D7": "46174",
+                "E7": "833.33",
+                "F7": "0",
+                "D8": "46204",
+                "E8": "833.33",
+                "F8": "0",
+                "D9": "46235",
+                "E9": "833.33",
+                "F9": "0",
+                "A10": "Period start",
+                "B10": "46023",
+                "C10": "46387",
+                "D10": "46266",
+                "E10": "0",
+                "F10": "833.33",
+                "A11": "First month",
+                "B11": "46023",
+                "D11": "46296",
+                "E11": "0",
+                "F11": "833.33",
+                "D12": "46327",
+                "E12": "0",
+                "F12": "833.33",
+                "D13": "46357",
+                "E13": "0",
+                "F13": "833.33"
             },
             "styles": {
                 "D1": 1,
@@ -470,8 +392,12 @@
                 "B1": 5,
                 "B2": 7,
                 "D2": 3,
+                "E2": 7,
+                "F2": 7,
                 "B3": 7,
                 "D3": 3,
+                "E3": 7,
+                "F3": 7,
                 "B4": 5,
                 "D4": 3,
                 "E4": 7,
@@ -494,6 +420,7 @@
                 "E9": 7,
                 "F9": 7,
                 "B10": 2,
+                "C10": 2,
                 "D10": 3,
                 "E10": 7,
                 "F10": 7,
@@ -558,7 +485,7 @@
             "thousandsSeparator": ",",
             "decimalSeparator": ".",
             "dateFormat": "mm/dd/yyyy",
-            "timeFormat": "hh:mm:ss",
+            "timeFormat": "hh:mm:ss a",
             "formulaArgSeparator": ",",
             "weekStart": 7
         }
@@ -566,7 +493,6 @@
     "pivots": {},
     "pivotNextId": 1,
     "customTableStyles": {},
-    "odooVersion": 12,
     "globalFilters": [],
     "lists": {},
     "listNextId": 1,

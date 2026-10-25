@@ -57,45 +57,31 @@
 
     <!-- ============ the menu ============ -->
 
-    <!-- Odoo 18 has no Review menu in the account module: the same Review and Control folders, here.
-         The core Journal Entries stay under Accounting, where 18 puts them. -->
-    <menuitem id="menu_review"
-              name="Review"
-              parent="account.menu_finance"
-              groups="account.group_account_readonly"
-              sequence="7"/>
-
-    <menuitem id="menu_review_control"
-              name="Control"
-              parent="menu_review"
-              groups="account.group_account_readonly"
-              sequence="20"/>
-
     <!-- like the Enterprise layout: the journals audit sits at the top of Review -->
     <menuitem id="menu_review_journal_audit"
               name="Journal Audit"
               action="accounting_pdf_reports.action_account_print_journal_menu"
-              parent="menu_review"
+              parent="account.account_audit_menu"
               groups="account.group_account_readonly"
               sequence="1"/>
 
     <!-- Control: the core Journal Items, plus what is still waiting -->
     <menuitem id="menu_review_moves_to_review"
               action="action_moves_to_review"
-              parent="menu_review_control"
+              parent="account.account_audit_control_menu"
               groups="account.group_account_readonly"
               sequence="10"/>
 
     <menuitem id="menu_review_moves_unposted"
               action="action_moves_unposted"
-              parent="menu_review_control"
+              parent="account.account_audit_control_menu"
               groups="account.group_account_readonly"
               sequence="12"/>
 
     <!-- Reconciliation: what is left open -->
     <menuitem id="menu_review_reconciliation"
               name="Reconciliation"
-              parent="menu_review"
+              parent="account.account_audit_menu"
               groups="account.group_account_readonly"
               sequence="30"/>
 
@@ -126,7 +112,7 @@
     <!-- Regularization Entries: the same place Enterprise puts the unrealized currency gains and losses -->
     <menuitem id="menu_review_regularization"
               name="Regularization Entries"
-              parent="menu_review"
+              parent="account.account_audit_menu"
               groups="account.group_account_manager"
               sequence="40"/>
 

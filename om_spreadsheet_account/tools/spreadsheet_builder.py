@@ -2,9 +2,8 @@
 
 The dashboards of the Dashboards app are o-spreadsheet workbooks stored as JSON. Community Odoo cannot edit them,
 so they are written here in code: cells, pivots, lists, charts and global filters, then dumped next to the module.
-The dashboards are written in the format of the spreadsheet library of Odoo 19.0 (version 18.5.10), then brought
-back to the one of Odoo 18.0 by `to_odoo_18` (version 22, Odoo data version 12): the steps of the migrations of the
-spreadsheet library of 19.0 after 18.0.4, the version 22, undone.
+The format follows the dashboards of the spreadsheet_dashboard_* modules of Odoo 19.0 (version 18.5.10), the
+newest the spreadsheet library of 19.0 reads.
 
 Not loaded by Odoo: run the build script of the module to regenerate the files.
 """
@@ -12,17 +11,6 @@ import json
 import uuid
 
 VERSION = '18.5.10'
-# the data versions of the spreadsheet library of Odoo 18.0: the newest one it reads
-ODOO_18_VERSION = 22
-ODOO_18_ODOO_VERSION = 12
-
-# the default values of the relative date filters of 19.0, under their name of 18.0
-ODOO_18_DATE_DEFAULTS = {
-    'last_7_days': 'last_week',
-    'last_30_days': 'last_month',
-    'last_90_days': 'last_three_months',
-    'last_12_months': 'last_year',
-}
 
 TEAL = '#01666B'
 GREY = '#434343'
@@ -358,10 +346,11 @@ class Workbook:
         self.link_references[figure_id] = menu_xmlid
 
     def list_table(self, sheet, col, row, list_id, rows, header_style=None):
-        """ The records of a list, a header then one line per record: ODOO.LIST(list, position, field) returns one
-        value. ODOO.LIST.HEADER of Odoo 18.0 takes no header text: the header is the label of the column. """
+        """ The records of a list, a header then one line per record: the list functions of 19.0 return one value
+        each, ODOO.LIST(list, position, field) and ODOO.LIST.HEADER(list, field). """
         for offset, (field_name, text) in enumerate(self._list_columns[list_id]):
-            sheet.set(col + offset, row, label(text), header_style)
+            sheet.set(col + offset, row, '=ODOO.LIST.HEADER(%s,"%s","%s")' % (list_id, field_name, text),
+                      header_style)
             for index in range(1, rows + 1):
                 sheet.set(col + offset, row + index, '=ODOO.LIST(%s,%s,"%s")' % (list_id, index, field_name))
 
@@ -389,85 +378,10 @@ class Workbook:
             'chartOdooMenusReferences': self.link_references,
         }
 
-    def to_odoo_18_json(self):
-        """ The workbook as the spreadsheet library of Odoo 18.0 reads it """
-        return to_odoo_18(self.to_json())
-
     def dump(self, path):
         with open(path, 'w', encoding='utf-8') as file:
-            json.dump(self.to_odoo_18_json(), file, indent=4, ensure_ascii=False)
+            json.dump(self.to_json(), file, indent=4, ensure_ascii=False)
             file.write('\n')
-
-
-def _odoo_18_figure(figure):
-    """ A figure of 19.0 as 18.0 stores it: placed by x and y, a chart without its id, a carousel of one Odoo
-    chart as that chart. """
-    offset = figure.pop('offset', {})
-    figure.pop('col', None)
-    figure.pop('row', None)
-    figure = {'id': figure['id'], 'x': offset.get('x', 0), 'y': offset.get('y', 0), **figure}
-    data = figure['data']
-    if figure['tag'] == 'carousel':
-        # 18.0 has no carousel: the Odoo chart is the figure, with the title and the filters of the carousel
-        (chart_id, definition), = data['chartDefinitions'].items()
-        definition = dict(definition)
-        definition.pop('actionXmlId', None)
-        definition['title'] = data.get('title') or definition.get('title') or {}
-        definition['fieldMatching'] = data.get('fieldMatching', {}).get(chart_id, {})
-        figure['tag'] = 'chart'
-        figure['data'] = data = definition
-    if figure['tag'] == 'chart':
-        data.pop('chartId', None)
-        data.pop('cumulatedStart', None)
-        if data.get('type') == 'scorecard' and isinstance(data.get('baselineDescr'), dict):
-            data['baselineDescr'] = data['baselineDescr'].get('text', '')
-    return figure
-
-
-def _odoo_18_filter(global_filter):
-    if global_filter['type'] == 'date':
-        default = global_filter.get('defaultValue')
-        global_filter['rangeType'] = 'relative'
-        if default:
-            global_filter['defaultValue'] = ODOO_18_DATE_DEFAULTS.get(default, default)
-    elif global_filter['type'] == 'text':
-        ranges = global_filter.pop('rangesOfAllowedValues', None)
-        if ranges:
-            global_filter['rangeOfAllowedValues'] = ranges[0]
-        default = global_filter.get('defaultValue')
-        if isinstance(default, dict):
-            strings = default.get('strings') or []
-            global_filter['defaultValue'] = strings[0] if strings else ''
-    elif global_filter['type'] == 'relation':
-        default = global_filter.get('defaultValue')
-        if isinstance(default, dict):
-            global_filter['includeChildren'] = default.get('operator') == 'child_of'
-            global_filter['defaultValue'] = default.get('ids') or []
-        global_filter.setdefault('defaultValue', [])
-    return global_filter
-
-
-def to_odoo_18(data):
-    """ The workbook of 19.0 in the format of the spreadsheet library of Odoo 18.0: the migration steps of 19.0
-    after 18.0.4 (the version 22) undone, and those of the Odoo data after the version 12. """
-    data['version'] = ODOO_18_VERSION
-    data['odooVersion'] = ODOO_18_ODOO_VERSION
-    for sheet in data['sheets']:
-        # 18.1.1: a cell was an object
-        sheet['cells'] = {xc: {'content': content} for xc, content in sheet['cells'].items()}
-        # 18.3.1, 18.4.2, 18.5.1 and the carousels of 19.0
-        sheet['figures'] = [_odoo_18_figure(figure) for figure in sheet['figures']]
-    for pivot in data['pivots'].values():
-        # 18.4.3 and the Odoo data 12 to 13: the sorted column names its measure by field
-        sorted_column = pivot.get('sortedColumn')
-        if sorted_column:
-            measure = next(m for m in pivot['measures'] if m['id'] == sorted_column['measure'])
-            pivot['sortedColumn'] = {
-                'groupId': [[], []], 'measure': measure['fieldName'], 'order': sorted_column['order'],
-            }
-    # the global filters of the Odoo data 18.4.10 to 18.5.10
-    data['globalFilters'] = [_odoo_18_filter(global_filter) for global_filter in data['globalFilters']]
-    return data
 
 
 # -- helpers shared by the dashboards -------------------------------------------------

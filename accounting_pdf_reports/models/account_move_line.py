@@ -1,6 +1,6 @@
 import ast
-from odoo import api, models, fields
-from odoo.osv import expression
+from odoo import api, models
+from odoo.fields import Domain
 
 
 class AccountMoveLine(models.Model):
@@ -15,7 +15,7 @@ class AccountMoveLine(models.Model):
     def _query_get(self, domain=None):
         self.check_access('read')
 
-        context = dict(self._context or {})
+        context = dict(self.env.context or {})
         domain = domain or []
         if not isinstance(domain, (list, tuple)):
             domain = ast.literal_eval(domain)
@@ -63,9 +63,6 @@ class AccountMoveLine(models.Model):
         if context.get('account_ids'):
             domain += [('account_id', 'in', context['account_ids'].ids)]
 
-        if context.get('analytic_tag_ids'):
-            domain += [('analytic_tag_ids', 'in', context['analytic_tag_ids'].ids)]
-
         if context.get('analytic_account_ids'):
             domain += [('analytic_distribution', 'in', context['analytic_account_ids'].ids)]
 
@@ -83,13 +80,14 @@ class AccountMoveLine(models.Model):
             domain.append(('parent_state', '!=', 'cancel'))
             if context.get('tax_exigible'):
                 # the tax report: a cash basis tax is due when it is paid, on its cash basis entry
-                domain = expression.AND([domain, self._get_tax_exigible_domain()])
+                domain = Domain(domain) & self._get_tax_exigible_domain()
 
-            query = self._where_calc(domain)
-            self._apply_ir_rules(query)
-            from_string, from_params = query.from_clause
-            where_string, where_params = query.where_clause
-            tables, where_clause, where_clause_params = from_string, where_string, from_params + where_params
+            query = self._search(domain)
+            from_clause = query.from_clause
+            where_sql = query.where_clause
+            tables = from_clause.code
+            where_clause = where_sql.code
+            where_clause_params = list(from_clause.params) + list(where_sql.params)
         return tables, where_clause, where_clause_params
 
     def format_analytic_distribution(self, distribution):

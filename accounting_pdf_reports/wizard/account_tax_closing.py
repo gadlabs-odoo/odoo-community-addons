@@ -1,6 +1,6 @@
 from odoo import _, fields, models
 from odoo.exceptions import UserError
-from odoo.osv import expression
+from odoo.fields import Domain
 from odoo.tools.misc import format_date
 
 
@@ -44,7 +44,7 @@ class AccountTaxClosingWizard(models.TransientModel):
         ]
         if 'is_withholding_tax_on_payment' in self.env['account.tax']._fields:
             domain.append(('tax_line_id.is_withholding_tax_on_payment', '=', False))
-        return expression.AND([domain, MoveLine._get_tax_exigible_domain()])
+        return Domain(domain) & MoveLine._get_tax_exigible_domain()
 
     def _prepare_move_lines(self):
         self.ensure_one()

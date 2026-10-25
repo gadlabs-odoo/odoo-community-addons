@@ -57,13 +57,6 @@ class TestFollowup(AccountTestInvoicingCommon):
         stat = self.env['followup.stat.by.partner']
         return stat.browse(stat._get_stat_id(self.customer.id, self.company.id))
 
-    def _reminders_emailed(self):
-        """ The reminders posted on the customer and emailed to it. A test of 18 sends the emails at once and
-        deletes them: the message is checked, not the mail.mail. """
-        return self.customer.message_ids.filtered(
-            lambda message: message.message_type == 'comment'
-            and 'email' in message.notification_ids.mapped('notification_type'))
-
     def _run_wizard(self, run_date):
         wizard = self.env['followup.print'].create({'date': run_date, 'followup_id': self.plan.id})
         return wizard.do_process()
@@ -76,7 +69,9 @@ class TestFollowup(AccountTestInvoicingCommon):
         self.assertEqual(self._stat_line().max_followup_id, self.level_15)
         self.assertTrue(action['context']['needprinting'])
         self.assertIn('1 email(s) sent', action['context']['description'])
-        self.assertTrue(self._reminders_emailed())
+        self.assertTrue(self.env['mail.mail'].search([
+            ('model', '=', 'res.partner'), ('res_id', '=', self.customer.id),
+        ]))
 
         self.env.invalidate_all()
         self._run_wizard('2026-02-15')
@@ -252,7 +247,8 @@ class TestFollowup(AccountTestInvoicingCommon):
         self.env['followup.print'].with_company(company_2).create({
             'date': '2026-01-20', 'followup_id': plan_2.id,
         }).do_process()
-        self.assertEqual(self._reminders_emailed().subject, '%s Payment Reminder' % company_2.name)
+        mail = self.env['mail.mail'].search([('model', '=', 'res.partner'), ('res_id', '=', self.customer.id)])
+        self.assertEqual(mail.subject, '%s Payment Reminder' % company_2.name)
 
     def test_translations_are_loaded(self):
         self.env['res.lang']._activate_lang('fr_FR')
@@ -265,7 +261,7 @@ class TestFollowup(AccountTestInvoicingCommon):
         self.assertIn('1 e-mail(s) envoyé(s)', wizard.do_process()['context']['description'])
         subject = self.env.ref(
             'om_account_followup.email_template_om_account_followup_default').with_context(lang='fr_FR').subject
-        self.assertEqual(subject, '{{ user.env.company.name }}  Rappel de paiement')
+        self.assertEqual(subject, '{{ env.company.name }}  Rappel de paiement')
 
     def test_daily_automatic_sending(self):
         self._create_customer_invoice('2026-01-01')
@@ -282,7 +278,7 @@ class TestFollowup(AccountTestInvoicingCommon):
         with freeze_time('2026-01-25'):
             cron_model._cron_send_followups()
         self.assertEqual(self._receivable_line(self.customer.invoice_ids).followup_line_id, self.level_15)
-        mail = self._reminders_emailed()
+        mail = self.env['mail.mail'].search([('model', '=', 'res.partner'), ('res_id', '=', self.customer.id)])
         self.assertTrue(mail)
         self.assertIn('sender@example.com', mail.email_from)
         # automatic runs do not announce letters nobody prints

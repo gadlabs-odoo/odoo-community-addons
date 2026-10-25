@@ -1,8 +1,8 @@
 ==============================
-Odoo 18 Accounting Community
+Odoo 19 Accounting Community
 ==============================
 
-Odoo 18 Community Edition ships Invoicing, not Accounting. This module turns it
+Odoo 19 Community Edition ships Invoicing, not Accounting. This module turns it
 into a full accounting application: it installs the seventeen Odoo Mates
 accounting modules in one click and adds the menus, groups, settings and
 dashboards that make them work as one system rather than seventeen separate
@@ -17,7 +17,7 @@ screens shown at each step.
 Requirements
 ============
 
-* Odoo 18.0 Community Edition.
+* Odoo 19.0 Community Edition.
 * No external Python library and no paid Odoo Enterprise module.
 
 
@@ -119,7 +119,7 @@ Installing this module installs the seventeen modules listed above, so make
 sure they are all present in your addons folder before you start.
 
 
-Upgrading from an earlier 18 release
+Upgrading from an earlier 19 release
 ====================================
 
 This is release 1.3.0 (October 2026). It adds modules and changes several of
@@ -135,7 +135,7 @@ the others, so upgrade the suite as a whole:
 3. Restart Odoo and update the apps list in developer mode.
 4. Upgrade all the modules of the suite that are installed, together: Odoo
    upgrades a module and the ones depending on it, not the modules it depends
-   on, so upgrading *Odoo 18 Accounting Community* alone is not enough. The new
+   on, so upgrading *Odoo 19 Accounting Community* alone is not enough. The new
    modules install themselves with it. From the command line:
    ``-u accounting_pdf_reports,om_account_accountant,om_account_asset,om_account_budget,om_account_daily_reports,om_account_followup,om_fiscal_year,om_recurring_payments``
    (or ``-u all``).

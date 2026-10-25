@@ -12,7 +12,7 @@ and disputed invoices.""",
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
-        'data/data.xml',
+        'data/mail_template_data.xml',
         'data/mail_activity_type_data.xml',
         'data/ir_cron.xml',
         'wizard/followup_print_view.xml',
